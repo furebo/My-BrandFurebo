@@ -1,0 +1,1760 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>About Developer</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+        <style>
+
+            *{
+                margin: 0px;
+                padding:0px
+            }
+            #menu-bar{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+        #name{
+            width: 200px;
+        height: 30px;
+        position:fixed;
+        background: whitesmoke
+        }
+           
+        #container{
+            overflow-x: hidden;
+        
+        display: flex;
+        flex-wrap: wrap;
+        
+        }
+        #menu{
+        
+           width: 200px;
+           height: 900px;
+           position: fixed;
+           margin-top: 200px;
+           background: whitesmoke;
+           box-shadow: 2px;
+        }
+        #myname{
+            margin-top: 0px;
+            width: 300px;
+            height: 200px;
+            background: rgb(216, 108, 108);
+        }
+        
+        .myclass {
+           position: fixed;
+           width: 300px;
+           height: 400px;
+           display: flex;
+           flex-direction: column;
+           background:yellowgreen;
+           padding: 0em;
+           justify-content: space-between
+           }
+        
+        #mybody{
+          margin-left: 200px;
+          width: 1180px;
+          display: flex;
+          flex-direction: column;
+          background: wheat;
+          }
+        .mymenu{
+           height: 60px;
+           margin-left: 20px;
+          display: flex;
+          flex-direction: row;
+          font-family: calibri;
+          font-size: 14px
+        
+          }
+        .mymenu:hover{
+          font-size: 13px;
+        }
+        img{
+        
+        }
+        #aboutsectText{
+            width: 1150px;
+            font-size: 30px;
+            font-family: 'calibri';
+            border: 2px solid black;
+            padding-right: 100px;
+        }
+        #experienceSectText{
+            width:750px;
+            height: 300px;
+            font-size: 30px;
+            padding: 5px;
+            border: 2px solid black;
+            padding: 30px;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            margin-left: 180px;
+            margin-right: 200px;
+            font-family: calibri;
+            font-size: 20px
+        }
+
+       
+
+        a{
+            color: black;
+            text-decoration: none
+        }
+        #aboutSection{
+            width: 1150px;
+            height: 100px;
+            background: blue;
+            color: white
+        }
+        #experienceSection{
+            margin-top: 20px;
+            width: 1150px;
+            height: 100px;
+            background: blue;
+            color: white
+        }
+        
+        #experienceSection2{
+            margin-top: 20px;
+            width: 1150px;
+            height: 100px;
+            background: blue;
+            color: white
+        }
+
+        #compSkillSect{
+            margin-top: 20px;
+            width: 1150px;
+            height: 100px;
+            background: blue;
+            color: white
+        }
+        #compSkillContent{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            width: 1110px;
+            padding: 1em;
+            grid-column-gap: 10px;
+            grid-row-gap: 60px;
+            margin-top: 50px;
+            margin-left: 25px;
+            margin-right: 20px;
+            margin-bottom: 50px
+
+        }
+        #compSkilCont1{
+
+        }
+        #skillPicture{
+
+        }
+        #skillText{
+           padding: 10px;
+        }
+        #compSkilCont{
+         background: white;
+         width: 330px;
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         border: 2px solid silver;
+        }
+        #compSkilCont3{
+
+        }
+        #softSkillTitle{
+            width: 1150px;
+            height: 100px;
+            background: blue;
+            color: white
+        }
+        #softSkillTextSection{
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            grid-gap: 1em;
+        }
+        #softSkill{
+            width: 1080px;
+            height: 300px;
+            margin-left: 35px;
+            margin-right: 35px;
+            margin-top: 40px;
+            background: white;
+            border: 2px solid silver;
+            
+        
+    
+        }
+        #softTitle{
+
+        }
+        #softText{
+            padding: 30px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between
+        }
+        #accomplishmt{
+
+            width: 1150px;
+            height: 100px;
+            background: blue;
+            color: white ;
+            margin-top:15px;
+        }
+        #accomplishmtText{
+            display: grid;
+            width:1150px;
+            height: 400px;
+            grid-gap: 1em;
+            grid-template-columns: repeat(2, 1fr);
+            margin-bottom: 15px;
+            padding-left: 28px;
+            padding-top: 28px;
+            padding-bottom: 28px;
+            box-sizing: border-box;
+        }
+        #accomptxt{
+            width: 500px;
+            background: white;
+            padding: 10px;
+            border: 2px solid silver;
+            
+        }
+        #educationTitle{
+            width: 1150px;
+            height: 100px;
+            background: blue;
+            color: white 
+        }
+        #educText{
+            display: flex;
+            flex-direction: column;
+            width: 1150px;
+            height: 450px;
+            background: wheat;
+            justify-content: space-between;
+            padding-bottom: 15px;
+            box-sizing: border-box;
+            padding-left: 200px;
+            padding-right: 80px;
+    
+
+        }
+        #educTexts{
+            width: 750px;
+            height: 140px;
+            background: white;
+            padding: 10px;
+            border: 2px solid silver;
+        }
+        #contactTitle{
+            margin-top: 20px;
+            width: 1150px;
+            height: 100px;
+            background: blue;
+            color: white
+        }
+        #contactText{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 1150px;
+            background:silver;
+            height: 400px;
+        
+            
+        }
+        #telPhone{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-right: 200px;
+            margin-left: 360px;
+            margin-top: 50px;
+        }
+        #telText{
+            margin-right: 310px;
+        }
+        #fecText{
+            margin-right: 140px;
+        }
+        #githText{
+            margin-right: 290px;
+        }
+        #emailText{
+            margin-right: 310px;
+        }
+
+        #facebook{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-right: 200px;
+            margin-left: 360px;
+            margin-top: 50px;
+        }
+
+        #github{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-right: 200px;
+            margin-left: 360px;
+            margin-top: 50px;
+        }
+         
+
+        #email{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-left: 360px;
+            margin-top: 40px;
+            margin-right: 30px;
+        }
+        h1{
+            padding: 20px;
+        }
+        @media screen and (max-width: 768px){
+            #container{
+                overflow-x: hidden;
+             width: 760px;
+            display: grid;
+            grid-template-columns: 7fr 5fr;
+        }
+
+        #menu{
+        
+        
+        position: fixed;
+        margin-top: 150px;
+        background: whitesmoke;
+     }
+
+        #myimage{
+            width: 760px;
+            height: 1000px;
+            margin-top: 60px
+        }
+        #mybody{
+            margin-top: 100px;
+            margin-left: 0px;
+        }
+            .change{
+                display: block;
+            
+            }
+            .changeAgain{
+                display: none;
+            }
+            #name{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                width: 755px;
+                height: 150px;
+                background: rgb(196, 193, 193);
+                position: fixed;
+                border: 2px solid black;
+                
+            }
+            #nametop{
+                margin-right: 0px;
+                font-size: 15px;
+            }
+            .menuclass{
+                display: none
+            }
+
+            #menu1{
+                background: white;
+                width: 70px;
+                height: 60px;
+                cursor: pointer;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                margin-left: 70px;
+        
+           }
+            #bar{
+                height: 10px;
+                width: 80%;
+                background:black;
+                display: block;
+                border-radius: 5px;
+                margin-left: 5px;
+           }
+             
+             #aboutSection{
+            width: 766px;
+            height: 50px;
+            font-size: 10px;
+            padding-bottom: 20px
+           }
+            #aboutsectText{
+                  font-size: 15px;
+                  height: 250px;
+                  width: 710px;
+                  padding: 20px
+        }
+
+            #experienceSection{
+                
+                  width: 760px;
+                  height: 50px;
+                  font-size: 10px;
+                  padding-bottom: 20px
+            }
+            #experienceSectText{
+            
+                 font-size: 15px;
+                 height: 150px;
+                 width: 690px;
+                 padding-right: 30px
+           }
+           #compSkillSect{
+                 width: 768px;
+                 height: 50px;
+                 font-size: 10px;
+                 padding-bottom: 20px;
+           }
+           #compSkillContent{
+                 display: grid;
+                 grid-template-columns: repeat(2,1fr);
+                 width: 730px;
+                 grid-gap: 10px;
+                 padding: 10px
+            }
+            #compSkilCont{
+                 background: silver;
+                 width: 350px;
+                 display: flex;
+                 flex-direction: flex;
+                 justify-content: center;
+             }
+             #skillimage{
+                 width: 350px;
+                 height: 350px;
+             }
+             #softSkillTitle{
+                width: 755px;
+                height: 50px;
+                font-size: 10px;
+                padding-bottom: 20px;
+            }
+            #softSkill{
+                width: 750px;
+                height: 400px;
+            }
+            #accomplishmt{
+                width: 768px;
+                height: 50px;
+                margin-top:15px;
+                font-size: 10px;
+                padding-bottom: 20px
+           }
+           #accomplishmtText{
+               background:silver;
+               display: flex;
+               flex-direction: column;
+               justify-content: space-around;
+               width: 700px;
+               height: 600px;
+               margin-bottom: 15px;
+               
+            }
+            #accomptxt{
+                width: 630px;
+                background: white;
+                height: 100px;
+                margin-left: 30px;
+            
+            }
+            #educationTitle{
+               width: 768px;
+               height: 50px;
+               font-size: 10px;
+               padding-bottom: 20px
+            
+            }
+            #educText{
+               display: flex;
+               flex-direction: column;
+               width: 670px;
+               height: 400px;
+               justify-content: space-between;
+               padding-bottom: 15px;
+           }
+           #educTexts{
+            width: 620px;
+            height: 140px;
+            background: silver;
+            padding: 10px;
+            margin-left: 30px;
+            
+        }
+           #contactTitle{
+               width: 768px;
+               height: 50px;
+               font-size: 10px;
+               padding-bottom: 20px
+            }
+            #contactText{
+               display: flex;
+               flex-direction: column;
+               justify-content: space-between;
+               width: 765px;
+               height: 300px;
+           }
+           #telPhone{
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              margin-right: 250px;
+              margin-left: 20px;
+              margin-top: 50px;
+        }
+           #email{
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              margin-left: 20px;
+              margin-top: 20px;
+              margin-right: 100px;
+           }
+        
+        }
+
+        @media (max-width: 414px){
+            #container{
+             width: 414px;
+            display: grid;
+            overflow-x: hidden;
+        
+        }
+
+        #name{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                width: 410px;
+                height: 150px;
+                background: rgb(196, 193, 193);
+                position: fixed;
+                border: 2px solid black;
+                
+            }
+
+        #myimage{
+            width: 414px;
+            height: 300px;
+            margin-top: 60px
+        }
+
+        #aboutSection{
+            width: 413px;
+            height: 50px;
+            font-size: 10px;
+            padding-bottom: 20px
+           }
+            #aboutsectText{
+                  font-size: 15px;
+                  height: 300px;
+                  width: 360px;
+                  padding-right: 30px
+        }
+
+        #experienceSection{
+                
+                width: 414px;
+                height: 50px;
+                font-size: 10px;
+                padding-bottom: 20px
+          }
+          #experienceSectText{
+          
+               font-size: 15px;
+               height: 150px;
+               width: 340px;
+               padding-right: 30px
+         }
+
+         #compSkillSect{
+                 width: 414px;
+                 height: 50px;
+                 font-size: 10px;
+                 padding-bottom: 20px;
+                 }
+
+        #compSkillContent{
+                 display: grid;
+                 grid-template-columns: repeat(1,1fr);
+                 width: 370px;
+                 grid-gap: 10px;
+                 padding: 20px
+            }
+
+            #softSkillTitle{
+                width: 414px;
+                height: 50px;
+                font-size: 10px;
+                padding-bottom: 20px;
+            }
+
+            #softSkill{
+                width: 410px;
+                height: 400px;
+            }
+
+
+            #accomplishmt{
+                width: 414px;
+                height: 50px;
+                margin-top:15px;
+                font-size: 10px;
+                padding-bottom: 20px;
+                padding-left:10px
+           }
+           #accomplishmtText{
+               background:silver;
+               display: flex;
+               flex-direction: column;
+               justify-content: space-around;
+               width: 390px;
+               height: 600px;
+               margin-bottom: 15px;
+               padding-right:15px
+               
+            }
+            #accomptxt{
+                width: 250px;
+                background: white;
+                height: 100px;
+                margin-left: 30px;
+            
+            }
+
+            #educationTitle{
+               width: 405px;
+               height: 50px;
+               font-size: 10px;
+               padding-bottom: 20px
+            
+            }
+            #educText{
+               display: flex;
+               flex-direction: column;
+               width: 320px;
+               height: 400px;
+               justify-content: space-between;
+               padding-bottom: 15px;
+               padding-top: 15px;
+           }
+           #educTexts{
+            width: 250px;
+            height: 140px;
+            background: silver;
+            padding: 10px;
+            margin-left: 30px;
+            
+        }
+
+        #contactTitle{
+               width: 414px;
+               height: 50px;
+               font-size: 10px;
+               padding-bottom: 20px
+            }
+            #contactText{
+               display: flex;
+               flex-direction: column;
+               justify-content: space-between;
+               width: 414px;
+               height: 300px;
+           }
+           #telPhone{
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              margin-right: 200px;
+              margin-left: 20px;
+              margin-top: 50px;
+        }
+           #email{
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              margin-left: 20px;
+              margin-top: 20px;
+              margin-right: 40px;
+           }
+        
+
+        }
+
+        @media (max-width: 411px){
+            #container{
+                overflow-x: hidden;
+             width: 411px;
+            display: grid;
+        
+        }
+
+        #name{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                width: 406px;
+                height: 150px;
+                background: rgb(196, 193, 193);
+                position: fixed;
+                border: 2px solid black;
+                
+            }
+
+        #myimage{
+            width: 411px;
+            height: 300px;
+            margin-top: 60px
+        }
+
+        #aboutSection{
+            width: 411px;
+            height: 50px;
+            font-size: 10px;
+            padding-bottom: 20px
+           }
+        #aboutsectText{
+                  font-size: 15px;
+                  height: 300px;
+                  width: 367px;
+                  padding: 20px
+        }
+
+        #experienceSection{
+                
+                width: 411px;
+                height: 50px;
+                font-size: 10px;
+                padding-bottom: 20px
+          }
+          #experienceSectText{
+          
+               font-size: 15px;
+               height: 150px;
+               width: 365px;
+               padding: 20px
+         }
+
+         #compSkillSect{
+                 width: 411px;
+                 height: 50px;
+                 font-size: 10px;
+                 padding-bottom: 20px;}
+
+        #compSkillContent{
+                 display: grid;
+                 grid-template-columns: repeat(1,1fr);
+                 width: 365px;
+                 grid-gap: 10px;
+                 padding: 20px
+            }
+
+            #softSkillTitle{
+                width: 411px;
+                height: 50px;
+                font-size: 10px;
+                padding-bottom: 20px;
+            }
+
+            #softSkill{
+                width: 405px;
+                height: 400px;
+            }
+
+            #accomplishmt{
+            width:411px;
+            height: 50px;
+            background: blue;
+            color: white ;
+            margin-top:15px;
+        }
+
+            #accomplishmtText{
+               background:silver;
+               display: flex;
+               flex-direction: column;
+               justify-content: space-around;
+               width: 365px;
+               height: 600px;
+               margin-bottom: 15px;
+               
+            }
+
+            #accomptxt{
+                width: 280px;
+                background: white;
+                height: 100px;
+                margin-left: 30px;
+            
+            }
+
+
+            #educationTitle{
+               width: 411px;
+               height: 50px;
+               font-size: 10px;
+               padding-bottom: 20px
+            
+            }
+            #educText{
+               display: flex;
+               flex-direction: column;
+               width: 325px;
+               height: 400px;
+               justify-content: space-between;
+               padding-bottom: 15px;
+           }
+           #educTexts{
+            width: 200px;
+            height: 140px;
+            background: silver;
+            padding: 20px;
+            
+            
+        }
+
+        #contactTitle{
+               width: 411px;
+               height: 50px;
+               font-size: 10px;
+               padding-bottom: 20px
+            }
+            #contactText{
+               display: flex;
+               flex-direction: column;
+               justify-content: space-between;
+               width: 405px;
+               height: 300px;
+           }
+           #telPhone{
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              margin-right: 200px;
+              margin-left: 20px;
+              margin-top: 50px;
+        }
+           #email{
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              margin-left: 20px;
+              margin-top: 20px;
+              margin-right: 80px;
+           }
+        
+
+        }
+
+        @media  (max-width: 375px){
+            #container{
+                overflow-x: hidden;
+             width: 375px;
+            display: grid;
+    
+        }
+
+        #nametop{
+
+        }
+
+        #name{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                width: 370px;
+                height: 150px;
+                background: rgb(196, 193, 193);
+                position: fixed;
+                border: 2px solid black;
+                
+            }
+
+        #myimage{
+            width: 375px;
+            height: 300px;
+            margin-top: 60px
+        }
+
+
+        #aboutSection{
+            width: 375px;
+            height: 50px;
+            font-size: 10px;
+            padding-bottom: 20px
+           }
+            #aboutsectText{
+                  font-size: 15px;
+                  height: 280px;
+                  width: 320px;
+                  padding-right: 30px
+        }
+
+        #compSkillSect{
+                 width: 375px;
+                 height: 50px;
+                 font-size: 10px;
+                 padding-bottom: 20px;
+                 }
+
+        #experienceSection{
+                
+                width: 375px;
+                height: 50px;
+                font-size: 10px;
+                padding-bottom: 20px
+          }
+          #experienceSectText{
+          
+               font-size: 15px;
+               height: 150px;
+               width: 320px;
+               padding-right: 30px
+         }
+
+        #compSkillContent{
+                 display: grid;
+                 grid-template-columns: repeat(1,1fr);
+                 width: 350px;
+                 grid-gap: 10px;
+                 padding: 10px
+            }
+
+            #softSkillTitle{
+                width: 375px;
+                height: 50px;
+                font-size: 10px;
+                padding-bottom: 20px;
+            }
+
+
+            #softSkill{
+                width: 370px;
+                height: 400px;
+            }
+
+            #accomplishmt{
+            width: 362px;
+            height: 50px;
+            background: blue;
+            color: white ;
+            margin-top:15px;
+        }
+
+            #accomplishmtText{
+               background:silver;
+               display: flex;
+               flex-direction: column;
+               justify-content: space-around;
+               width: 349px;
+               height: 600px;
+               margin-bottom: 15px;
+               
+            }
+
+            #accomptxt{
+                width: 250px;
+                background: white;
+                height: 100px;
+                
+            
+            }
+
+            #educationTitle{
+               width: 374px;
+               height: 50px;
+               font-size: 10px;
+               padding-bottom: 20px
+            
+            }
+            #educText{
+               display: flex;
+               flex-direction: column;
+               width: 290px;
+               height: 400px;
+               justify-content: space-between;
+               padding-bottom: 15px;
+           }
+           #educTexts{
+            width: 220px;
+            height: 140px;
+            background: silver;
+            padding: 10px;
+            margin-left: 30px;
+            
+        }
+
+        #contactTitle{
+               width: 374px;
+               height: 50px;
+               font-size: 10px;
+               padding-bottom: 20px
+            }
+            #contactText{
+               display: flex;
+               flex-direction: column;
+               justify-content: space-between;
+               width: 370px;
+               height: 300px;
+           }
+
+           #telPhone{
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              margin-right: 150px;
+              margin-left: 20px;
+              margin-top: 50px;
+        }
+           #email{
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              margin-left: 20px;
+              margin-top: 20px;
+              margin-right: 100px;
+           }
+
+        }
+
+        @media (max-width: 360px){
+            #container{
+                overflow-x: hidden;
+             width: 360px;
+            display: grid;
+    
+        }
+
+        #name{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                width: 356px;
+                background: rgb(196, 193, 193);
+                position: fixed;
+                border: 2px solid black;
+                
+            }
+
+        #myimage{
+            width: 360px;
+            height: 300px;
+            margin-top: 60px
+        }
+
+
+        #aboutSection{
+            width: 360px;
+            height: 50px;
+            font-size: 10px;
+            padding-bottom: 20px
+           }
+            #aboutsectText{
+                  font-size: 15px;
+                  height: 300px;
+                  width: 315px;
+                  padding: 20px
+        }
+
+        #experienceSection{
+                
+                width: 360px;
+                height: 50px;
+                font-size: 10px;
+                padding-bottom: 20px
+          }
+          #experienceSectText{
+          
+               font-size: 15px;
+               height: 150px;
+               width: 315px;
+               padding: 20px
+         }
+
+         #compSkillSect{
+                 width: 360px;
+                 height: 50px;
+                 font-size: 10px;
+                 padding-bottom: 20px;}
+
+        #compSkillContent{
+                 display: grid;
+                 grid-template-columns: repeat(1,1fr);
+                 width: 334px;
+                 grid-gap: 10px;
+                 padding: 10px
+            }
+
+            #compSkilCont{
+                 background: silver;
+                 width: 320px;
+                 display: flex;
+                 flex-direction: flex;
+                 justify-content: center;
+             }
+             #skillimage{
+                 width: 320px;
+                 height: 350px;
+             }
+
+            #softSkillTitle{
+                width: 360px;
+                height: 50px;
+                font-size: 10px;
+                padding-bottom: 20px;
+            }
+
+            #softSkill{
+                width: 352px;
+                height: 400px;
+            }
+
+            #accomplishmtText{
+               background:silver;
+               display: flex;
+               flex-direction: column;
+               justify-content: space-around;
+               width: 312px;
+               height: 600px;
+               margin-bottom: 15px;
+               
+            }
+
+            #accomptxt{
+                width: 220px;
+                background: white;
+                height: 100px;
+                margin-left: 30px;
+            
+            }
+
+            #educationTitle{
+               width: 358px;
+               height: 50px;
+               font-size: 10px;
+               padding-bottom: 20px
+            
+            }
+            #educText{
+               display: flex;
+               flex-direction: column;
+               width: 270px;
+               height: 400px;
+               justify-content: space-between;
+               padding-bottom: 15px;
+           }
+           #educTexts{
+            width: 200px;
+            height: 140px;
+            background: silver;
+            padding: 10px;
+            margin-left: 30px;
+            
+        }
+
+        #contactTitle{
+               width: 360px;
+               height: 50px;
+               font-size: 10px;
+               padding-bottom: 20px
+            }
+            #contactText{
+               display: flex;
+               flex-direction: column;
+               justify-content: space-between;
+               width: 352px;
+               height: 200px;
+           }
+
+           #telPhone{
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              margin-right: 150px;
+              margin-left: 20px;
+              margin-top: 50px;
+        }
+           #email{
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              margin-left: 20px;
+              margin-top: 20px;
+              margin-right: 100px;
+              font-size: 15px
+           }
+
+        }
+
+        @media (max-width: 320px){
+            #container{
+                overflow-x: hidden;
+             width: 320px;
+            display: grid;
+    
+        }
+
+        #name{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                width: 314px;
+                height: 150px;
+                background: rgb(196, 193, 193);
+                position: fixed;
+                border: 2px solid black;
+                
+            }
+
+        #myimage{
+            width: 320px;
+            height: 300px;
+            margin-top: 60px
+        }
+
+
+        #aboutSection{
+            width: 318px;
+            height: 50px;
+            font-size: 10px;
+            padding-bottom: 20px
+           }
+            #aboutsectText{
+                  font-size: 15px;
+                  height: 300px;
+                  width: 260px;
+                  padding-right: 30px;
+                  font-size: 14px
+        }
+
+        #experienceSection{
+                
+                width: 318px;
+                height: 50px;
+                font-size: 10px;
+                padding-bottom: 20px
+          }
+          #experienceSectText{
+          
+               font-size: 15px;
+               height: 150px;
+               width: 260px;
+               padding-right: 30px
+         }
+
+         #compSkillSect{
+                 width: 318px;
+                 height: 50px;
+                 font-size: 10px;
+                 padding-bottom: 20px;
+                 }
+
+        #compSkillContent{
+                 display: grid;
+                 grid-template-columns: repeat(1,1fr);
+                 width: 292px;
+                 grid-gap: 10px;
+                 padding: 10px
+            }
+
+            #compSkilCont{
+                 background: silver;
+                 width: 280px;
+                 display: flex;
+                 flex-direction: flex;
+                 justify-content: center;
+             }
+             #skillimage{
+                 width: 280px;
+                 height: 350px;
+             }
+
+            #softSkillTitle{
+                width: 318px;
+                height: 50px;
+                font-size: 10px;
+                padding-bottom: 20px;
+            }
+
+            #softSkill{
+                width: 310px;
+                height: 400px;
+            }
+
+            #accomplishmtText{
+               background:silver;
+               display: flex;
+               flex-direction: column;
+               justify-content: space-around;
+               width: 270px;
+               height: 600px;
+               margin-bottom: 15px;
+               
+            }
+
+            #accomptxt{
+                width: 180px;
+                background: white;
+                height: 120px;
+                margin-left: 30px;
+            
+            }
+
+            #educationTitle{
+               width: 320px;
+               height: 50px;
+               font-size: 10px;
+               padding-bottom: 20px
+            
+            }
+            #educText{
+               display: flex;
+               flex-direction: column;
+               width: 230px;
+               height: 500px;
+               justify-content: space-between;
+               padding-bottom: 15px;
+           }
+           #educTexts{
+            width: 150px;
+            height: 180px;
+            background: silver;
+            padding: 10px;
+            margin-left: 30px;
+            
+        }
+
+        #contactTitle{
+               width: 320px;
+               height: 50px;
+               font-size: 10px;
+               padding-bottom: 20px
+            }
+            #contactText{
+               display: flex;
+               flex-direction: column;
+               justify-content: space-between;
+               width: 320px;
+               height: 200px;
+           }
+
+           #telPhone{
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              margin-right: 100px;
+              margin-left: 20px;
+              margin-top: 50px;
+        }
+           #email{
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              margin-left: 20px;
+              margin-top: 20px;
+              margin-right: 100px;
+              font-size: 10px
+           }
+
+
+        }
+        </style>
+       
+        
+    </head>
+    <body>
+
+        <div id="container">
+            
+            
+            <div  id="name">
+                    <div id="menu1"  onclick="myfunction()" class="otherclass">
+
+                            <div id="bar" class="bar1"></div>
+                            <div id="bar" class="bar2"></div>
+                            <div id="bar" class="bar3"></div>
+                    </div>
+                    <div id="nametop">
+                    <h1 style="color:green; margin-left:30px;font-family:calibli" >Furebo Didace</h1>
+                    <h4 style="margin-left:50px; font-size:10px">Junior Software Developer</h4>
+                    </div>
+
+                    
+            </div>
+
+            
+
+            
+
+
+            <div id="menu" class="menuclass ">
+                
+                <div id="about" class="mymenu">
+                    <img src="images/about icong.png" width="30px" height="30px" >
+                    <a href="#aboutSection"><h3 style="margin-left: 20px">About</h3></a>   
+                </div>
+                
+                <div id="experience" class="mymenu">
+                    <img src="images/experience icon.PNG" width="30px" height="30px">
+                    <a href="#experienceSection"><h3 style="margin-left: 20px">Experiences</h3></a>
+                </div>
+                <div id="compSkills" class="mymenu">
+                    <img src="images/compskills icon.PNG" width="30px" height="30px">
+                    <a href="#compSkillSect"><h3 style="margin-left: 20px">Computer_Skills</h3></a>
+                </div>
+                <div id="softSkills" class="mymenu">
+                    <img src="images/softsk icon.PNG" width="30px" height="30px">
+                    <a href="#softSkillTitle"><h3 style="margin-left: 20px">Software_skills</h3></a>
+                </div>
+                <div id="accomplishments" class="mymenu">
+                    <img src="images/award icon.png" width="30px" height="30px">
+                    <a href="#accomplishmt"><h3 style="margin-left: 20px">Accomplishments</h3></a>
+                </div>
+                <div id="education" class="mymenu">
+                    <img src="images/education icon.PNG" width="30px" height="30px">
+                    <a href="#educationTitle"><h3 style="margin-left: 20px">Education</h3></a>
+                </div>
+                <div id="contacts" class="mymenu">
+                    <img src="images/contact icon.PNG" width="30px" height="30px">
+                    <a href="#contactTitle"><h3 style="margin-left: 20px">Contacts</h3></a>
+                </div>
+
+            </div>
+
+            
+
+            <div id="mybody" onclick()="hideFunction()">
+                
+                
+
+
+                <div id="picture">
+                    <img src="images/autor img.png" width="1150px" height="1150px"  id="myimage">
+                </div>
+                <div id="aboutSection">
+                    <h1>About</h1>
+                </div>
+                <div id="aboutsectText">
+                       <h3 style="border-left: 5px solid blue;margin-top: 20px; margin-left:50px">
+                           Driven by the passion on software and web applications development , database
+                           application and system analysis and design.
+                       </h3>
+                    
+                       <p style="padding: 50px;margin-top: 10px"> As a software develloper I always dream about making a big move forward throuth 
+                        the opportunities around me and overcome challenges that I may face sometimes. 
+                        Algthout my professianal is  taking many effort from learnng basics of programming 
+                        toward my succes in the industry.
+                        </p>
+                    
+                    
+                       <p style="padding: 50px;margin-top: 10px"> As a web developper I am interested a lot in web programming using modern programming langueges and
+                         this is important thing to become more skilled in web development that is why I joined Andela the 
+                         community where I fetch more knowldge and improve my programing ability more significantly with the
+                          assistance of high specialist in software engeneering .
+                          
+                          <p style="padding: 50px;margin-top: 10px">Being a longlife learner in web programming is helpfull for me to thrive to the mastery of my craft.</p>
+                    
+                </div>
+                <div id="experienceSection">
+                    <h1>Experience</h1>
+                </div>
+                <div id="experienceSectText">
+                    <div style="display: flex;flex-direction:row;justify-content:space-between">
+                    <h1>UR</h1>
+                    <h2 style="margin-top: 30px">Student</h2>
+                    </div>
+                    <hr>
+                    <ul style="margin-left: 50px">
+                    <li><p>Graduated  from Umutara Polythechnic in 2012 I have done some
+                        thechnology related activities in differents local campanies and organizations .
+                    </p>
+                    </li>
+                    <li>
+                    <p>According to the gorvenment policies in Information and Communication Technology I trained 
+                       other persons in digital literacy and online communication through internet and computer network.
+                    </p>
+                    </li>
+                    </ul>
+                </div>
+
+                
+                <div id="compSkillSect">
+                    <h1>Computer Skills</h1>
+                </div>
+                <div id="compSkillContent">
+                    <div id="compSkilCont">
+                        <div id="skillPicture">
+                            <img src="images/HARDWARE.jpg" width="330px" height="280px" id="skillimage">
+                        </div>
+                        <div id="skillText">
+                            <p>Computer hardware 
+                                mentance of hardware and 
+                                mentenance of software 
+                            </p>
+                        </div>
+                    </div>
+                    <div id="compSkilCont">
+                            <div id="skillPicture">
+                                <img src="images/KERNEL.PNG" width="330px" height="280px" id="skillimage">
+                            </div>
+                            <div id="skillText">
+                                <p>Microsoft office  including:
+                                    Office world, excel, Power Point,
+                                    Publisher, Microsoft Access
+                                </p>
+                            </div>
+                    </div>
+                    <div id="compSkilCont">
+                        <div id="skillText">
+                        <h2>Accomplishments:</h2>
+                        <p>
+                            ICT studies at university and traing in Scientific and Technologycal Research Institute in Rwanda .
+                        </p>
+                        </div>
+                    </div>
+                    <div id="compSkilCont">
+                            <div id="skillPicture">
+                                <img src="images/Capture1.PNG" width="330px" height="280px" id="skillimage">
+                            </div>
+                            <div id="skillText">
+                                <p>Network administration :
+                                    Network system design and mentenance .
+                                    Lacal Area network system creation and mentanance.
+                                </p>
+                            </div>
+                    </div>
+                    <div id="compSkilCont">
+                            <div id="skillPicture">
+                                <img src="images/system.PNG" width="330px" height="280px" id="skillimage">
+                            </div>
+                            <div id="skillText">
+                                <p>
+                                    System analysis and design , Database management and Design for organizations
+                                </p>
+                            </div>
+                    </div>
+                    <div id="compSkilCont">
+                            <div id="skillPicture">
+                                <img src="images/gisagara.PNG" width="330px" height="280px" id="skillimage">
+                            </div>
+                            <div id="skillText">
+                                <p>
+                                    Web Design with html and css Back end database design using PHP and mysql  J.S
+                                </p>
+                            </div>
+                    </div>
+                </div>
+                <div id="softSkillTitle">
+                    <h1>Software skills</h1>
+                </div>
+                <div id="softSkillTextSection">
+                    <div id="softSkill">
+                        <div id="softTitle">
+                            
+                            <h1>FRONT END</h1>
+                            <hr>
+                        </div>
+                        <div id="softText">
+                            <div> <img src="images/html5.svg" width="80px" height="80px" ></div>
+                            <P style="font-family: calibli">
+                                HTML 5
+                            </P>
+                        </div>
+
+                        <div id="softText">
+                                <div><img src="images/css.svg" width="80px" height="80px"></div>
+                                <P style="font-family: calibli">
+                                        CSS 3
+                                </P>
+                                
+                        </div>
+
+                    </div>
+                    
+                   
+                    <div id="softSkill">
+                            <div id="softTitle">
+                                <h1>BACK END </h1>
+                                <hr>
+                            </div>
+                            <div id="softText">
+                                <div><img src="images/javascript.svg" width="80px" height="80px">
+                                    <P>JAVASCRIPT</P>
+                                </div>
+                                <div>
+                                    <img src="images/python.svg" width="80px" height="80px">
+                                    <p>
+                                        PYTHON
+                                    </p>
+                                </div>
+
+                                <div>
+                                        <img src="images/nodejs.svg" width="80px" height="80px">
+                                        <p>
+                                            NODE.JS
+                                        </p>
+                                </div>
+
+                                <div>
+                                        <img src="images/mysql.svg" width="80px" height="80px">
+                                        <p>
+                                            MYSQL
+                                        </p>
+                                </div>
+
+                                <div>
+                                        <img src="images/mongo.svg" width="80px" height="80px">
+                                        <p>
+                                            MomgoDB
+                                        </p>
+                                </div>
+                                
+                            </div>
+                    </div>
+                    
+                </div>
+                <div id="accomplishmt">
+                    <h1>Accomplishments</h1>
+                </div>
+                <div id="accomplishmtText">
+                    <div id="accomptxt">
+                        <p style="font-family:calibri;font-size:20px">Accomplishment of University Internership
+                           in Scientific and Technological Research
+                           Institute Huye branch in 2010.
+                        </p>
+                    </div>
+                    <div id="accomptxt">
+                        
+                        <p style="font-family:calibri;font-size:20px">Agriculter Coperative Managment Information 
+                           System (ACMIS). Project Accomplished in 2012 for the management of agriculture 
+                           cooperatives in B.R.D.
+                        </p>
+                        
+                    </div>
+                    <div id="accomptxt">
+                        
+                        <p style="font-family:calibri;font-size:20px">Information system management in 
+                           Dorinsina ltd company in gisagara 
+                           District for 6 months in 2019
+                        </p>
+                        
+                    </div>
+                    <div id="accomptxt">
+                        
+                        <p style="font-family:calibri;font-size:20px">Information system manager in
+                           African  Baptist Ministry  in Kenya
+                           for 6 months in 2017
+                        </p>
+                        
+                    </div>
+                </div>
+                <div id="educationTitle">
+                    <h1>Education</h1>
+                </div>
+                <div id="educText">
+                    <div id="educTexts" style="margin-top: 50px;">
+                        <h2 style="color: teal;font-family:' Geneva, Verdana, sans-serif">
+                            Advanced Level GSCIM Rwankuba & ES Musanze
+                        </h2>
+                        <p style="margin-top:20px;font-family:calibri;font-size:20px">Completed Ordinal level in 2000 at GSCIM Rwankuba,
+                           Advanced level completion in Bio-Chemistry at Musanze 
+                           School of Sciences in 2003.
+                           Advanced level in Maths and Physics in 2007 .
+                        </p>
+                    </div>
+                    <div id="educTexts">
+                        <h2 style="color: teal;font-family:' Geneva, Verdana, sans-serif">University Level Umutara Polythechnic</h2>
+                        <p style="margin-top:20px;font-family:calibri;font-size:20px">After the final project at Umutara polythechnic , I graduated became a holder 
+                           of Bacheror’s degree with honor in Informaion and Communication Technology
+                           in 2012
+                        </p>
+                    </div>
+                </div>
+                <div id="contactTitle">
+                    <h1>Contacts</h1>
+                </div>
+                <div id="contactText">
+                    <div id="telPhone">
+                        <div id="telIcon">
+                            <img src="images/telephone icon.png" width="40px" height="40px">
+                        </div>
+                        <div id="telText">
+                            <h3>+250 784450008</h3>
+                        </div>
+                    </div>
+
+                    <div id="facebook">
+                            <div id="fecIcon">
+                                <img src="images/facebook.png" width="40px" height="40px">
+                            </div>
+                            <div id="fecText">
+                                <a href="www.https://facebook.com/furebo24@gmail.com"><h3>furebo24@gmail.com</h3>
+                            </div>
+                    </div>
+
+
+                    <div id="github">
+                            <div id="githIcon">
+                                <img src="images/github.png" width="40px" height="40px">
+                            </div>
+                            <div id="githText">
+                                <a href="www.https://github.com/furebo"><h3>github.com/furebo</h3></a>
+                            </div>
+                    </div>
+
+                    <div id="email">
+                        <div id="emailIcon">
+                            <img src="images/email icon.png" width="40px" height="40px">
+                        </div>
+                        <div id="emailText">
+                            <h2>furebodidace582@gmail.com</h2>
+                        </div>
+                    </div>
+                </div>
+                                
+            </div>
+        </div>
+        
+        <script>
+            function myfunction(){
+                document.getElementById('menu').style.display="block";
+               
+                document.getElementById('mybody').addEventListener('click',hideFunction);
+
+                function hideFunction(){
+                    document.getElementById('menu').style.display="none";
+                    
+                }
+            }
+
+            
+            
+    </script>
+    
+    </body>
+</html>
