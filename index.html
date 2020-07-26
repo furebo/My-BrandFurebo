@@ -8,7 +8,8 @@
 
             *{
                 margin: 0px;
-                padding:0px
+                padding:0px;
+                box-sizing: border-box;
             }
             #menu-bar{
                 display: flex;
@@ -16,7 +17,7 @@
                 justify-content: space-between;
             }
         #name{
-            width: 200px;
+        width: 200px;
         height: 30px;
         position:fixed;
         background: whitesmoke
@@ -29,14 +30,16 @@
         flex-wrap: wrap;
         
         }
+      
         #menu{
         
            width: 200px;
            height: 900px;
            position: fixed;
            margin-top: 200px;
-           background: whitesmoke;
+           background:whitesmoke;
            box-shadow: 2px;
+            
         }
         #myname{
             margin-top: 0px;
@@ -187,9 +190,6 @@
             margin-top: 40px;
             background: white;
             border: 2px solid silver;
-            
-        
-    
         }
         #softTitle{
 
@@ -209,21 +209,15 @@
             margin-top:15px;
         }
         #accomplishmtText{
+            background: red;
+            width: 1150px;
             display: grid;
-            width:1150px;
-            height: 400px;
-            grid-gap: 1em;
-            grid-template-columns: repeat(2, 1fr);
-            margin-bottom: 15px;
-            padding-left: 28px;
-            padding-top: 28px;
-            padding-bottom: 28px;
-            box-sizing: border-box;
+            grid-template-columns: repeat(2,1fr)
         }
         #accomptxt{
-            width: 500px;
-            background: white;
-            padding: 10px;
+            width: 200px;
+            background: indigo;
+        
             border: 2px solid silver;
             
         }
@@ -1074,11 +1068,19 @@
             padding-bottom: 20px
            }
             #aboutsectText{
+                  width: 360px;
                   font-size: 15px;
-                  height: 300px;
-                  width: 315px;
-                  padding: 20px
+                  height: 600px;
+                  box-sizing: border-box;
+                  margin-right: 5px;
+                  padding-left: 5px
         }
+
+        #aboutsectText p{
+            margin-top: 10px;
+        }
+
+      
 
         #experienceSection{
                 
@@ -1089,10 +1091,18 @@
           }
           #experienceSectText{
           
-               font-size: 15px;
-               height: 150px;
-               width: 315px;
-               padding: 20px
+            width:300px;
+            height: 350px;
+            font-size: 15px;
+            padding: 5px;
+            border: 2px solid black;
+            padding: 10px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            margin-left: 30px;
+            margin-right: 30px;
+            font-family: calibri;
+        
          }
 
          #compSkillSect{
@@ -1105,19 +1115,19 @@
                  display: grid;
                  grid-template-columns: repeat(1,1fr);
                  width: 334px;
-                 grid-gap: 10px;
+                 grid-gap: 40px;
                  padding: 10px
             }
 
             #compSkilCont{
                  background: silver;
-                 width: 320px;
+                 width: 300px;
                  display: flex;
                  flex-direction: flex;
                  justify-content: center;
              }
              #skillimage{
-                 width: 320px;
+                 width: 300px;
                  height: 350px;
              }
 
@@ -1129,8 +1139,28 @@
             }
 
             #softSkill{
-                width: 352px;
-                height: 400px;
+            width: 300px;
+            height: 550px;
+            margin-left: 30px;
+            margin-right: 30px;
+    
+            background: white;
+            border: 2px solid silver;
+        
+        }
+
+        #softText{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            margin-top: 10px;
+            
+        }
+
+        #softText img{
+            margin-top: 20px;
+        }
+
+       
             }
 
             #accomplishmtText{
@@ -1139,15 +1169,17 @@
                flex-direction: column;
                justify-content: space-around;
                width: 312px;
-               height: 600px;
+               height: 1000px;
                margin-bottom: 15px;
+               margin-left: 25px;
+               padding: 15px
                
             }
 
             #accomptxt{
                 width: 220px;
                 background: white;
-                height: 100px;
+                height: 250px;
                 margin-left: 30px;
             
             }
@@ -1160,53 +1192,101 @@
             
             }
             #educText{
-               display: flex;
-               flex-direction: column;
-               width: 270px;
-               height: 400px;
-               justify-content: space-between;
-               padding-bottom: 15px;
-           }
-           #educTexts{
-            width: 200px;
-            height: 140px;
-            background: silver;
+            display: flex;
+            flex-direction: column;
+            width: 360px;
+            height: 700px;
+            background: wheat;
+            justify-content: space-between;
+            padding-bottom: 15px;
+            box-sizing: border-box;
+            padding-left: 20px;
+            padding-right: 20px;
+    
+
+        }
+        #educTexts{
+            width: 270px;
+            height: 300px;
+            background: white;
             padding: 10px;
-            margin-left: 30px;
-            
+            border: 2px solid silver;
         }
 
         #contactTitle{
-               width: 360px;
-               height: 50px;
-               font-size: 10px;
-               padding-bottom: 20px
-            }
-            #contactText{
-               display: flex;
-               flex-direction: column;
-               justify-content: space-between;
-               width: 352px;
-               height: 200px;
-           }
-
-           #telPhone{
-              display: flex;
-              flex-direction: row;
-              justify-content: space-between;
-              margin-right: 150px;
-              margin-left: 20px;
-              margin-top: 50px;
+            margin-top: 20px;
+            width: 360px;
+            height: 50px;
+            background: blue;
+            color: white
         }
-           #email{
-              display: flex;
-              flex-direction: row;
-              justify-content: space-between;
-              margin-left: 20px;
-              margin-top: 20px;
-              margin-right: 100px;
-              font-size: 15px
-           }
+        #contactText{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 360px;
+            background:silver;
+            height: 400px;
+        
+            
+        }
+        #telPhone{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-right: 100px;
+            margin-left: 50px;
+            margin-top: 30px;
+        }
+        #telText{
+            margin-right: 10px;
+            margin-top: 20px;
+        }
+        #fecText{
+            margin-right: 2px;
+            margin-top: 20px;
+        }
+        #githText{
+            margin-right: 50px;
+            margin-top: 20px;
+        }
+        #emailText{
+            margin-right: 10px;
+            margin-top: 20px;
+            font-size: 10px;
+        }
+
+        #facebook{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-right: 50px;
+            margin-left: 50px;
+            margin-top: 30px;
+        }
+
+        #github{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-right: 50px;
+            margin-left: 50px;
+            margin-top: 30px;
+        }
+         
+
+        #email{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-left: 50px;
+            margin-top: 30px;
+            margin-right: 50px;
+        }
+
+        #emailIcon{
+            margin-bottom: 30px;
+        }
 
         }
 
@@ -1249,7 +1329,8 @@
                   height: 300px;
                   width: 260px;
                   padding-right: 30px;
-                  font-size: 14px
+                  font-size: 14px;
+                  margin-top: 20px;
         }
 
         #experienceSection{
@@ -1416,32 +1497,32 @@
                 
                 <div id="about" class="mymenu">
                     <img src="images/about icong.png" width="30px" height="30px" >
-                    <a href="#aboutSection"><h3 style="margin-left: 20px">About</h3></a>   
+                    <a href="#aboutSection"><h3 style="margin-left: 20px;padding-top: 8px">About</h3></a>   
                 </div>
                 
                 <div id="experience" class="mymenu">
                     <img src="images/experience icon.PNG" width="30px" height="30px">
-                    <a href="#experienceSection"><h3 style="margin-left: 20px">Experiences</h3></a>
+                    <a href="#experienceSection"><h3 style="margin-left: 20px;padding-top: 8px">Experiences</h3></a>
                 </div>
                 <div id="compSkills" class="mymenu">
                     <img src="images/compskills icon.PNG" width="30px" height="30px">
-                    <a href="#compSkillSect"><h3 style="margin-left: 20px">Computer_Skills</h3></a>
+                    <a href="#compSkillSect"><h3 style="margin-left: 20px;padding-top: 8px">Computer Skills</h3></a>
                 </div>
                 <div id="softSkills" class="mymenu">
                     <img src="images/softsk icon.PNG" width="30px" height="30px">
-                    <a href="#softSkillTitle"><h3 style="margin-left: 20px">Software_skills</h3></a>
+                    <a href="#softSkillTitle"><h3 style="margin-left: 20px;padding-top: 8px">Software skills</h3></a>
                 </div>
                 <div id="accomplishments" class="mymenu">
                     <img src="images/award icon.png" width="30px" height="30px">
-                    <a href="#accomplishmt"><h3 style="margin-left: 20px">Accomplishments</h3></a>
+                    <a href="#accomplishmt"><h3 style="margin-left: 20px;padding-top: 8px">Accomplishments</h3></a>
                 </div>
                 <div id="education" class="mymenu">
                     <img src="images/education icon.PNG" width="30px" height="30px">
-                    <a href="#educationTitle"><h3 style="margin-left: 20px">Education</h3></a>
+                    <a href="#educationTitle"><h3 style="margin-left: 20px;padding-top: 8px">Education</h3></a>
                 </div>
                 <div id="contacts" class="mymenu">
                     <img src="images/contact icon.PNG" width="30px" height="30px">
-                    <a href="#contactTitle"><h3 style="margin-left: 20px">Contacts</h3></a>
+                    <a href="#contactTitle"><h3 style="margin-left: 20px;padding-top: 8px">Contacts</h3></a>
                 </div>
 
             </div>
@@ -1465,19 +1546,19 @@
                            application and system analysis and design.
                        </h3>
                     
-                       <p style="padding: 50px;margin-top: 10px"> As a software develloper I always dream about making a big move forward throuth 
+                       <p style="padding: 10px;margin-top: 10px;margin-left: 20px"> As a software develloper I always dream about making a big move forward throuth 
                         the opportunities around me and overcome challenges that I may face sometimes. 
                         Algthout my professianal is  taking many effort from learnng basics of programming 
                         toward my succes in the industry.
                         </p>
                     
                     
-                       <p style="padding: 50px;margin-top: 10px"> As a web developper I am interested a lot in web programming using modern programming langueges and
+                       <p style="padding: 10px;margin-top: 10px;margin-left: 20px"> As a web developper I am interested a lot in web programming using modern programming langueges and
                          this is important thing to become more skilled in web development that is why I joined Andela the 
                          community where I fetch more knowldge and improve my programing ability more significantly with the
                           assistance of high specialist in software engeneering .
                           
-                          <p style="padding: 50px;margin-top: 10px">Being a longlife learner in web programming is helpfull for me to thrive to the mastery of my craft.</p>
+                          <p style="padding: 10px;margin-top: 10px;margin-left: 20px">Being a longlife learner in web programming is helpfull for me to thrive to the mastery of my craft.</p>
                     
                 </div>
                 <div id="experienceSection">
@@ -1584,7 +1665,7 @@
                             <P style="font-family: calibli">
                                 HTML 5
                             </P>
-                        </div>
+                            </div>
 
                         <div id="softText">
                                 <div><img src="images/css.svg" width="80px" height="80px">
