@@ -38,10 +38,7 @@ background:#F5F1DA;
 box-shadow: 2px;
 
 }
-.menu div:hover{
-    width: 32px;
-    height: 32px;
-}
+
 
 .menu div img{
     width: 30px;
