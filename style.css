@@ -4,6 +4,11 @@
     padding:0px;
     box-sizing: border-box;
 }
+
+.container{
+    margin: auto;
+}
+
 #menu-bar{
     display: flex;
     flex-direction: row;
