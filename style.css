@@ -6,6 +6,7 @@
 }
 .container{
     margin: auto;
+    width:1350px
 }
 #menu-bar{
     display: flex;
