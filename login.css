@@ -1,0 +1,667 @@
+*{margin: 0;
+    padding: 0
+    
+    }
+    body{
+        background: silver;
+        padding-top: 10px;
+    }
+    .header ul{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    height: 40px;
+    background: rgb(26, 25, 25);
+    padding-top: 10px;
+    width: 1160px;;
+    margin: auto
+    }
+    .header ul li a{
+        color: white;
+    font-size: 20px;
+    text-decoration: none;
+    margin-left: 50px;
+    }
+    .header ul li{
+     list-style: none
+    }
+    .form-container{
+        width: 350px;
+        height: auto;
+        padding: 20px 30px;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px 0 #000;
+        margin: auto;
+    }
+
+    .container{
+        width: 1160px;
+        height: 500px;
+        background: #E3DFC8;
+        margin: auto;
+        padding-top: 150px;
+        margin-bottom: 5px
+    }
+    .container h1{
+        text-align: center;
+        font-size: 50px;
+        color: steelblue;
+    }
+    form{
+        margin: 20px auto;
+        width: 320px;
+        color: steelblue;
+    }
+    input{
+        padding: 10px;
+        font-size: inherit;
+    }
+    input[type="text"]{
+        display: block;
+        margin-bottom: 25px;
+        width: 100%;
+        border: 2px solid steelblue;
+    }
+    input[type="password"]{
+        display: block;
+        margin-bottom: 25px;
+        width: 100%;
+        border: 2px solid steelblue;
+    }
+    input[type="submit"]{
+       width: 320px;
+       height: 45px;
+       border: none;
+       background: steelblue;
+       color: white;
+    }
+
+
+
+    .contacts{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        color: white;
+        background: rgb(85, 85, 90);
+        height: 450px;
+        padding-bottom: 30px
+        
+        
+        }
+        .telPhone{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-right: 200px;
+        margin-left: 300px;
+        margin-top: 50px;
+        }
+        
+        .telPhone img{
+            width: 40px;
+            height: 40px;
+        }
+        .telPhone h3{
+            margin-top: 15px;
+        margin-right: 310px;
+        }
+        .facebook a{
+            margin-top: 15px;
+        margin-right: 265px;
+        }
+        .github a{
+            margin-top: 15px;
+        margin-right: 290px;
+        }
+        .email h2{
+            margin-top: 15px;
+        margin-right: 310px;
+        }
+        
+        .facebook{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-right: 200px;
+        margin-left: 300px;
+        margin-top: 50px;
+        }
+        .facebook img{
+            width: 40px;
+            height: 40px
+        }
+        
+        .github{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-right: 200px;
+        margin-left: 300px;
+        margin-top: 50px;
+        }
+        
+        .github img{
+            width: 40px;
+            height: 40px;
+        }
+        
+        
+        .email{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-left: 300px;
+        margin-top: 40px;
+        margin-right: 30px;
+        }
+        
+        .email img{
+            width: 40px;
+            height: 40px;
+        }
+    
+   /* 
+    .footer{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background: rgb(38, 38, 39);
+        height: 200px;
+        margin: auto;
+        padding-left: 50px;
+        color: white;
+        padding-bottom: 30px;
+        padding-top: 30px
+        
+    }
+   */
+   @media screen and (max-width:1024px){
+    body{
+        background: silver;
+        padding-top: 10px;
+    }
+    .header ul{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    height: 40px;
+    background: rgb(26, 25, 25);
+    padding-top: 10px;
+    width: 1024px;
+    margin: auto
+    }
+    .header ul li a{
+        color: white;
+    font-size: 20px;
+    text-decoration: none;
+    margin-left: 50px;
+    }
+    .header ul li{
+     list-style: none
+    }
+    .form-container{
+        width: 350px;
+        height: auto;
+        padding: 20px 30px;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px 0 #000;
+        margin: auto;
+    }
+
+    .container{
+        width: 1024px;
+        height: 500px;
+        background: #E3DFC8;
+        margin: auto;
+        padding-top: 150px;
+        margin-bottom: 5px
+    }
+    .container h1{
+        text-align: center;
+        font-size: 50px;
+        color: steelblue;
+    }
+    form{
+        margin: 20px auto;
+        width: 320px;
+        color: steelblue;
+    }
+    input{
+        padding: 10px;
+        font-size: inherit;
+    }
+    input[type="text"]{
+        display: block;
+        margin-bottom: 25px;
+        width: 100%;
+        border: 2px solid steelblue;
+    }
+    input[type="password"]{
+        display: block;
+        margin-bottom: 25px;
+        width: 100%;
+        border: 2px solid steelblue;
+    }
+    input[type="submit"]{
+       width: 320px;
+       height: 45px;
+       border: none;
+       background: steelblue;
+       color: white;
+    }
+
+
+
+    .contacts{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        color: white;
+        background: rgb(85, 85, 90);
+        height: 450px;
+        padding-bottom: 30px
+        
+        
+        }
+        .telPhone{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-right: 200px;
+        margin-left: 300px;
+        margin-top: 50px;
+        }
+        
+        .telPhone img{
+            width: 40px;
+            height: 40px;
+        }
+        .telPhone h3{
+            margin-top: 15px;
+        margin-right: 310px;
+        }
+        .facebook a{
+            margin-top: 15px;
+        margin-right: 265px;
+        }
+        .github a{
+            margin-top: 15px;
+        margin-right: 290px;
+        }
+        .email h2{
+            margin-top: 15px;
+        margin-right: 310px;
+        }
+        
+        .facebook{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-right: 200px;
+        margin-left: 300px;
+        margin-top: 50px;
+        }
+        .facebook img{
+            width: 40px;
+            height: 40px
+        }
+        
+        .github{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-right: 200px;
+        margin-left: 300px;
+        margin-top: 50px;
+        }
+        
+        .github img{
+            width: 40px;
+            height: 40px;
+        }
+        
+        
+        .email{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-left: 300px;
+        margin-top: 40px;
+        margin-right: 30px;
+        }
+        
+        .email img{
+            width: 40px;
+            height: 40px;
+        }
+   }
+   @media screen and (max-width:768px){
+    body{
+        background: silver;
+        padding-top: 10px;
+    }
+    .header ul{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    height: 40px;
+    background: rgb(26, 25, 25);
+    padding-top: 10px;
+    width: 768px;
+    margin: auto
+    }
+    .header ul li a{
+        color: white;
+    font-size: 20px;
+    text-decoration: none;
+    margin-left: 50px;
+    }
+    .header ul li{
+     list-style: none
+    }
+    .form-container{
+        width: 350px;
+        height: auto;
+        padding: 20px 30px;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px 0 #000;
+        margin: auto;
+    }
+
+    .container{
+        width: 768px;
+        height: 500px;
+        background: #E3DFC8;
+        margin: auto;
+        padding-top: 150px;
+        margin-bottom: 5px
+    }
+    .container h1{
+        text-align: center;
+        font-size: 50px;
+        color: steelblue;
+    }
+    form{
+        margin: 20px auto;
+        width: 320px;
+        color: steelblue;
+    }
+    input{
+        padding: 10px;
+        font-size: inherit;
+    }
+    input[type="text"]{
+        display: block;
+        margin-bottom: 25px;
+        width: 100%;
+        border: 2px solid steelblue;
+    }
+    input[type="password"]{
+        display: block;
+        margin-bottom: 25px;
+        width: 100%;
+        border: 2px solid steelblue;
+    }
+    input[type="submit"]{
+       width: 320px;
+       height: 45px;
+       border: none;
+       background: steelblue;
+       color: white;
+    }
+
+
+
+    .contacts{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        color: white;
+        background: rgb(85, 85, 90);
+        height: 450px;
+        padding-bottom: 30px;
+        width: 768px;
+        
+        
+        }
+        .telPhone{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-right: 200px;
+        margin-left: 300px;
+        margin-top: 50px;
+        }
+        
+        .telPhone img{
+            width: 40px;
+            height: 40px;
+        }
+        .telPhone h3{
+            margin-top: 15px;
+        margin-right: 310px;
+        }
+        .facebook a{
+            margin-top: 15px;
+        margin-right: 265px;
+        }
+        .github a{
+            margin-top: 15px;
+        margin-right: 290px;
+        }
+        .email h2{
+            margin-top: 15px;
+        margin-right: 310px;
+        }
+        
+        .facebook{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-right: 200px;
+        margin-left: 300px;
+        margin-top: 50px;
+        }
+        .facebook img{
+            width: 40px;
+            height: 40px
+        }
+        
+        .github{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-right: 200px;
+        margin-left: 300px;
+        margin-top: 50px;
+        }
+        
+        .github img{
+            width: 40px;
+            height: 40px;
+        }
+        
+        
+        .email{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-left: 300px;
+        margin-top: 40px;
+        margin-right: 30px;
+        }
+        
+        .email img{
+            width: 40px;
+            height: 40px;
+        }
+   }
+
+   @media screen and (max-width:414px){
+    body{
+        background: silver;
+        padding-top: 10px;
+    }
+    .header ul{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    height: 40px;
+    background: rgb(26, 25, 25);
+    padding-top: 10px;
+    width: 414px;
+    margin: auto
+    }
+    .header ul li a{
+        color: white;
+    font-size: 20px;
+    text-decoration: none;
+    margin-left: 50px;
+    }
+    .header ul li{
+     list-style: none
+    }
+    .form-container{
+        width: 350px;
+        height: auto;
+        padding: 20px 30px;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px 0 #000;
+        margin: auto;
+    }
+
+    .container{
+        width: 414px;
+        height: 600px;
+        background: #E3DFC8;
+        margin: auto;
+        padding-top: 150px;
+        margin-bottom: 5px
+    }
+    .container h1{
+        text-align: center;
+        font-size: 50px;
+        color: steelblue;
+    }
+    form{
+        margin: 20px auto;
+        width: 320px;
+        color: steelblue;
+    }
+    input{
+        padding: 10px;
+        font-size: inherit;
+    }
+    input[type="text"]{
+        display: block;
+        margin-bottom: 25px;
+        width: 100%;
+        border: 2px solid steelblue;
+    }
+    input[type="password"]{
+        display: block;
+        margin-bottom: 25px;
+        width: 100%;
+        border: 2px solid steelblue;
+    }
+    input[type="submit"]{
+       width: 320px;
+       height: 45px;
+       border: none;
+       background: steelblue;
+       color: white;
+    }
+
+
+
+    .contacts{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        color: white;
+        background: rgb(85, 85, 90);
+        height: 450px;
+        padding-bottom: 30px;
+        width: 414px;
+        
+        
+        }
+        .telPhone{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-right: 200px;
+        margin-left: 50px;
+        margin-top: 50px;
+        }
+        
+        .telPhone img{
+            width: 40px;
+            height: 40px;
+        }
+        .telPhone h3{
+            margin-top: 15px;
+        margin-right: 310px;
+        }
+        .facebook a{
+            margin-top: 15px;
+        margin-right: 265px;
+        }
+        .github a{
+            margin-top: 15px;
+        margin-right: 290px;
+        }
+        .email h2{
+            margin-top: 15px;
+        margin-right: 310px;
+        }
+        
+        .facebook{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-right: 200px;
+        margin-left: 50px;
+        margin-top: 50px;
+        }
+        .facebook img{
+            width: 40px;
+            height: 40px
+        }
+        
+        .github{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-right: 200px;
+        margin-left: 50px;
+        margin-top: 50px;
+        }
+        
+        .github img{
+            width: 40px;
+            height: 40px;
+        }
+        
+        
+        .email{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-left: 50px;
+        margin-top: 40px;
+        margin-right: 30px;
+        }
+        
+        .email img{
+            width: 40px;
+            height: 40px;
+        }
+   }
+    
+    
