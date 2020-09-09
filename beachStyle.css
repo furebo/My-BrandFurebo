@@ -1,0 +1,121 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    margin-right: 10px;
+    background:  #E3DFC8;
+    border:1px solid black
+}
+.contents{
+    width: auto
+}
+ ul{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    height: 40px;
+    background: rgb(26, 25, 25);
+    padding-top: 10px;
+    width: 97%;
+    margin: auto
+}
+ ul li a{
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    margin-left: 50px;
+    
+    
+}
+ul h2{
+    color: white;
+    margin-left: 500px;
+    padding-bottom: 25px;
+    height: 10px;
+    margin-top: 5px
+}
+.blogheader{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 140px;
+    background: silver;
+    margin-top: 40px
+}
+.blogheader p{
+    font-size: 20px
+}
+.blogheader img{
+    width: 80px;
+    height: 80px;
+    margin-top: 60px;
+    border-radius: 40px;
+}
+.blogtitle{
+    color:black;
+    font-family: Verdana;
+    margin-right: 30px;
+}
+.blogcontent p{
+    font-size: 25px;
+    margin-left: 60px;
+    margin-right: 60px
+}
+.blogcontent p span{
+    font-style: italic;
+}
+.blogbody img{
+    height: 500px;
+    width: 700px;
+    margin-left: 300px;
+}
+.blogbody p span{
+    margin-left: 300px;
+    font-style: italic;
+    color: green;
+    
+}
+.blogbody p{
+    margin-top: 5px
+}
+form{
+    width: 550px;
+    height: 400px;
+    background: silver;
+    padding-top: 40px;
+    padding-left: 40px;
+    margin: auto
+}
+#button{
+    margin-top: 70px;
+    margin-left: 100px
+}
+.comments{
+    margin-top: 50px;
+    margin-left: 400px;
+    
+}
+.credentials{
+    font-family: Franklin Gothic Medium;
+    margin-left: 60px
+}
+.comments div{
+    margin-left: 60px
+}
+.comments-list{
+    display: flex;
+    flex-direction: column;
+    background:#E3DFC8;
+    height: auto;
+    font-size: 20px;
+    margin-left: 200px;
+    width:800px
+}
+.commentsList h2{
+    margin-left: 50px;
+    margin-top: 50px
+}
+.commentsList p{
+   
+    margin-bottom: 20px
+}

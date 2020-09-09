@@ -1,0 +1,216 @@
+<!DOCTYPE hmtl>
+<html>
+<head>
+    <title>Admin Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="adminportal.css">
+
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase.js"></script>
+
+</head>
+<body>
+    <div class="container">
+            
+                <div class="navbar">
+                    <li><a href="blog.html">Home</a></li>
+                    <li><a href="index.html">Portifolio</a></li>
+                    <li><a href="createArticle.html"> Create Article</a></li>
+                </div>
+
+                <div>
+                <h1><u>Updating information on the Landing page</u></h1>
+             <div class="mydiv">
+            <div class="aboutAuthor">
+                <h3>Profile Picture</h3>
+                <div>
+                    <input type="file" class="picture">
+                    <img src="" alt="profile image" width="180px" height="200px">
+                    
+                </div>
+            </div>
+            
+            <div class="divAbout">
+            <h3>
+              About section Content
+            </h3>
+            <textarea class="about" cols="70" rows="10"></textarea>
+            
+            </div>
+            <button class="btnPicture">Edit</button>
+            <button class="btnAbout">Delete</button>
+            
+          <hr>
+          <div class="experience_view">
+            <h3>
+            
+            </h3>
+            <div class="expDetails">
+            <div class="divExperience">
+                <div>
+            <label for="area">Area of experience:</label>
+            <input type="text" class="area" name="area">
+                </div>
+                <div>
+            <label for="profession">Enter the Professin:</label>
+            <input type="text" class="profession" name="profession">
+                </div>
+               <div class="experienceDescription">
+            <label for="description" class="experienceDescriptionLabel">Description :</label>
+            <textarea cols="30" rows="50" name="description"></textarea>
+               </div>
+            </div>
+
+             <button class="btnExpDetails">Add Experience</button>
+            </div>
+             <div class="select">
+                 <h3>List of Experiences</h3>
+                 <select>
+                     <option>HTML<img src="" width="10" height="10"></option>
+                     <option>CSS <img src=""></option>
+                     <option>JAVASCRIPT</option>
+                 </select>
+                 <button class="expRemove">Remove Experience</button>
+                 
+             </div>
+             <div class="vertical"></div>
+             </div>
+
+            <hr>
+            <div class="compsReview">
+             
+            
+           
+            <div class="compSkills">
+                
+                <div class="compSkillIconImg">
+            <label for="skillImage">Enter Image:</label>
+            <input type="file" name="skillImage">
+            <img src="" width="100px" height="80px">
+                </div>
+
+                <div class="textArea_btn">
+                <div class="compSkillDescription">
+            <label for="skillDescription"> Description:</label>
+            <textarea class="computerSkill" name="skillDescription" cols="30" rows="5"></textarea>
+                </div>
+            
+             <button class="btnCompSkillDetails">Add Skill</button>
+             </div>
+            </div>
+
+            <div class="verticalLineForCompSkill"></div>
+            
+             <div class="compSkillReview">
+                    <div class="select">
+                            <h3>List of Computer Skills</h3>
+                            <select>
+                                <option>Hardware<img src="" width="10" height="10"></option>
+                                <option>Mentenance <img src=""></option>
+                                <option>Netwotking</option>
+                            </select>
+                            <button class="expRemove">Remove Skills</button>
+                            
+                        </div>
+            </div>
+            
+            
+            </div>
+            <hr>
+            <h3>
+            Software skills
+            </h3>
+            <h2>Front End</h2>
+            <div class="softSkills">
+
+            <div class="softSkillsFrontEnd">
+                <div class="soft">
+            <label for="softwareIcon">Software Icon:</label>
+            <input type="file" name="softwareIcon">
+            <img src="" width="100px" height="100px">
+                </div>
+                <div class="softwareDescriptionDiv">
+            <label for="softwareDescription">Software Description:</label>
+            <textarea name="softwareDescription" rows="10" cols="40"></textarea>
+                </div>
+            </div>
+        </div>
+            
+            <hr>
+               
+            <h2>Back End</h2>
+            <div class="softSkillsBackEnd">
+                <div class="softback">
+            <label for="softwareIcon">Software Icon:</label>
+            <input type="file" name="softwareIcon">
+            <img src="" width="100px" height="100px">
+                </div>
+                <div class="softSkillsBackEndDiv">
+            <label for="softwareDescription">Software Description:</label>
+            <textarea name="softwareDescription" rows="10" cols="40"></textarea>
+                </div>
+            </div>
+
+        </div>
+        <button class="btnSoftwareSkill">Add New Software Skills </button>
+        <hr>
+                                    
+            <h3>
+             Accomplishment
+            </h3>
+            <div class="accomplishmentDiv">
+            <label for="accomplishment">Accomplishment Details:</label>
+            <textarea class="accomplishment" cols="70" rows="10" name="accomplishment"></textarea>
+            </div>
+
+            <button class="btnAccomplishment">Add New Accomplishment </button>
+            <hr>
+                        
+            <h3>
+             Education
+            </h3>
+            <div class="educationDiv">
+                <div >
+            <label for="educationTitle">Enter Education Title:</label>
+            <input type="text" name="educationTitle">
+                </div>
+                <div class="educationDetailDiv">
+            <label for="education">Education Details:</label>
+            <textarea class="education" cols="70" rows="10" name="education"></textarea>
+                </div>
+            </div>
+                        
+            <button class="btnEducation">Add New Education </button>                      
+        </div>
+        </div>
+    </div>
+    
+</body>
+
+
+<script>
+            // Your web app's Firebase configuration
+            var firebaseConfig = {
+              apiKey: "AIzaSyC_6k824_wPkjyVFWTN90_lGSjgvr1cJCY",
+              authDomain: "capstoneproject-3867f.firebaseapp.com",
+              databaseURL: "https://capstoneproject-3867f.firebaseio.com",
+              projectId: "capstoneproject-3867f",
+              storageBucket: "capstoneproject-3867f.appspot.com",
+              messagingSenderId: "649166124156",
+              appId: "1:649166124156:web:5ee41949c8815bd73a05f9",
+              measurementId: "G-VE15X2EC9E"
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+            //firebase.analytics();
+            const db = firebase.firestore();
+            //db.settings({timestampsInSnapshots:true});
+            
+    </script>
+    <script src="adminportal.js"></script>
+</html>
