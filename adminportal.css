@@ -1,0 +1,306 @@
+.container{
+    margin:auto;
+    width: 1200px;
+    background:  #E3DFC8;
+    border:1px solid black
+}
+ 
+body{
+    background: silver
+}
+.navbar{
+    display: flex;
+    flex-direction: row;
+    background: black;
+    color: white;
+    height: 80px;
+    font-size: 25px;
+    padding-top: 20px;
+    list-style-type: none
+}
+.navbar li{
+    margin-left: 60px;
+}
+h1{
+    margin-left: 300px;
+}
+.mydiv {
+    margin-left: 80px;
+    margin-right:80px;
+    font-size: 20px;
+    padding-top: 30px;
+    border: 2px solid black
+}
+.mydiv h3{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 50px
+}
+.mydiv h2{
+    margin-left: 50px
+}
+.mydiv input{
+    margin-left: 50px
+}
+.divAbout{
+    display: flex;
+    
+}
+.aboutAuthor{
+    display: flex;
+}
+.aboutAuthor div{
+    display: flex;
+    margin-left: 70px;
+    margin-bottom: 20px;
+}
+.aboutAuthor div input{
+    margin-top: 20px;
+}
+.divAbout button{
+    height: 20px;
+    margin-top: 100px
+}
+.divAbout textarea{
+    margin-right: 30px;
+}
+.divAbout li{
+    margin-top: 100px
+}
+.divAbout textarea{
+    margin-left: 20px
+}
+
+.divExperience{
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px
+}
+.experience_view{
+    display: flex;
+    height: auto
+}
+.divExperience div{
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.divExperience div input{
+    
+    margin-left: 25px;
+    width: 222px
+}
+.divExperience input{
+    margin-left: 10px;
+}
+.expRemove{
+    width: 100px;
+    background: steelblue;
+    color: white;
+    margin-top: 100px
+}
+.select{
+    margin-left: 200px;
+    display: flex;
+    flex-direction: column
+}
+
+.vertical{
+    border-left: 6px solid black;
+    height: 250px;
+    position: absolute;
+    left: 50%
+}
+.verticalLineForCompSkill{
+    border-left: 6px solid black;
+    height: 250px;
+    position: absolute;
+    left: 50%
+}
+.profession{
+    margin-left: 30px
+}
+.experienceDescription{
+    display: flex;
+    flex-direction: row
+}
+.experienceDescriptionLabel{
+    margin-top: 50px;
+}
+.experienceDescription textarea{
+    
+    height: 80px;
+    margin-left: 85px
+}
+.btnExpDetails{
+   margin-left: 200px;
+   margin-top: 20px;
+   width: 100px;
+   background: steelblue;
+   color: white
+}
+.expDetails{
+    display: flex;
+    flex-direction: column
+}
+.compsReview{
+    display: flex;
+    flex-direction: row;
+}
+.compSkills{
+    width:350px;
+    display: flex;
+    flex-direction: column
+}
+.compSkills div{
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.compSkillIconImg{
+    display: flex;
+    flex-direction: column
+    
+}
+.compSkillIconImg img{
+    margin-right: 10px;
+    margin-left: 50px;
+    margin-top: 10px
+}
+.compSkillDescription{
+    display: flex;
+    flex-direction: row
+}
+.compSkillDescription label{
+    margin-top:40px
+}
+
+.compSkillDescription textarea{
+    margin-left:43px
+}
+.btnCompSkillDetails{
+    
+    margin-top: 20px;
+    width: 100px;
+    height: 30px;
+    margin-left: 200px;
+    background: steelblue;
+    color:white
+}
+.textArea_btn{
+    display: flex;
+    flex-direction: column
+}
+.softSkills{
+    display: flex;
+    flex-direction: column
+}
+.softSkills{
+    margin-left: 50px;
+}
+.soft{
+    display: flex;
+    justify-content: space-between
+}
+.soft img{
+    margin-right: 300px
+}
+.softSkillsFrontEnd{
+    display: flex;
+    flex-direction: column
+}
+.softSkillsFrontEnd div{
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+}
+.softwareDescriptionDiv label{
+    margin-top: 40px
+}
+.softwareDescriptionDiv textarea{
+    margin-left: 50px;
+}
+.softSkillsBackEnd{
+    display: flex;
+    flex-direction: column
+}
+.softback{
+    display: flex;
+    justify-content: space-between
+}
+.softback img{
+    margin-right: 300px;
+}
+.softSkillsBackEndDiv{
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px
+}
+.softSkillsBackEndDiv label{
+    margin-top: 40px
+}
+.softSkillsBackEndDiv textarea{
+    margin-left: 43px
+}
+.accomplishmentDiv{
+    display: flex;
+    flex-direction: row
+}
+.btnSoftwareSkill{
+    margin-left: 300px;
+    margin-top: 20px
+}
+.accomplishmentDiv label{
+    margin-top: 40px
+}
+.accomplishmentDiv{
+    margin-left: 50px;
+}
+.accomplishmentDiv textarea{
+    margin-left: 20px;
+}
+.btnAccomplishment{
+    margin-left: 300px;
+    margin-top: 20px
+}
+.educationDiv{
+    display: flex;
+    flex-direction: row
+}
+.educationDiv div{
+    margin-left: 50px;
+}
+.educationDiv label{
+    margin-top: 40px
+}
+hr{
+    margin-top: 40px;
+    width: 800px;
+    height: 2px;
+    color: black
+}
+.btnEducation{
+    margin-bottom: 20px;
+   }
+.btnPicture{
+    margin-left: 500px;
+    margin-top: 10px
+}
+.educationDiv{
+    display: flex;
+    flex-direction: column;
+}
+.educationDiv div{
+    margin-top: 10px
+}
+.educationDetailDiv {
+    display: flex;
+    flex-direction: row
+}
+.educationDetailDiv textarea{
+    margin-left: 80px
+}
+.btnEducation{
+    margin-left: 300px;
+    margin-top: 20px
+}
+
+
