@@ -1,0 +1,118 @@
+<!DOCTYPE hmtl>
+<html>
+<head>
+    <title>Beautfull beaches</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="beachStyle.css">
+
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-firestore.js"></script>
+
+</head>
+<body>
+    <div class="container">
+            
+                <ul>
+                    <li><a href="blog.html">Home</a></li>
+                    <li><a href="index.html">Portifolio</a></li>
+                    
+                </ul>
+            
+            <div class="blogheader">
+                    
+                   <div class="bloghead"> 
+                    <h2 class="blogtitle"> Our rest Enjoying the beach</h2>
+                    <p class="blogheaderParagraph">
+                        Many beautfull beaches located in Rwanda are the good places where we can pass <br> our holldays, resting after our job;
+                        felling the blaze from not salty water of our lakes.
+                    </p>
+                    </div>
+            </div>
+            <div class="blogcontent">
+            <p>By <a href="index.html">Furebo Didace</a> on <span class="time">Wednesday August the 12th 2020</span></p>
+            <div class="blogbody">
+                <img src="blogimages/beach.jpg" class="blogcoverimage">
+                <p><span></span></p>
+
+                <p class="contents">
+                        In Rwanda country also called the country of one thousand hills we find many beautifull areas such as montains ,lakes, hills
+                        Valleys, forests ,parks,and other historical areas where most of peoples are curries of and need to visit including the 
+                        foreigners.  But today i talk about the rwandan lakes with their beautifull beaches where we reach and we fell comfortable,
+                        resting , enjoying ourselves particulary in weekends and holydays.<br><br>
+                
+                        In Rwanda country also called the country of one thousand hills we find many beautifull areas such as montains ,lakes, hills
+                        Valleys, forests ,parks,and other historical areas where most of peoples are curries of and need to visit including the 
+                        foreigners.  But today i talk about the rwandan lakes with their beautifull beaches where we reach and we fell comfortable,
+                        resting , enjoying ourselves particulary in weekends and holydays.<br><br>
+                
+                        In Rwanda country also called the country of one thousand hills we find many beautifull areas such as montains ,lakes, hills
+                        Valleys, forests ,parks,and other historical areas where most of peoples are curries of and need to visit including the 
+                        foreigners.  But today i talk about the rwandan lakes with their beautifull beaches where we reach and we fell comfortable,
+                        resting , enjoying ourselves particulary in weekends and holydays.<br><br>
+               
+                        In Rwanda country also called the country of one thousand hills we find many beautifull areas such as montains ,lakes, hills
+                        Valleys, forests ,parks,and other historical areas where most of peoples are curries of and need to visit including the 
+                        foreigners.  But today i talk about the rwandan lakes with their beautifull beaches where we reach and we fell comfortable,
+                        resting , enjoying ourselves particulary in weekends and holydays.
+               </p>
+            </div>
+
+            <p class="credentials">We need to hear from you. Please leave your comment </p>
+
+            <div class="comments">
+                            
+                <div>
+                    <h2>Enter your name:</h2>
+                    <input type="text" name="name" class="username">
+
+                    <h2>Enter your Email:</h2>
+                    <input type="email" name="email" required>
+
+                    <h2>Leave a comment:</h2>
+                       
+                       <textarea rows="10" cols="80" class="userComments"></textarea>
+       
+                      <input type="submit" value="Submit" class="submition">
+   
+                </div>
+                
+            </div>
+
+            <div class="commentsList">
+                <h2>View all comments bellow:</h2>
+
+                <ul class="comments-list" ></ul>
+                
+                <p><span><a href="gorillaVisit.html">Next Post</a></span></p>
+            </div>
+            
+            </div>
+        
+    </div>
+</body>
+
+
+<script>
+            // Your web app's Firebase configuration
+            var firebaseConfig = {
+              apiKey: "AIzaSyC_6k824_wPkjyVFWTN90_lGSjgvr1cJCY",
+              authDomain: "capstoneproject-3867f.firebaseapp.com",
+              databaseURL: "https://capstoneproject-3867f.firebaseio.com",
+              projectId: "capstoneproject-3867f",
+              storageBucket: "capstoneproject-3867f.appspot.com",
+              messagingSenderId: "649166124156",
+              appId: "1:649166124156:web:5ee41949c8815bd73a05f9",
+              measurementId: "G-VE15X2EC9E"
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+            //firebase.analytics();
+            const db = firebase.firestore();
+            //db.settings({timestampsInSnapshots:true});
+            
+    </script>
+    <script src="newArticle.js"></script>
+</html>
