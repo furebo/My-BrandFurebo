@@ -42,7 +42,7 @@ paragraph.appendChild(descriptionTextNode);
 var span = document.createElement('span');
 var anchor = document.createElement('A');
 
-anchor.setAttribute('href','newarticle.html ?'+ doc.id);
+anchor.setAttribute('href','newarticles/newarticle.html ?'+ doc.id);
 anchor.setAttribute('data-id',doc.id);
 var anchorText = document.createTextNode('...Continue Reading...');
 anchor.appendChild(anchorText);
