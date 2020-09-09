@@ -5,6 +5,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <link rel="stylesheet" type="text/css" href="style.css">
+
+        <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-database.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-storage.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase.js"></script>
       
     </head>
     <body>
@@ -83,19 +90,7 @@
                            application and system analysis and design.
                        </h3>
                     
-                       <p> As a software develloper I always dream about making a big move forward throuth 
-                        the opportunities around me and overcome challenges that I may face sometimes. 
-                        Algthout my professianal is  taking many effort from learnng basics of programming 
-                        toward my succes in the industry.
-                        </p>
-                    
-                    
-                       <p> As a web developper I am interested a lot in web programming using modern programming langueges and
-                         this is important thing to become more skilled in web development that is why I joined Andela the 
-                         community where I fetch more knowldge and improve my programing ability more significantly with the
-                          assistance of high specialist in software engeneering .
-                          
-                          <p>Being a longlife learner in web programming is helpfull for me to thrive to the mastery of my craft.</p>
+                       <p class="abtCont"> </p>
                     
                 </div>
 
@@ -385,7 +380,29 @@
                 }
             }
 
+
+
         </script>
+        <script>
+            // Your web app's Firebase configuration
+            var firebaseConfig = {
+              apiKey: "AIzaSyC_6k824_wPkjyVFWTN90_lGSjgvr1cJCY",
+              authDomain: "capstoneproject-3867f.firebaseapp.com",
+              databaseURL: "https://capstoneproject-3867f.firebaseio.com",
+              projectId: "capstoneproject-3867f",
+              storageBucket: "capstoneproject-3867f.appspot.com",
+              messagingSenderId: "649166124156",
+              appId: "1:649166124156:web:5ee41949c8815bd73a05f9",
+              measurementId: "G-VE15X2EC9E"
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+            //firebase.analytics();
+            const db = firebase.firestore();
+            //db.settings({timestampsInSnapshots:true});
+            
+    </script>
+    <script src="index.js"></script>
     
     </body>
 </html>
