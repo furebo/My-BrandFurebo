@@ -1,0 +1,158 @@
+<!DOCTYPE hmtl>
+<html>
+<head>
+    <title>Blog homepage</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="blogstyle.css">
+
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-firestore.js"></script>
+    
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <marquee direction="right"><h2>Welcome, Enjoy Our <span>Weekly realesed </span> Blogs!</h2></marquee>
+        </div>
+        <ul >
+                <li><a href="blog.html">Home</a></li>
+                <li><a href="index.html">Portifolio</a></li>
+                <h2 > <span > <a href="#" class="lists" id="list">Login</a></span></h2>
+
+        </ul>
+        <div class="body">
+            
+            <div class="main">
+                <div class="newBlog">
+                    <div class="blogheader">
+                        <div class="river"> 
+                            <h2 class="title"> Life of Gazelles in the Park </h2>
+                            <p class="firstdescription">
+                               <span class="description">The life of all animals in the national parks is comfortable when they don't face
+                               hunters who kill them regularly</span> <span class="readmore"><a href="newArticle.html">...Continue Reading...</a></span> 
+                            </p>
+                        </div>
+                    </div>
+                   <img src="blogimages/gazelles.PNG" class="newblogImage"> 
+                </div>
+
+           <!--
+                <div class="blog">
+                    <div class="blogheader">
+                        <img src="blogimages/didace.jpg" class="myImage">
+                       <div class="gorille"> 
+                        <h2> Our rest Enjoying the beach</h2>
+                        <p>
+                            Many beautfull beaches located in Rwanda are the good places where...<a href="beach.html">Continue reading</a>
+                        </p>
+                      </div>
+                    </div>
+                    
+                    
+                    <img src="blogimages/beach.jpg" class="blogImage">
+                </div>
+            
+                <div class="blog">
+                        <div class="blogheader2">
+                            <img src="blogimages/didace.jpg" class="myImage">
+                        
+                            <div class="gorille">
+                            <h2>Have a rest with the Gorilla family !  </h2>
+                            <p>
+                                In North of Rwanda ,amazing 
+                                and good creatures similar to... <a href="#">Continue reading</a>
+                            </p>
+                            </div>
+                            <img  src="blogimages/gorilla1.jpg" class="roundedgorilla">
+                        </div>
+                        
+                        <img src="blogimages/beach.jpg" class="blogImage">
+                </div>
+                <div class="blog">
+                        <div class="blogheader2">
+                            <img src="blogimages/didace.jpg" class="myImage">
+
+                            <div class="gorille">
+                            <h2>The Beauty of Rwanda national Parks </h2>
+                            <p>
+                                In North of Rwanda ,amazing 
+                                and good creatures similar to... <a href="#">Continue reading</a>
+                            </p>
+                            </div>
+                            <img  src="blogimages/gazelles.PNG" class="roundedgorilla">
+                        </div>
+                        <img src="blogimages/beach.jpg" class="blogImage">
+                 </div>
+                            
+                            
+                -->       
+                        
+            </div>
+            </div>
+
+
+            <div class="contacts">
+                    <div class="telPhone">
+                    
+                            <img src="images/telephone icon.png">
+        
+                            <h3>+250 784450008</h3>
+                        
+                    </div>
+        
+                    <div class="facebook">
+                            
+                                <img src="images/facebook.png">
+                            
+                            
+                                <a href="www.https://facebook.com/furebo24@gmail.com"><h3 style="color: white">furebo24@gmail.com</h3></a>
+                            
+                    </div>
+        
+        
+                    <div class="github">
+                            
+                                <img src="images/github.png">
+                        
+                                <a href="www.https://github.com/furebo"><h3 style="color: white">github.com/furebo</h3></a>
+                            
+                    </div>
+        
+                    <div class="email">
+                        
+                            <img src="images/email icon.png">
+                        
+                            <h2>furebodidace582@gmail.com</h2>
+                        
+                    </div>
+                </div>
+            
+
+</body>
+
+
+<script>
+            // Your web app's Firebase configuration
+            var firebaseConfig = {
+              apiKey: "AIzaSyC_6k824_wPkjyVFWTN90_lGSjgvr1cJCY",
+              authDomain: "capstoneproject-3867f.firebaseapp.com",
+              databaseURL: "https://capstoneproject-3867f.firebaseio.com",
+              projectId: "capstoneproject-3867f",
+              storageBucket: "capstoneproject-3867f.appspot.com",
+              messagingSenderId: "649166124156",
+              appId: "1:649166124156:web:5ee41949c8815bd73a05f9",
+              measurementId: "G-VE15X2EC9E"
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+            //firebase.analytics();
+            const db = firebase.firestore();
+            //db.settings({timestampsInSnapshots:true});
+            
+    </script>
+
+<script src="blog.js"></script>
+</html>
