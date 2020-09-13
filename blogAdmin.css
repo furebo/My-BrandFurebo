@@ -7,9 +7,9 @@
     border: 2px solid black;
     padding-bottom: 40px;
     background: white
-
-
-
+}
+.logout{
+    margin-left: 800px
 }
 body{
     background: silver;
