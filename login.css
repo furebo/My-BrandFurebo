@@ -6,6 +6,9 @@
         background: silver;
         padding-top: 10px;
     }
+    .logout{
+        margin-left: 700px
+    }
     .header ul{
     display: flex;
     flex-direction: row;
