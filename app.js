@@ -1,8 +1,50 @@
 const express = require('express')
 const app = express();
+const mongoose = require('mongoose');
 let port = process.env.PORT ||3000;
+
+//mongoDB url from atlas = 
+const MONGODB_URI = 'mongodb+srv://furebodidace:fode123@cluster0.oxsrq.mongodb.net/myBlog?retryWrites=true&w=majority'
+// connecting app to mongoDB
+mongoose.connect(MONGODB_URI||'mongodb://localhost/localdatabase',{
+    useNewUrlParser:true,
+    useUnifiedTopology:true
+});
+//CHECKING if mongoose is connected
+mongoose.connection.on('connected',()=>{
+    console.log('mongoose is connected!!!!!!!!!');
+})
+
+//schema
+const schema = mongoose.Schema;
+const blogSchema = new Schema({
+    title:String,
+    description:String
+})
+//models
+const blogModel = mongoose.model('blog',blogSchema);
+
+//saving data to the mongo database
+
+const data = {
+    title:"About javascript",
+    description:"Javascript is very import language in web programing"
+}
+
+// before seving data to database using .save method we need to create model instance and pass in the data as follow
+
+const newBlogModel = new blogModel(data);
+//then let save into database 
+
+newBlogModel.save((error)=>{
+    if(error){
+        console.log('there is an error saving to database!')
+    }else{
+        console.log('Data has been saved successfully!')
+    }
+})
 //middlewares
-app.use('/psots',()=>{
+app.use('/posts',()=>{
     
 })
 
