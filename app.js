@@ -17,7 +17,7 @@ mongoose.connection.on('connected',()=>{
 
 //schema
 const schema = mongoose.Schema;
-const blogSchema = new Schema({
+const blogSchema = new schema({
     title:String,
     description:String
 })
@@ -35,14 +35,14 @@ const data = {
 
 const newBlogModel = new blogModel(data);
 //then let save into database 
-
+/*
 newBlogModel.save((error)=>{
     if(error){
         console.log('there is an error saving to database!')
     }else{
         console.log('Data has been saved successfully!')
     }
-})
+})  */
 //middlewares
 app.use('/posts',()=>{
     
@@ -52,6 +52,24 @@ app.use('/posts',()=>{
 app.get('/welcome',(req,res)=>{
     res.send('Welcome, Enjoy our weekly realesed blog !');
 })
+
+app.get('/api',(req,res)=>{
+   const dataretreived = {
+       title:"about Node.js",
+       description:"Node.js is run time environment to run javascript codes outside the browser!"
+   }
+   blogModel.find()
+   .then((dataretreived)=>{
+       console.log('Dataretreived :',dataretreived)
+   })
+   .catch((error)=>{
+       console.log('Error :')
+   })
+   res.json(dataretreived);
+})
+
+
+
 // lesting to the server
 app.listen(port,()=>{
     console.log(`Server listing on port http://localhost: ${port}` )
