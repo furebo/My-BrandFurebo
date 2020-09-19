@@ -1,0 +1,3591 @@
+*{
+    margin: 0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+
+.container{
+    margin: auto;
+    width:1350px
+}
+
+#menu-bar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.name{
+width: 200px;
+height: 400px;
+position:fixed;
+background: whitesmoke
+}
+
+.nametop h4{
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+
+.container{
+overflow-x: hidden;
+display: flex;
+flex-wrap: wrap;
+
+}
+
+.menu{
+
+width: 200px;
+height: 900px;
+position: fixed;
+margin-top: 140px;
+background:#F5F1DA;
+box-shadow: 2px;
+
+}
+
+
+.menu div img{
+    width: 30px;
+    height: 30px;
+    margin-top:10px
+}
+
+
+
+.menu div a{
+    margin-left: 20px;
+    padding-top: 8px;
+    margin-top: 8px
+}
+.name{
+margin-top: 0px;
+width: 200px;
+height: 200px;
+background: #96BB7C;
+}
+
+.body{
+margin-left: 200px;
+width: 1150px;
+display: flex;
+flex-direction: column;
+background: #E3DFC8;
+}
+
+.body img{
+    width: 1150px;
+    height: 1150px
+}
+.menu div{
+height: 60px;
+margin-left: 20px;
+display: flex;
+flex-direction: row;
+font-family: calibri;
+font-size: 14px
+
+}
+.menu div:hover{
+font-size: 13px;
+}
+
+.aboutSectText{
+width: 1150px;
+font-size: 30px;
+font-family: 'calibri';
+border: 2px solid black;
+padding-right: 100px;
+}
+
+.aboutSectText h3{
+    border-left: 5px solid blue;
+    margin-top: 20px; 
+    margin-left:50px
+}
+
+.aboutSectText p{
+    padding: 10px;
+    margin-top: 10px;
+    margin-left: 20px
+}
+.experienceSectText{
+width:750px;
+height: 300px;
+font-size: 30px;
+padding: 5px;
+border: 2px solid black;
+padding: 30px;
+margin-top: 50px;
+margin-bottom: 50px;
+margin-left: 180px;
+margin-right: 200px;
+font-family: calibri;
+font-size: 20px
+}
+
+.experienceSectText div{
+    display: flex;
+    flex-direction:row;
+    justify-content:space-between;
+    
+}
+.experienceSectText div h1{
+    background-color: #E3DFC8;
+    color: black;
+}
+
+
+
+a{
+color: black;
+text-decoration: none
+}
+.body h1{
+width: 1150px;
+height: 100px;
+background: #96BB7C;
+color: white;
+
+}
+
+.body h2{
+    margin-top: 30px;
+}
+.body ul{
+    margin-left: 50px;
+}
+
+.compSkillContent{
+display: grid;
+grid-template-columns: repeat(3,1fr);
+width: 1110px;
+padding: 1em;
+grid-column-gap: 10px;
+grid-row-gap: 60px;
+margin-top: 50px;
+margin-left: 25px;
+margin-right: 20px;
+margin-bottom: 50px
+
+}
+
+.compSkilCont p{
+padding: 10px;
+}
+
+.compSkilCont img{
+   width: 330px;
+   height: 280px 
+}
+
+.compSkilCont{
+background: #F5F1DA;
+width: 330px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+border: 2px solid silver;
+}
+
+.softSkillTextSection{
+display: flex;
+flex-direction: column;
+height: 800px
+}
+
+
+.softSkill{
+    width: 1050px;
+    height: 350px;
+    margin-left: 40px;
+    margin-right: 35px;
+    background:#F5F1DA;
+    border: 2px solid silver;
+    margin-top: 40px;
+    
+
+    }
+.softSkill h1{
+    background: #E3DFC8;
+    color: black;
+    width: 1050px;
+    border: 1px solid silver;
+}
+
+.softText{
+padding-top: 60px;
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+
+
+}
+
+.softText div{
+    display: flex;
+    flex-direction: column
+}
+
+.softText img{
+    width: 80px;
+    height: 80px;
+    
+}
+
+.softText p{
+    font-family: calibli;
+}
+
+.softText1{
+display: flex;
+flex-direction:row;
+justify-content: space-around;
+
+
+}
+
+.softText1 div{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    font-family: calibli;
+}
+
+.softText1 img{
+    margin-top: 30px;
+    margin-bottom: 10px;
+    width: 80px;
+    height: 80px
+}
+
+
+.title{
+    margin-top: 40px;
+}
+
+.accomplishment{
+display: flex;
+flex-direction: column;
+margin-top: 40px;
+width:1000px;
+height: 1000px;
+} 
+
+
+.accomplishment p{
+
+    width: 1050px;
+    height: 200px;
+    margin-left: 40px;
+    margin-right: 35px;
+    background:#F5F1DA;
+    border: 2px solid silver;
+    margin-top: 40px;
+    margin-top: 30px;
+    padding: 30px;
+    font-family:calibri;
+    font-size:30px
+
+
+}
+
+.educText {
+display: flex;
+flex-direction: column;
+width: 1150px;
+height: 600px;
+background: #F5F1DA;
+justify-content: space-between;
+padding-bottom: 50px;
+box-sizing: border-box;
+}
+
+.educTexts{
+    width: 1050px;
+    height: 250px;
+    margin-left: 40px;
+    margin-right: 35px;
+    background:#F5F1DA;
+    border: 2px solid silver;
+    margin-top: 40px;
+    margin-top: 30px;
+    padding: 30px;
+    font-family:calibri;
+    font-size:30px;
+}
+
+.educTexts h2{
+    color: teal;
+    font-family:' Geneva, Verdana, sans-serif';
+
+}
+
+.educTexts p{
+    margin-top:20px;
+    font-family:calibri;
+    font-size:20px
+}
+.contacts{
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+width: 1150px;
+background:#E3DFC8;
+height: 450px;
+padding-bottom: 30px
+
+
+}
+.telPhone{
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+margin-right: 200px;
+margin-left: 360px;
+margin-top: 50px;
+}
+
+.telPhone img{
+    width: 40px;
+    height: 40px;
+}
+.telPhone h3{
+    margin-top: 15px;
+margin-right: 310px;
+}
+.facebook a{
+    margin-top: 15px;
+margin-right: 265px;
+}
+.github a{
+    margin-top: 15px;
+margin-right: 290px;
+}
+.email h2{
+    margin-top: 15px;
+margin-right: 310px;
+}
+
+.facebook{
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+margin-right: 200px;
+margin-left: 360px;
+margin-top: 50px;
+}
+.facebook img{
+    width: 40px;
+    height: 40px
+}
+
+.github{
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+margin-right: 200px;
+margin-left: 360px;
+margin-top: 50px;
+}
+
+.github img{
+    width: 40px;
+    height: 40px;
+}
+
+
+.email{
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+margin-left: 360px;
+margin-top: 40px;
+margin-right: 30px;
+}
+
+.email img{
+    width: 40px;
+    height: 40px;
+}
+h1{
+padding: 20px;
+}
+
+
+
+@media screen and (max-width: 1024px){
+.body{
+margin-left: 200px;
+width: 824px;
+display: flex;
+flex-direction: column;
+background: #E3DFC8;
+}
+
+.body img{
+    width: 100%;
+    height: 100vh;
+}
+
+.menu{
+    width: 200px;
+    background: white;
+    
+}
+.name{
+    width: 200px;
+    margin-top: 0px
+}
+
+#nametop h4{
+   margin-bottom: 25px;
+}
+
+
+
+.body h1{
+width: 900px;
+height: 50px;
+font-size: 10px;
+padding-bottom: 20px;
+background:#96BB7C;
+color: white
+}
+.aboutSectText{
+    width: 780px;
+    font-size: 30px;
+    font-family: 'calibri';
+    border: 2px solid black;
+    padding-right: 50px
+    }
+
+
+
+    .experienceSectText{
+        width:700px;
+        height: 300px;
+        font-size: 30px;
+        padding: 5px;
+        border: 2px solid black;
+        padding: 30px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        margin-left: 40px;
+        margin-right: 200px;
+        font-family: calibri;
+        font-size: 20px
+        }
+        
+        .experienceSectText div{
+            display: flex;
+            flex-direction:row;
+            justify-content:space-between;
+            
+        }
+        .experienceSectText div h1{
+            background-color: #E3DFC8;
+            color: black;
+            font-size: 40px
+        }
+        
+
+
+
+
+a{
+color: black;
+text-decoration: none
+}
+
+
+.compSkillContent{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    width: 740px;
+    padding: 1em;
+    grid-column-gap: 10px;
+    grid-row-gap: 60px;
+    margin-top: 50px;
+    margin-left: 25px;
+    margin-right: 10px;
+    margin-bottom: 50px
+    
+    }
+    
+    .compSkilCont p{
+    padding: 10px;
+    }
+    
+    .compSkilCont img{
+       width: 200px;
+       height: 280px 
+    }
+    
+    .compSkilCont{
+    background: #F5F1DA;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 2px solid silver;
+    }
+
+    .softSkillTextSection{
+        display: flex;
+        flex-direction: column;
+        height: 800px
+        }
+        
+        
+        .softSkill{
+            width: 700px;
+            height: 350px;
+            margin-left: 40px;
+            margin-right: 35px;
+            background:#F5F1DA;
+            border: 2px solid silver;
+            margin-top: 40px;
+            
+        
+            }
+        .softSkill h1{
+            background: #E3DFC8;
+            color: black;
+            width: 695px;
+            border: 1px solid silver;
+        }
+        
+        .softText{
+        padding-top: 60px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        
+        
+        }
+        
+        .softText div{
+            display: flex;
+            flex-direction: column
+        }
+        
+        .softText img{
+            width: 80px;
+            height: 80px;
+            
+        }
+        
+        .softText p{
+            font-family: calibli;
+        }
+        
+        .softText1{
+        display: flex;
+        flex-direction:row;
+        justify-content: space-around;
+        
+        
+        }
+        
+        .softText1 div{
+            display: flex;
+            flex-direction: column;
+            margin-top: 20px;
+            font-family: calibli;
+        }
+        
+        .softText1 img{
+            margin-top: 30px;
+            margin-bottom: 10px;
+            width: 80px;
+            height: 80px
+        }
+
+        .title{
+            margin-top: 40px;
+        }
+        
+        .accomplishment{
+        display: flex;
+        flex-direction: column;
+        margin-top: 40px;
+        width:950px;
+        height: 1000px;
+        } 
+        
+        
+        .accomplishment p{
+        
+            width: 695px;
+            height: 200px;
+            margin-left: 40px;
+            margin-right: 35px;
+            background:#F5F1DA;
+            border: 2px solid silver;
+            margin-top: 40px;
+            margin-top: 30px;
+            padding: 30px;
+            font-family:calibri;
+            font-size:30px
+        
+        
+        }
+        .educText {
+            display: flex;
+            flex-direction: column;
+            width: 1000px;
+            height: 700px;
+            background: #F5F1DA;
+            justify-content: space-between;
+            padding-bottom: 50px;
+            box-sizing: border-box;
+            }
+            
+            .educTexts{
+                width: 690px;
+                height: 300px;
+                margin-left: 40px;
+                margin-right: 35px;
+                background:#F5F1DA;
+                border: 2px solid silver;
+                margin-top: 40px;
+                margin-top: 30px;
+                padding: 30px;
+                font-family:calibri;
+                font-size:30px;
+            }
+            
+            .educTexts h2{
+                color: teal;
+                font-family:' Geneva, Verdana, sans-serif';
+            
+            }
+            
+            .educTexts p{
+                margin-top:20px;
+                font-family:calibri;
+                font-size:20px
+            }
+            .contacts{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                width: 1000px;
+                background:#E3DFC8;
+                height: 450px;
+                padding-bottom: 30px
+                
+                
+                }
+                .telPhone{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                margin-right: 200px;
+                margin-left: 300px;
+                margin-top: 50px;
+                }
+                
+                .telPhone img{
+                    width: 40px;
+                    height: 40px;
+                }
+                .telPhone h3{
+                    margin-top: 15px;
+                margin-right: 310px;
+                }
+                .facebook a{
+                    margin-top: 15px;
+                margin-right: 265px;
+                }
+                .github a{
+                    margin-top: 15px;
+                margin-right: 290px;
+                }
+                .email h2{
+                    margin-top: 15px;
+                margin-right: 310px;
+                }
+                
+                .facebook{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                margin-right: 200px;
+                margin-left: 300px;
+                margin-top: 50px;
+                }
+                .facebook img{
+                    width: 40px;
+                    height: 40px
+                }
+                
+                .github{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                margin-right: 200px;
+                margin-left: 300px;
+                margin-top: 50px;
+                }
+                
+                .github img{
+                    width: 40px;
+                    height: 40px;
+                }
+                
+                
+                .email{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                margin-left: 300px;
+                margin-top: 40px;
+                margin-right: 30px;
+                }
+                
+                .email img{
+                    width: 40px;
+                    height: 40px;
+                }
+}
+
+
+@media screen and (max-width: 768px){
+.container{
+    overflow-x: hidden;
+ width: 760px;
+display: grid;
+grid-template-columns: 7fr 5fr;
+}
+
+
+.body{
+    margin-left:0px;
+    width: 824px;
+    display: flex;
+    flex-direction: column;
+    background: #E3DFC8;
+    }
+    
+    .body img{
+        width: 100%;
+        height: 100vh;
+        margin-top: 70px;
+    }
+    
+    .name{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 760px;
+        height:80px;
+        position: fixed;
+        border: 2px solid black;
+        background: white;
+        padding-bottom: 20px;
+        position: fixed
+        
+    }
+    .nametop{
+        display: flex;
+        flex-direction: column;
+        line-height: 2px;
+        margin-right: 2px;
+        font-size: 20px;
+        background:white;
+        margin-bottom: 20px;
+        height: 40px;
+        
+    }
+
+    .nametop h1{
+        color: green;
+        margin-right: 50px;
+    }
+
+    .nametop h4{
+        margin-left: 30px;
+    }
+
+   
+    
+    .menu1{
+        background: white;
+        width: 40px;
+        height: 30px;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-left: 20px;
+        margin-bottom: 10px;
+        margin-top: 20px;
+    
+    }
+
+    .menu1 div{
+        margin-left: 40px;
+        width: 80%;
+        height: 5px;
+        background: green
+    }
+    
+    
+    
+    .nametop{
+        margin-right: 20px;
+        font-size: 15px;
+        background:white;
+        margin-bottom: 30px;
+        height: 10px;
+    }
+    .menu{
+        margin-top: 80px;
+        display: none;
+    }
+    
+    
+    .body h1{
+    width: 760px;
+    height: 50px;
+    font-size: 10px;
+    padding-bottom: 20px;
+    background:#96BB7C;
+    color: white
+    }
+    .aboutSectText{
+        width: 760px;
+        font-size: 30px;
+        font-family: 'calibri';
+        border: 2px solid black;
+        padding-right: 50px
+        }
+    
+    
+    
+        .experienceSectText{
+            width:680px;
+            height: 300px;
+            font-size: 30px;
+            padding: 5px;
+            border: 2px solid black;
+            padding: 30px;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            margin-left: 40px;
+            margin-right: 200px;
+            font-family: calibri;
+            font-size: 20px
+            }
+            
+            .experienceSectText div{
+                display: flex;
+                flex-direction:row;
+                justify-content:space-between;
+                
+            }
+            .experienceSectText div h1{
+                background-color: #E3DFC8;
+                color: black;
+                font-size: 40px
+            }
+            
+    
+    
+    
+    
+    a{
+    color: black;
+    text-decoration: none
+    }
+    
+    
+    .compSkillContent{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        width: 720px;
+        height:850px;
+        grid-column-gap: 10px;
+        grid-row-gap: 60px;
+        margin-left: 25px;
+        margin-right: 10px;
+        
+        }
+        
+        .compSkilCont p{
+        padding: 10px;
+        }
+        
+        .compSkilCont img{
+            margin-top: 0px;
+           width: 200px;
+           height: 280px 
+        }
+        
+        .compSkilCont{
+        background: #F5F1DA;
+        width: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border: 2px solid silver;
+        }
+    
+        .softSkillTextSection{
+            display: flex;
+            flex-direction: column;
+            height: 800px
+            }
+            
+            
+            .softSkill{
+                width: 675px;
+                height: 350px;
+                margin-left: 40px;
+                margin-right: 35px;
+                background:#F5F1DA;
+                border: 2px solid silver;
+                margin-top: 40px;
+                
+            
+                }
+            .softSkill h1{
+                background: #E3DFC8;
+                color: black;
+                width: 670px;
+                border: 1px solid silver;
+            }
+            
+            .softText{
+            padding-top: 60px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            
+            
+            }
+            
+            .softText div{
+                display: flex;
+                flex-direction: column
+            }
+            
+            .softText img{
+                width: 80px;
+                height: 80px;
+                
+            }
+            
+            .softText p{
+                font-family: calibli;
+            }
+            
+            .softText1{
+            display: flex;
+            flex-direction:row;
+            justify-content: space-around;
+            
+            
+            }
+            
+            .softText1 div{
+                display: flex;
+                flex-direction: column;
+                margin-top: 20px;
+                font-family: calibli;
+            }
+            
+            .softText1 img{
+                margin-top: 30px;
+                margin-bottom: 10px;
+                width: 80px;
+                height: 80px
+            }
+    
+            .title{
+                margin-top: 40px;
+            }
+            
+            .accomplishment{
+            display: flex;
+            flex-direction: column;
+            margin-top: 40px;
+            width:760px;
+            height: 1000px;
+            }
+            
+                  
+            
+            .accomplishment p{
+            
+                width: 680px;
+                height: 200px;
+                margin-left: 40px;
+                margin-right: 35px;
+                background:#F5F1DA;
+                border: 2px solid silver;
+                margin-top: 40px;
+                margin-top: 30px;
+                padding: 30px;
+                font-family:calibri;
+                font-size:30px
+            
+            
+            }
+            .educText {
+                display: flex;
+                flex-direction: column;
+                width: 760px;
+                height: 700px;
+                background: #F5F1DA;
+                justify-content: space-between;
+                padding-bottom: 50px;
+                box-sizing: border-box;
+                }
+                
+                .educTexts{
+                    width: 680px;
+                    height: 300px;
+                    margin-left: 40px;
+                    margin-right: 35px;
+                    background:#F5F1DA;
+                    border: 2px solid silver;
+                    margin-top: 40px;
+                    margin-top: 30px;
+                    padding: 30px;
+                    font-family:calibri;
+                    font-size:30px;
+                }
+                
+                .educTexts h2{
+                    color: teal;
+                    font-family:' Geneva, Verdana, sans-serif';
+                
+                }
+                
+                .educTexts p{
+                    margin-top:20px;
+                    font-family:calibri;
+                    font-size:20px
+                }
+                .contacts{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    width: 1000px;
+                    background:#E3DFC8;
+                    height: 650px;
+                    padding-bottom: 30px
+                    
+                    
+                    }
+                    .telPhone{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    margin-right: 200px;
+                    margin-left: 300px;
+                    margin-top: 50px;
+                    }
+                    
+                    .telPhone img{
+                        width: 40px;
+                        height: 40px;
+                    }
+                    .telPhone h3{
+                        margin-top: 15px;
+                    margin-right: 310px;
+                    }
+                    .facebook a{
+                        margin-top: 15px;
+                    margin-right: 265px;
+                    }
+                    .github a{
+                        margin-top: 15px;
+                    margin-right: 290px;
+                    }
+                    .email h2{
+                        margin-top: 15px;
+                    margin-right: 310px;
+                    }
+                    
+                    .facebook{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    margin-right: 200px;
+                    margin-left: 300px;
+                    margin-top: 50px;
+                    }
+                    .facebook img{
+                        width: 40px;
+                        height: 40px
+                    }
+                    
+                    .github{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    margin-right: 200px;
+                    margin-left: 300px;
+                    margin-top: 50px;
+                    }
+                    
+                    .github img{
+                        width: 40px;
+                        height: 40px;
+                    }
+                    
+                    
+                    .email{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    margin-left: 300px;
+                    margin-top: 40px;
+                    margin-right: 30px;
+                    }
+                    
+                    .email img{
+                        width: 40px;
+                        height: 40px;
+                    }
+                    .contacts div img{
+                        margin-top: 10px;
+                    }
+}
+
+@media screen and (max-width: 450px){
+    .container{
+        overflow-x: hidden;
+     width: 450px;
+    display: grid;
+    grid-template-columns: 7fr 5fr;
+    }
+    
+    
+    .body{
+        margin-left:0px;
+        width: 450px;
+        display: flex;
+        flex-direction: column;
+        background: #E3DFC8;
+        }
+        
+        .body img{
+            width: 100%;
+            height: 100vh;
+            margin-top: 60px;
+        }
+        
+        .name{
+            margin-top: 0px;
+            position: fixed;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            width: 450px;
+            height:60px;
+            border: 2px solid black;
+            background: white;
+    
+            
+            
+        }
+        .nametop{
+            display: flex;
+            flex-direction: column;
+            line-height: 2px;
+            font-size: 15px;
+            background:white;
+            margin-bottom: 10px;
+            height: 30px;
+            margin-left: 40px;
+            margin-top: 10px
+        
+            
+        }
+    
+        .nametop h1{
+            color: green;
+            margin-left: 40px;
+        }
+    
+        .nametop h4{
+            color:black;
+            margin-left: 65px;
+        }
+        
+        .menu1{
+            background: white;
+            width: 40px;
+            height: 30px;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin-left: 20px;
+            margin-bottom: 10px;
+            margin-top: 30px;
+        
+        }
+    
+        .menu1 div{
+            margin-left: 20px;
+            width: 80%;
+            height: 5px;
+            background: green
+        }
+        
+        .menu{
+            margin-top: 100px;
+            display: none;
+        }
+        
+        
+        .body h1{
+        width: 450px;
+        height: 50px;
+        font-size: 10px;
+        padding-bottom: 20px;
+        background:#96BB7C;
+        color: white
+        }
+        .aboutSectText{
+            width: 448px;
+            font-size: 30px;
+            font-family: 'calibri';
+            border: 2px solid black;
+            padding-right: 20px
+            }
+        
+        
+        
+            .experienceSectText{
+                width:400px;
+                height: 400px;
+                font-size: 30px;
+                padding: 5px;
+                border: 2px solid black;
+                padding: 30px;
+                margin-top: 50px;
+                margin-bottom: 50px;
+                margin-left: 25px;
+                font-family: calibri;
+                font-size: 20px
+                }
+                
+                .experienceSectText div{
+                    display: flex;
+                    flex-direction:row;
+                    justify-content:space-between;
+                    
+                }
+                .experienceSectText div h1{
+                    background-color: #E3DFC8;
+                    color: black;
+                    font-size: 40px
+                }
+                
+        
+        
+        
+        
+        a{
+        color: black;
+        text-decoration: none
+        }
+        
+        
+        .compSkillContent{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            width: 400px;
+            height: 500px;
+            margin-left: 25px;
+            margin-right: 10px;
+            padding-top: 0px;
+            
+            
+            }
+            
+            .compSkilCont p{
+            width: 100px;
+            height: 120px;
+            }
+            
+            .compSkilCont img{
+               margin-top: 0px;
+               width: 100px;
+               height: 120px ;
+        
+            }
+
+            .compSkilCont h2{
+                font-size:10px;
+                margin-left: 10px
+            }
+            
+            .compSkilCont{
+            font-size: 10px;
+            background: #F5F1DA;
+            width: 100px;
+            height: 220px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border: 2px solid silver;
+            margin-bottom: 10px;
+            }
+
+                    
+        
+            .softSkillTextSection{
+                display: flex;
+                flex-direction: column;
+                height: 850px
+                }
+                
+                
+                .softSkill{
+                    width: 370px;
+                    height: 630px;
+                    margin-left: 40px;
+                    margin-right: 35px;
+                    background:#F5F1DA;
+                    border: 2px solid silver;
+                    margin-top: 40px;
+                    
+                
+                    }
+                .softSkill h1{
+                    background: rgb(218, 217, 216);
+                    color: black;
+                    width: 370px;
+                    border: 1px solid silver;
+                }
+                
+                .softText{
+                padding-top: 0px;
+                padding-left: 20px;
+                display: grid;
+                grid-template-columns: repeat(2,1fr);
+                justify-content: space-around;
+        
+                
+                
+                }
+                
+                .softText div{
+                    display: flex;
+                    flex-direction: column
+                }
+                
+                .softText img{
+                    width: 80px;
+                    height: 80px;
+                    margin-left: 30px;
+                    margin-top:10px
+                    
+                }
+                
+                .softText p{
+                    font-family: calibli;
+                    margin-left: 30px
+                    
+                }
+                
+                .softText1{
+                display: flex;
+                flex-direction:row;
+                justify-content: space-around;
+                
+                
+                }
+                
+                .softText1 div{
+                    display: flex;
+                    flex-direction: column;
+                    margin-top: 20px;
+                    font-family: calibli;
+                }
+                
+                .softText1 img{
+                    margin-top: 30px;
+                    margin-bottom: 10px;
+                    width: 80px;
+                    height: 80px
+                }
+        
+                .title{
+                    margin-top: 40px;
+                }
+                
+                .accomplishment{
+                display: flex;
+                flex-direction: column;
+                margin-top: 40px;
+                width:350px;
+                height: 1300px;
+                } 
+                
+                
+                .accomplishment p{
+                
+                    width: 370px;
+                    height: 280px;
+                    margin-left: 40px;
+                    margin-right: 35px;
+                    background:#F5F1DA;
+                    border: 2px solid silver;
+                    margin-top: 40px;
+                    margin-top: 30px;
+                    padding: 30px;
+                    font-family:calibri;
+                    font-size:30px
+                
+                
+                }
+                .educText {
+                    display: flex;
+                    flex-direction: column;
+                    width: 450px;
+                    height: 1000px;
+                    background: #F5F1DA;
+                    justify-content: space-between;
+                    padding-bottom: 50px;
+                    box-sizing: border-box;
+                    }
+                    
+                    .educTexts{
+                        width: 370px;
+                        height: 450px;
+                        margin-left: 40px;
+                        margin-right: 35px;
+                        background:#F5F1DA;
+                        border: 2px solid silver;
+                        margin-top: 40px;
+                        margin-top: 30px;
+                        padding: 30px;
+                        font-family:calibri;
+                        font-size:30px;
+                    }
+                    
+                    .educTexts h2{
+                        color: teal;
+                        font-family:' Geneva, Verdana, sans-serif';
+                    
+                    }
+                    
+                    .educTexts p{
+                        margin-top:20px;
+                        font-family:calibri;
+                        font-size:20px
+                    }
+                    .contacts{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        width: 450px;
+                        background:#E3DFC8;
+                        height: 400px;
+                        padding-bottom: 30px
+                        
+                        
+                        }
+
+                          .telPhone{
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        margin-left: 50px;
+                        margin-top: 50px;
+                        }
+                        
+                        .telPhone img{
+                            width: 40px;
+                            height: 40px;
+                        }
+                        .telPhone h3{
+                            margin-top: 10px;
+                            margin-left: 50px;
+                        }
+                        .facebook a{
+                            margin-top: 60px;
+                        margin-left: 50px;
+                        }
+                        .github a{
+                            margin-top: 60px;
+                        margin-left: 50px;
+                        }
+                        .email h2{
+                            margin-top: 20px;
+                        margin-left: 50px;
+                        }
+                        
+                        .facebook{
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        margin-right: 200px;
+                        margin-left: 50px;
+                        margin-top: 50px;
+                        }
+                        .facebook img{
+                            width: 40px;
+                            height: 40px
+                        }
+                        
+                        .github{
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        margin-right: 200px;
+                        margin-left: 50px;
+                        margin-top: 50px;
+                        }
+                        
+                        .github img{
+                            width: 40px;
+                            height: 40px;
+                        }
+                        
+                        
+                        .email{
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        margin-left: 50px;
+                        margin-top: 40px;
+                        margin-right: 30px;
+                        }
+                        
+                        .email img{
+                            width: 40px;
+                            height: 40px;
+                        }
+
+                        .contacts div a{
+                            margin-top: 20px
+                        }
+
+                        .contacts div{
+                            margin-top:30px;
+                        }
+    
+    }
+
+@media (max-width: 414px){
+    .container{
+        overflow-x: hidden;
+     width: 414px;
+    display: grid;
+    grid-template-columns: 7fr 5fr;
+    }
+    
+    
+    .body{
+        margin-left:0px;
+        width: 414px;
+        display: flex;
+        flex-direction: column;
+        background: #E3DFC8;
+        }
+        
+        .body img{
+            width: 100%;
+            height: 100vh;
+            margin-top: 60px;
+        }
+        
+        .name{
+            margin-top: 0px;
+            position: fixed;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            width: 414px;
+            height:60px;
+            border: 2px solid black;
+            background: white;
+    
+            
+            
+        }
+        .nametop{
+            display: flex;
+            flex-direction: column;
+            line-height: 2px;
+            font-size: 15px;
+            background:white;
+            margin-bottom: 10px;
+            height: 30px;
+            margin-left: 4px;
+            margin-top: 10px
+        
+            
+        }
+    
+        .nametop h1{
+            color: green;
+            margin-left: 40px;
+        }
+    
+        .nametop h4{
+            color:black;
+            margin-left: 65px;
+        }
+        
+        .menu1{
+            background: white;
+            width: 40px;
+            height: 30px;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin-left: 20px;
+            margin-bottom: 10px;
+            margin-top: 30px;
+        
+        }
+        .menu{
+            margin-top: 100px;
+            display: none;
+        }
+        
+        
+        .body h1{
+        width: 414px;
+        height: 50px;
+        font-size: 10px;
+        padding-bottom: 20px;
+        background:#96BB7C;
+        color: white
+        }
+        .aboutSectText{
+            width: 414px;
+            font-size: 30px;
+            font-family: 'calibri';
+            border: 2px solid black;
+            padding-right: 20px
+            }
+        
+        
+        
+            .experienceSectText{
+                width:365px;
+                height: 450px;
+                font-size: 30px;
+                padding: 5px;
+                border: 2px solid black;
+                padding: 30px;
+                margin-top: 50px;
+                margin-bottom: 50px;
+                margin-left: 25px;
+                font-family: calibri;
+                font-size: 20px
+                }
+                
+                .experienceSectText div{
+                    display: flex;
+                    flex-direction:row;
+                    justify-content:space-between;
+                    
+                }
+                .experienceSectText div h1{
+                    background-color: #E3DFC8;
+                    color: black;
+                    font-size: 40px
+                }
+                
+        
+        
+        
+        
+        a{
+        color: black;
+        text-decoration: none
+        }
+        
+        
+        .compSkillContent{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            width: 350px;
+            height: 600px;
+            margin-left: 0px;
+            margin-right: 5px;
+    
+            
+            
+            }
+            
+            .compSkilCont p{
+            width: 100px;
+            height: 120px;
+            }
+            
+            .compSkilCont img{
+                margin-top: 20px;
+               width: 100px;
+               height: 120px ;
+        
+            }
+            
+            .compSkilCont{
+            font-size: 10px;
+            background: #F5F1DA;
+            width: 120px;
+            height: 230px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border: 2px solid silver;
+            margin-bottom: 30px;
+            }
+        
+            .softSkillTextSection{
+                display: flex;
+                flex-direction: column;
+                height: 850px
+                }
+                
+                
+                .softSkill{
+                    width: 350px;
+                    height: 630px;
+                    margin-left: 30px;
+                    margin-right: 35px;
+                    background:#F5F1DA;
+                    border: 2px solid silver;
+                    margin-top: 40px;
+                    
+                
+                    }
+                .softSkill h1{
+                    background: rgb(218, 217, 216);
+                    color: black;
+                    width: 350px;
+                    border: 1px solid silver;
+                }
+                
+                .softText{
+                padding-top: 0px;
+                padding-left: 20px;
+                display: grid;
+                grid-template-columns: repeat(2,1fr);
+                justify-content: space-around;
+        
+                
+                
+                }
+                
+                .softText div{
+                    display: flex;
+                    flex-direction: column
+                }
+                
+                .softText img{
+                    width: 80px;
+                    height: 80px;
+                    margin-left: 30px;
+                    margin-top:10px
+                    
+                }
+                
+                .softText p{
+                    font-family: calibli;
+                    margin-left: 30px
+                    
+                }
+                
+                .softText1{
+                display: flex;
+                flex-direction:row;
+                justify-content: space-around;
+                
+                
+                }
+                
+                .softText1 div{
+                    display: flex;
+                    flex-direction: column;
+                    margin-top: 20px;
+                    font-family: calibli;
+                }
+                
+                .softText1 img{
+                    margin-top: 30px;
+                    margin-bottom: 10px;
+                    width: 80px;
+                    height: 80px
+                }
+        
+                .title{
+                    margin-top: 40px;
+                }
+                
+                .accomplishment{
+                display: flex;
+                flex-direction: column;
+                margin-top: 40px;
+                width:350px;
+                height: 1500px;
+                } 
+                
+                
+                .accomplishment p{
+                
+                    width: 335px;
+                    height: 340px;
+                    margin-left: 40px;
+                    margin-right: 35px;
+                    background:#F5F1DA;
+                    border: 2px solid silver;
+                    margin-top: 40px;
+                    margin-top: 30px;
+                    padding: 30px;
+                    font-family:calibri;
+                    font-size:30px
+                
+                
+                }
+                .educText {
+                    display: flex;
+                    flex-direction: column;
+                    width: 414px;
+                    height: 1200px;
+                    background: #F5F1DA;
+                    justify-content: space-between;
+                    padding-bottom: 50px;
+                    box-sizing: border-box;
+                    }
+                    
+                    .educTexts{
+                        width: 330px;
+                        height: 500px;
+                        margin-left: 40px;
+                        margin-right: 35px;
+                        background:#F5F1DA;
+                        border: 2px solid silver;
+                        margin-top: 40px;
+                        margin-top: 30px;
+                        padding: 30px;
+                        font-family:calibri;
+                        font-size:30px;
+                    }
+                    
+                    .educTexts h2{
+                        color: teal;
+                        font-family:' Geneva, Verdana, sans-serif';
+                    
+                    }
+                    
+                    .educTexts p{
+                        margin-top:20px;
+                        font-family:calibri;
+                        font-size:20px
+                    }
+                    .contacts{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        width: 450px;
+                        background:#E3DFC8;
+                        height: 500px;
+                        padding-bottom: 30px
+                        
+                        
+                        }
+                        .telPhone{
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        margin-left: 50px;
+                        margin-top: 50px;
+                        }
+                        
+                        .telPhone img{
+                            width: 40px;
+                            height: 40px;
+                        }
+                        .telPhone h3{
+                            margin-top: 10px;
+                        margin-left: 50px;
+                        }
+                        .facebook a{
+                            margin-top: 60px;
+                        margin-left: 50px;
+                        }
+                        .github a{
+                            margin-top: 60px;
+                        margin-left: 50px;
+                        }
+                        .email h2{
+                        margin-top: 30px;
+                        margin-left: 50px;
+                        font-size: 15px;
+                        }
+                        
+                        .facebook{
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        margin-right: 200px;
+                        margin-left: 50px;
+                        margin-top: 50px;
+                        }
+                        .facebook img{
+                            width: 40px;
+                            height: 40px
+                        }
+                        
+                        .github{
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        margin-right: 200px;
+                        margin-left: 50px;
+                        margin-top: 50px;
+                        }
+                        
+                        .github img{
+                            width: 40px;
+                            height: 40px;
+                        }
+                        
+                        
+                        .email{
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        margin-left: 50px;
+                        margin-top: 40px;
+                        margin-right: 30px;
+                        }
+                        
+                        .email img{
+                            width: 40px;
+                            height: 40px;
+                        }
+                        .emai h2{
+                            margin-top: 20px;
+                        }
+
+}
+
+@media (max-width: 411px){
+    .container{
+        overflow-x: hidden;
+     width: 411px;
+    display: grid;
+    grid-template-columns: 7fr 5fr;
+    }
+    
+    
+    .body{
+        margin-left:0px;
+        width: 414px;
+        display: flex;
+        flex-direction: column;
+        background: #E3DFC8;
+        }
+        
+        .body img{
+            width: 100%;
+            height: 100vh;
+            margin-top: 60px;
+        }
+        
+        .name{
+            margin-top: 0px;
+            position: fixed;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            width: 411px;
+            height:60px;
+            border: 2px solid black;
+            background: white;
+    
+            
+            
+        }
+        .nametop{
+            display: flex;
+            flex-direction: column;
+            line-height: 2px;
+            font-size: 15px;
+            background:white;
+            margin-bottom: 10px;
+            height: 30px;
+            margin-left: 4px;
+            margin-top: 10px
+        
+            
+        }
+    
+        .nametop h1{
+            color: green;
+            margin-left: 40px;
+        }
+    
+        .nametop h4{
+            color:black;
+            margin-left: 65px;
+        }
+        
+        .menu1{
+            background: white;
+            width: 40px;
+            height: 30px;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin-left: 10px;
+            margin-bottom: 10px;
+            margin-top: 30px;
+        
+        }
+        
+        .menu{
+            margin-top: 100px;
+            display: none;
+        }
+        
+        
+        .body h1{
+        width: 414px;
+        height: 50px;
+        font-size: 10px;
+        padding-bottom: 20px;
+        background:#96BB7C;
+        color: white
+        }
+        .aboutSectText{
+            width: 410px;
+            font-size: 30px;
+            font-family: 'calibri';
+            border: 2px solid black;
+            padding-right: 20px
+            }
+        
+        
+        
+            .experienceSectText{
+                width:365px;
+                height: 450px;
+                font-size: 30px;
+                padding: 5px;
+                border: 2px solid black;
+                padding: 30px;
+                margin-top: 50px;
+                margin-bottom: 50px;
+                margin-left: 25px;
+                font-family: calibri;
+                font-size: 20px
+                }
+                
+                .experienceSectText div{
+                    display: flex;
+                    flex-direction:row;
+                    justify-content:space-between;
+                    
+                }
+                .experienceSectText div h1{
+                    background-color: #E3DFC8;
+                    color: black;
+                    font-size: 40px
+                }
+                
+        
+        
+        
+        
+        a{
+        color: black;
+        text-decoration: none
+        }
+        
+        
+        .compSkillContent{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            width: 350px;
+            height: 600px;
+            margin-left: 0px;
+            margin-right: 5px;
+    
+            
+            
+            }
+            
+            .compSkilCont p{
+            width: 100px;
+            height: 120px;
+            }
+            
+            .compSkilCont img{
+                margin-top: 20px;
+               width: 100px;
+               height: 120px ;
+        
+            }
+            
+            .compSkilCont{
+            font-size: 10px;
+            background: #F5F1DA;
+            width: 120px;
+            height: 230px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border: 2px solid silver;
+            margin-bottom: 30px;
+            }
+        
+            .softSkillTextSection{
+                display: flex;
+                flex-direction: column;
+                height: 850px
+                }
+                
+                
+                .softSkill{
+                    width: 350px;
+                    height: 630px;
+                    margin-left: 30px;
+                    margin-right: 35px;
+                    background:#F5F1DA;
+                    border: 2px solid silver;
+                    margin-top: 40px;
+                    
+                
+                    }
+                .softSkill h1{
+                    background: rgb(218, 217, 216);
+                    color: black;
+                    width: 350px;
+                    border: 1px solid silver;
+                }
+                
+                .softText{
+                padding-top: 0px;
+                padding-left: 20px;
+                display: grid;
+                grid-template-columns: repeat(2,1fr);
+                justify-content: space-around;
+        
+                
+                
+                }
+                
+                .softText div{
+                    display: flex;
+                    flex-direction: column
+                }
+                
+                .softText img{
+                    width: 80px;
+                    height: 80px;
+                    margin-left: 30px;
+                    margin-top:10px
+                    
+                }
+                
+                .softText p{
+                    font-family: calibli;
+                    margin-left: 30px
+                    
+                }
+                
+                .softText1{
+                display: flex;
+                flex-direction:row;
+                justify-content: space-around;
+                
+                
+                }
+                
+                .softText1 div{
+                    display: flex;
+                    flex-direction: column;
+                    margin-top: 20px;
+                    font-family: calibli;
+                }
+                
+                .softText1 img{
+                    margin-top: 30px;
+                    margin-bottom: 10px;
+                    width: 80px;
+                    height: 80px
+                }
+        
+                .title{
+                    margin-top: 40px;
+                }
+                
+                .accomplishment{
+                display: flex;
+                flex-direction: column;
+                margin-top: 40px;
+                width:350px;
+                height: 1500px;
+                } 
+                
+                
+                .accomplishment p{
+                
+                    width: 335px;
+                    height: 340px;
+                    margin-left: 40px;
+                    margin-right: 35px;
+                    background:#F5F1DA;
+                    border: 2px solid silver;
+                    margin-top: 40px;
+                    margin-top: 30px;
+                    padding: 30px;
+                    font-family:calibri;
+                    font-size:30px
+                
+                
+                }
+                .educText {
+                    display: flex;
+                    flex-direction: column;
+                    width: 414px;
+                    height: 1200px;
+                    background: #F5F1DA;
+                    justify-content: space-between;
+                    padding-bottom: 50px;
+                    box-sizing: border-box;
+                    }
+                    
+                    .educTexts{
+                        width: 330px;
+                        height: 500px;
+                        margin-left: 40px;
+                        margin-right: 35px;
+                        background:#F5F1DA;
+                        border: 2px solid silver;
+                        margin-top: 40px;
+                        margin-top: 30px;
+                        padding: 30px;
+                        font-family:calibri;
+                        font-size:30px;
+                    }
+                    
+                    .educTexts h2{
+                        color: teal;
+                        font-family:' Geneva, Verdana, sans-serif';
+                    
+                    }
+                    
+                    .educTexts p{
+                        margin-top:20px;
+                        font-family:calibri;
+                        font-size:20px
+                    }
+                    .contacts{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        width: 450px;
+                        background:#E3DFC8;
+                        height: 400px;
+                        padding-bottom: 30px
+                        
+                        
+                        }
+                        .telPhone{
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        margin-left: 50px;
+                        margin-top: 50px;
+                        }
+                        
+                        .telPhone img{
+                            width: 40px;
+                            height: 40px;
+                        }
+                        .telPhone h3{
+                            margin-top: 10px;
+                        margin-left: 50px;
+                        }
+                        .facebook a{
+                            margin-top: 60px;
+                        margin-left: 50px;
+                        }
+                        .github a{
+                            margin-top: 60px;
+                        margin-left: 50px;
+                        }
+                        .email h2{
+                        margin-top: 30px;
+                        margin-left: 50px;
+                        font-size: 15px;
+                        }
+                        
+                        .facebook{
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        margin-right: 200px;
+                        margin-left: 50px;
+                        margin-top: 50px;
+                        }
+                        .facebook img{
+                            width: 40px;
+                            height: 40px
+                        }
+                        
+                        .github{
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        margin-right: 200px;
+                        margin-left: 50px;
+                        margin-top: 50px;
+                        }
+                        
+                        .github img{
+                            width: 40px;
+                            height: 40px;
+                        }
+                        
+                        
+                        .email{
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        margin-left: 50px;
+                        margin-top: 40px;
+                        margin-right: 30px;
+                        }
+                        
+                        .email img{
+                            width: 40px;
+                            height: 40px;
+                        }
+
+
+
+}
+
+@media  (max-width: 375px){
+    .container{
+        overflow-x: hidden;
+     width: 375px;
+    display: grid;
+    grid-template-columns: 7fr 5fr;
+    }
+    
+    
+    .body{
+        margin-left:0px;
+        width: 375px;
+        display: flex;
+        flex-direction: column;
+        background: #E3DFC8;
+        }
+        
+        .body img{
+            width: 100%;
+            height: 100vh;
+            margin-top: 60px;
+        }
+        
+        .name{
+            margin-top: 0px;
+            position: fixed;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            width: 375px;
+            height:60px;
+            border: 2px solid black;
+            background: white;
+    
+            
+            
+        }
+        .nametop{
+            display: flex;
+            flex-direction: column;
+            line-height: 2px;
+            font-size: 10px;
+            background:white;
+            margin-bottom: 10px;
+            height: 30px;
+            margin-left: 0px;
+            margin-top: 10px;
+            margin-right: 10px
+        
+            
+        }
+    
+        .nametop h1{
+            color: green;
+            margin-left: 40px;
+        }
+    
+        .nametop h4{
+            color:black;
+            margin-left: 40px;
+            font-size: 15px
+        }
+        
+        .menu1{
+            background: white;
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin-left: 0px;
+            margin-bottom: 10px;
+            margin-top: 30px;
+        
+        }
+        
+        .menu{
+            margin-top: 100px;
+            display: none;
+        }
+        
+        
+        .body h1{
+        width: 375px;
+        height: 50px;
+        font-size: 10px;
+        padding-bottom: 20px;
+        background:#96BB7C;
+        color: white
+        }
+        .aboutSectText{
+            width: 375px;
+            font-size: 30px;
+            font-family: 'calibri';
+            border: 2px solid black;
+            padding-right: 20px
+            }
+        
+        
+        
+            .experienceSectText{
+                width:320px;
+                height: 550px;
+                font-size: 30px;
+                padding: 5px;
+                border: 2px solid black;
+                padding: 30px;
+                margin-top: 50px;
+                margin-bottom: 50px;
+                margin-left: 25px;
+                font-family: calibri;
+                font-size: 20px
+                }
+                
+                .experienceSectText div{
+                    display: flex;
+                    flex-direction:row;
+                    justify-content:space-between;
+                    
+                }
+                .experienceSectText div h1{
+                    background-color: #E3DFC8;
+                    color: black;
+                    font-size: 40px
+                }
+                
+        
+        
+        
+        
+        a{
+        color: black;
+        text-decoration: none
+        }
+        
+        
+        .compSkillContent{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            width: 300px;
+            height: 600px;
+            margin-left: 0px;
+            margin-right: 5px;
+    
+            
+            
+            }
+            
+            .compSkilCont p{
+            width: 100px;
+            height: 120px;
+            }
+            
+            .compSkilCont img{
+                margin-top: 20px;
+               width: 100px;
+               height: 120px ;
+        
+            }
+            
+            .compSkilCont{
+            font-size: 10px;
+            background: #F5F1DA;
+            width: 110px;
+            height: 230px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border: 2px solid silver;
+            margin-bottom: 30px;
+            }
+        
+            .softSkillTextSection{
+                display: flex;
+                flex-direction: column;
+                height: 850px
+                }
+                
+                
+                .softSkill{
+                    width: 310px;
+                    height: 630px;
+                    margin-left: 30px;
+                    margin-right: 35px;
+                    background:#F5F1DA;
+                    border: 2px solid silver;
+                    margin-top: 40px;
+                    
+                
+                    }
+                .softSkill h1{
+                    background: rgb(218, 217, 216);
+                    color: black;
+                    width: 308px;
+                    border: 1px solid silver;
+                }
+                
+                .softText{
+                padding-top: 0px;
+                padding-left: 20px;
+                display: grid;
+                grid-template-columns: repeat(2,1fr);
+                justify-content: space-around;
+        
+                
+                
+                }
+                
+                .softText div{
+                    display: flex;
+                    flex-direction: column
+                }
+                
+                .softText img{
+                    width: 80px;
+                    height: 80px;
+                    margin-left: 30px;
+                    margin-top:10px
+                    
+                }
+                
+                .softText p{
+                    font-family: calibli;
+                    margin-left: 30px
+                    
+                }
+                
+                .softText1{
+                display: flex;
+                flex-direction:row;
+                justify-content: space-around;
+                
+                
+                }
+                
+                .softText1 div{
+                    display: flex;
+                    flex-direction: column;
+                    margin-top: 20px;
+                    font-family: calibli;
+                }
+                
+                .softText1 img{
+                    margin-top: 30px;
+                    margin-bottom: 10px;
+                    width: 80px;
+                    height: 80px
+                }
+        
+                .title{
+                    margin-top: 40px;
+                }
+                
+                .accomplishment{
+                display: flex;
+                flex-direction: column;
+                margin-top: 40px;
+                width:375px;
+                height: 2200px;
+                } 
+                
+                
+                .accomplishment p{
+                
+                    width: 300px;
+                    height: 500px;
+                    margin-left: 40px;
+                    margin-right: 35px;
+                    background:#F5F1DA;
+                    border: 2px solid silver;
+                    margin-top: 40px;
+                    margin-top: 30px;
+                    padding: 30px;
+                    font-family:calibri;
+                    font-size:30px
+                
+                
+                }
+                .educText {
+                    display: flex;
+                    flex-direction: column;
+                    width: 375px;
+                    height: 1200px;
+                    background: #F5F1DA;
+                    justify-content: space-between;
+                    padding-bottom: 50px;
+                    box-sizing: border-box;
+                    }
+                    
+                    .educTexts{
+                        width: 300px;
+                        height: 600px;
+                        margin-left: 40px;
+                        margin-right: 35px;
+                        background:#F5F1DA;
+                        border: 2px solid silver;
+                        margin-top: 40px;
+                        margin-top: 30px;
+                        padding: 30px;
+                        font-family:calibri;
+                        font-size:30px;
+                    }
+                    
+                    .educTexts h2{
+                        color: teal;
+                        font-family:' Geneva, Verdana, sans-serif';
+                    
+                    }
+                    
+                    .educTexts p{
+                        margin-top:20px;
+                        font-family:calibri;
+                        font-size:20px
+                    }
+                    .contacts{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        width: 375px;
+                        background:#E3DFC8;
+                        height: 500px;
+                        padding-bottom: 30px
+                        
+                        
+                        }
+                        .telPhone{
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        margin-left: 50px;
+                        margin-top: 50px;
+                        }
+                        
+                        .telPhone img{
+                            width: 40px;
+                            height: 40px;
+                        }
+                        .telPhone h3{
+                            margin-top: 10px;
+                        margin-left: 50px;
+                        }
+                        .facebook a{
+                            margin-top: 60px;
+                        margin-left: 50px;
+                        }
+                        .github a{
+                            margin-top: 60px;
+                        margin-left: 50px;
+                        }
+                        .email h2{
+                        margin-top: 30px;
+                        margin-left: 50px;
+                        font-size: 15px;
+                        }
+                        
+                        .facebook{
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        margin-right: 200px;
+                        margin-left: 50px;
+                        margin-top: 50px;
+                        }
+                        .facebook img{
+                            width: 40px;
+                            height: 40px
+                        }
+                        
+                        .github{
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        margin-right: 200px;
+                        margin-left: 50px;
+                        margin-top: 50px;
+                        }
+                        
+                        .github img{
+                            width: 40px;
+                            height: 40px;
+                        }
+                        
+                        
+                        .email{
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        margin-left: 50px;
+                        margin-top: 40px;
+                        margin-right: 30px;
+                        }
+                        
+                        .email img{
+                            width: 40px;
+                            height: 40px;
+                        }
+
+}
+
+@media (max-width: 360px){
+    .container{
+        overflow-x: hidden;
+     width: 360px;
+    display: grid;
+    grid-template-columns: 7fr 5fr;
+    }
+    
+    
+    .body{
+        margin-left:0px;
+        width: 360px;
+        display: flex;
+        flex-direction: column;
+        background: #E3DFC8;
+        }
+        
+        .body img{
+            width: 100%;
+            height: 100vh;
+            margin-top: 60px;
+        }
+        
+        .name{
+            position: fixed;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            width: 360px;
+            height:60px;
+            border: 2px solid black;
+            background: white;
+    
+            
+            
+        }
+        .nametop{
+            display: flex;
+            flex-direction: column;
+            line-height: 2px;
+            font-size: 10px;
+            background:white;
+            margin-bottom: 10px;
+            height: 30px;
+            margin-left: 10px;
+            margin-top: 10px;
+            margin-right: 10px
+        
+            
+        }
+    
+        .nametop h1{
+            color: green;
+            margin-left: 40px;
+        }
+    
+        .nametop h4{
+            color:black;
+            margin-left: 40px;
+            font-size: 15px
+        }
+        
+        .menu1{
+            background: white;
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin-left: 0px;
+            margin-bottom: 10px;
+            margin-top: 30px;
+        
+        }
+        
+        .menu{
+            margin-top: 100px;
+            display: none;
+        }
+        
+        
+        .body h1{
+        width: 360px;
+        height: 50px;
+        font-size: 10px;
+        padding-bottom: 20px;
+        background:#96BB7C;
+        color: white
+        }
+        .aboutSectText{
+            width: 360px;
+            font-size: 30px;
+            font-family: 'calibri';
+            border: 2px solid black;
+            padding-right: 20px
+            }
+        
+        
+        
+            .experienceSectText{
+                width:310px;
+                height: 550px;
+                font-size: 30px;
+                padding: 5px;
+                border: 2px solid black;
+                padding: 30px;
+                margin-top: 50px;
+                margin-bottom: 50px;
+                margin-left: 25px;
+                font-family: calibri;
+                font-size: 20px
+                }
+                
+                .experienceSectText div{
+                    display: flex;
+                    flex-direction:row;
+                    justify-content:space-between;
+                    
+                }
+                .experienceSectText div h1{
+                    background-color: #E3DFC8;
+                    color: black;
+                    font-size: 40px
+                }
+                
+        
+        
+        
+        
+        a{
+        color: black;
+        text-decoration: none
+        }
+        
+        
+        .compSkillContent{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            width: 350px;
+            height: 600px;
+            margin-left: 0px;
+            margin-right: 5px;
+    
+            
+            
+            }
+            
+            .compSkilCont p{
+            width: 100px;
+            height: 120px;
+            }
+            
+            .compSkilCont img{
+                margin-top: 20px;
+               width: 100px;
+               height: 120px ;
+        
+            }
+            
+            .compSkilCont{
+            font-size: 10px;
+            background: #F5F1DA;
+            width: 100px;
+            height: 230px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border: 2px solid silver;
+            margin-bottom: 30px;
+            }
+        
+            .softSkillTextSection{
+                display: flex;
+                flex-direction: column;
+                height: 850px
+                }
+                
+                
+                .softSkill{
+                    width: 310px;
+                    height: 630px;
+                    margin-left: 25px;
+                    margin-right: 35px;
+                    background:#F5F1DA;
+                    border: 2px solid silver;
+                    margin-top: 40px;
+                    
+                
+                    }
+                .softSkill h1{
+                    background: rgb(218, 217, 216);
+                    color: black;
+                    width: 308px;
+                    border: 1px solid silver;
+                }
+                
+                .softText{
+                padding-top: 0px;
+                padding-left: 20px;
+                display: grid;
+                grid-template-columns: repeat(2,1fr);
+                justify-content: space-around;
+        
+                
+                
+                }
+                
+                .softText div{
+                    display: flex;
+                    flex-direction: column
+                }
+                
+                .softText img{
+                    width: 80px;
+                    height: 80px;
+                    margin-left: 30px;
+                    margin-top:10px
+                    
+                }
+                
+                .softText p{
+                    font-family: calibli;
+                    margin-left: 30px
+                    
+                }
+                
+                .softText1{
+                display: flex;
+                flex-direction:row;
+                justify-content: space-around;
+                
+                
+                }
+                
+                .softText1 div{
+                    display: flex;
+                    flex-direction: column;
+                    margin-top: 20px;
+                    font-family: calibli;
+                }
+                
+                .softText1 img{
+                    margin-top: 30px;
+                    margin-bottom: 10px;
+                    width: 80px;
+                    height: 80px
+                }
+        
+                .title{
+                    margin-top: 40px;
+                }
+                
+                .accomplishment{
+                display: flex;
+                flex-direction: column;
+                margin-top: 40px;
+                width:365px;
+                height: 2200px;
+        
+                } 
+                
+                
+                .accomplishment p{
+                
+                    width: 300px;
+                    height: 500px;
+                    margin-left: 30px;
+                    margin-right: 35px;
+                    background:#F5F1DA;
+                    border: 2px solid silver;
+                    margin-top: 40px;
+                    margin-top: 30px;
+                    padding: 30px;
+                    font-family:calibri;
+                    font-size:30px
+                
+                
+                }
+                .educText {
+                    display: flex;
+                    flex-direction: column;
+                    width: 375px;
+                    height: 1200px;
+                    background: #F5F1DA;
+                    justify-content: space-between;
+                    padding-bottom: 50px;
+                    box-sizing: border-box;
+                    }
+                    
+                    .educTexts{
+                        width: 300px;
+                        height: 600px;
+                        margin-left: 30px;
+                        margin-right: 35px;
+                        background:#F5F1DA;
+                        border: 2px solid silver;
+                        margin-top: 40px;
+                        margin-top: 30px;
+                        padding: 30px;
+                        font-family:calibri;
+                        font-size:30px;
+                    }
+                    
+                    .educTexts h2{
+                        color: teal;
+                        font-family:' Geneva, Verdana, sans-serif';
+                    
+                    }
+                    
+                    .educTexts p{
+                        margin-top:20px;
+                        font-family:calibri;
+                        font-size:20px
+                    }
+                    .contacts{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        width: 375px;
+                        background:#E3DFC8;
+                        height: 400px;
+                        padding-bottom: 30px
+                        
+                        
+                        }
+                        .telPhone{
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        margin-left: 50px;
+                        margin-top: 50px;
+                        }
+                        
+                        .telPhone img{
+                            width: 40px;
+                            height: 40px;
+                        }
+                        .telPhone h3{
+                            margin-top: 10px;
+                        margin-left: 50px;
+                        }
+                        .facebook a{
+                            margin-top: 60px;
+                        margin-left: 50px;
+                        }
+                        .github a{
+                            margin-top: 60px;
+                        margin-left: 50px;
+                        }
+                        .email h2{
+                        margin-top: 30px;
+                        margin-left: 50px;
+                        font-size: 15px;
+                        }
+                        
+                        .facebook{
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        margin-right: 200px;
+                        margin-left: 50px;
+                        margin-top: 50px;
+                        }
+                        .facebook img{
+                            width: 40px;
+                            height: 40px
+                        }
+                        
+                        .github{
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        margin-right: 200px;
+                        margin-left: 50px;
+                        margin-top: 50px;
+                        }
+                        
+                        .github img{
+                            width: 40px;
+                            height: 40px;
+                        }
+                        
+                        
+                        .email{
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        margin-left: 50px;
+                        margin-top: 40px;
+                        margin-right: 30px;
+                        }
+                        
+                        .email img{
+                            width: 40px;
+                            height: 40px;
+                        }
+
+
+}
+
+@media (max-width: 320px){
+    .container{
+        overflow-x: hidden;
+     width: 320px;
+    display: grid;
+    grid-template-columns: 7fr 5fr;
+    }
+    
+    
+    .body{
+        margin-left:0px;
+        width: 320px;
+        display: flex;
+        flex-direction: column;
+        background: #E3DFC8;
+        }
+        
+        .body img{
+            width: 100%;
+            height: 100vh;
+            margin-top: 60px;
+        }
+        
+        .name{
+            position: fixed;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            width: 320px;
+            height:60px;
+            border: 2px solid black;
+            background: white;
+    
+            
+            
+        }
+        .nametop{
+            display: flex;
+            flex-direction: column;
+            line-height: 2px;
+            font-size: 10px;
+            background:white;
+            margin-bottom: 10px;
+            height: 30px;
+            margin-left: 10px;
+            margin-top: 10px;
+            margin-right: 10px
+        
+            
+        }
+    
+        .nametop h1{
+            color: green;
+            margin-left: 40px;
+        }
+    
+        .nametop h4{
+            color:black;
+            margin-left: 40px;
+            font-size: 15px
+        }
+        
+        .menu1{
+            background: white;
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin-left: 0px;
+            margin-bottom: 10px;
+            margin-top: 30px;
+        
+        }
+        
+        .menu{
+            margin-top: 100px;
+    
+        }
+        
+        
+        .body h1{
+        width: 320px;
+        height: 50px;
+        font-size: 10px;
+        padding-bottom: 20px;
+        background:#96BB7C;
+        color: white
+        }
+        .aboutSectText{
+            width: 320px;
+            font-size: 30px;
+            font-family: 'calibri';
+            border: 2px solid black;
+            padding-right: 20px
+            }
+        
+        
+        
+            .experienceSectText{
+                width:270px;
+                height: 650px;
+                font-size: 30px;
+                padding: 5px;
+                border: 2px solid black;
+                padding: 30px;
+                margin-top: 50px;
+                margin-bottom: 50px;
+                margin-left: 25px;
+                font-family: calibri;
+                font-size: 20px
+                }
+                
+                .experienceSectText div{
+                    display: flex;
+                    flex-direction:row;
+                    justify-content:space-between;
+                    
+                }
+                .experienceSectText div h1{
+                    background-color: #E3DFC8;
+                    color: black;
+                    font-size: 40px
+                }
+                
+        
+        
+        
+        
+        a{
+        color: black;
+        text-decoration: none
+        }
+        
+        
+        .compSkillContent{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            width: 300px;
+            height: 600px;
+            margin-left: 0px;
+            margin-right: 5px;
+    
+            
+            
+            }
+            
+            .compSkilCont p{
+            width: 90px;
+            height: 90px;
+            }
+            
+            .compSkilCont img{
+               margin-top: 1px;
+               width: 75px;
+               height: 90px ;
+        
+            }
+
+            .compSkilCont h2{
+                font-size:6px
+            }
+            
+            .compSkilCont{
+            font-size: 10px;
+            background: #F5F1DA;
+            width: 85px;
+            height: 225px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border: 2px solid silver;
+            margin-bottom: 30px;
+            }
+        
+            .softSkillTextSection{
+                display: flex;
+                flex-direction: column;
+                height: 850px
+                }
+                
+                
+                .softSkill{
+                    width: 270px;
+                    height: 630px;
+                    margin-left: 25px;
+                    margin-right: 35px;
+                    background:#F5F1DA;
+                    border: 2px solid silver;
+                    margin-top: 40px;
+                    
+                
+                    }
+                .softSkill h1{
+                    background: rgb(218, 217, 216);
+                    color: black;
+                    width: 270px;
+                    border: 1px solid silver;
+                }
+                
+                .softText{
+                padding-top: 0px;
+                padding-left: 20px;
+                display: grid;
+                grid-template-columns: repeat(2,1fr);
+                justify-content: space-around;
+        
+                
+                
+                }
+                
+                .softText div{
+                    display: flex;
+                    flex-direction: column
+                }
+                
+                .softText img{
+                    width: 80px;
+                    height: 80px;
+                    margin-left: 30px;
+                    margin-top:10px
+                    
+                }
+                
+                .softText p{
+                    font-family: calibli;
+                    margin-left: 30px
+                    
+                }
+                
+                .softText1{
+                display: flex;
+                flex-direction:row;
+                justify-content: space-around;
+                
+                
+                }
+                
+                .softText1 div{
+                    display: flex;
+                    flex-direction: column;
+                    margin-top: 20px;
+                    font-family: calibli;
+                }
+                
+                .softText1 img{
+                    margin-top: 30px;
+                    margin-bottom: 10px;
+                    width: 80px;
+                    height: 80px
+                }
+        
+                .title{
+                    margin-top: 40px;
+                }
+                
+                .accomplishment{
+                display: flex;
+                flex-direction: column;
+                margin-top: 40px;
+                width:320px;
+                height: 2400px;
+        
+                } 
+                
+                
+                .accomplishment p{
+                
+                    width: 260px;
+                    height: 550px;
+                    margin-left: 30px;
+                    margin-right: 35px;
+                    background:#F5F1DA;
+                    border: 2px solid silver;
+                    margin-top: 40px;
+                    margin-top: 30px;
+                    padding: 30px;
+                    font-family:calibri;
+                    font-size:30px
+                
+                
+                }
+                .educText {
+                    display: flex;
+                    flex-direction: column;
+                    width: 320px;
+                    height: 900px;
+                    background: #E3DFC8;
+                    justify-content: space-between;
+                    padding-bottom: 50px;
+                    box-sizing: border-box;
+                    }
+                    
+                    .educTexts{
+                        width: 260px;
+                        height: 420px;
+                        margin-left: 30px;
+                        margin-right: 35px;
+                        background:#F5F1DA;
+                        border: 2px solid silver;
+                        margin-top: 40px;
+                        margin-top: 30px;
+                        padding: 30px;
+                        font-family:calibri;
+                        font-size:30px;
+                    }
+                    
+                    .educTexts h2{
+                        color: teal;
+                        font-family:' Geneva, Verdana, sans-serif';
+                        font-size: 25px;
+                    
+                    }
+                    
+                    .educTexts p{
+                        margin-top:20px;
+                        font-family:calibri;
+                        font-size:20px
+                    }
+                    .contacts{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        width: 375px;
+                        background:#E3DFC8;
+                        height: 400px;
+                        padding-bottom: 30px
+                        
+                        
+                        }
+                        .telPhone{
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        margin-left: 50px;
+                        margin-top: 50px;
+                        }
+                        
+                        .telPhone img{
+                            width: 40px;
+                            height: 40px;
+                        }
+                        .telPhone h3{
+                            margin-top: 10px;
+                        margin-left: 50px;
+                        }
+                        .facebook a{
+                            margin-top: 60px;
+                        margin-left: 50px;
+                        }
+                        .github a{
+                            margin-top: 60px;
+                        margin-left: 50px;
+                        }
+                        .email h2{
+                        margin-top: 30px;
+                        margin-left: 50px;
+                        font-size: 15px;
+                        }
+                        
+                        .facebook{
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        margin-right: 200px;
+                        margin-left: 50px;
+                        margin-top: 50px;
+                        }
+                        .facebook img{
+                            width: 40px;
+                            height: 40px
+                        }
+                        
+                        .github{
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        margin-right: 200px;
+                        margin-left: 50px;
+                        margin-top: 50px;
+                        }
+                        
+                        .github img{
+                            width: 40px;
+                            height: 40px;
+                        }
+                        
+                        
+                        .email{
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        margin-left: 50px;
+                        margin-top: 40px;
+                        margin-right: 30px;
+                        }
+                        
+                        .email img{
+                            width: 40px;
+                            height: 40px;
+                        }
+
+}
