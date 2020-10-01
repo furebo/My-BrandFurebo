@@ -395,36 +395,6 @@ app.get('/articles', upload.single('image'), (req, res, next) => {
     res.json({message:"data sent to database."})
 });                                                                   */
 
-app.get('/viewblogs',(req,res)=>{
-    const articles = [{
-        title:'test article',
-        description:'aggggggggggggggggggggggggggggggggggggggggggggg',
-        content:'cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc',
-    },
-    {
-        title:'test article2',
-        description:'ttttttttttttttttttttttttttttttttttttttttt',
-        content:'cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc',
-    }]
-    res.render('articles/index',{articles:articles})
-})
-
-app.get('/ourimage',(req,res)=>{
-    res.render('app',{});
-})
-
-app.get('/api',(req,res)=>{
-
-   articleModel.find().then((dataretreived)=>{
-       console.log('Dataretreived :',dataretreived)
-       res.render('articles/index',{articles:dataretreived});
-   })
-   .catch((error)=>{
-       console.log('there is an error')
-   })
-   
-})
-
 
 // lesting to the server
 app.listen(port,()=>{
