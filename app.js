@@ -131,6 +131,12 @@ app.post('/article',protection,upload.single('articleImage'),(req,res)=>{
     })
 })
 
+//default route
+
+app.get('/',(req,res)=>{
+    res.json({"message":"welcome"})
+})
+
 // signing up of an user
 
 app.post('/signup',(req,res,next)=>{
