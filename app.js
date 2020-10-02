@@ -404,7 +404,7 @@ app.get('/articles', upload.single('image'), (req, res, next) => {
 
 // lesting to the server
 app.listen(port,()=>{
-    console.log(`Server listing on port http://localhost: ${port}` )
+    console.log(`Server listing on port http://localhost: ${port}`)
 })
 
 module.exports = app;
