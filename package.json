@@ -24,7 +24,6 @@
     "node": "10.16.3"
   },
   "scripts": {
-    "devStart": "nodemon app.js",
     "start": "node app.js",
     "test": "mocha --timeout 40000"
   },

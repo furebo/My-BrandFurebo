@@ -37,18 +37,19 @@ app.use((err,req,res,next)=>{
 
 
 const { JsonWebTokenError } = require('jsonwebtoken');
-mongoose.Promise = global.Promise;
+//mongoose.Promise = global.Promise;
 let port = process.env.PORT ||3000;
 
 //mongoDB url from atlas = 
 const MONGODB_URI = 'mongodb+srv://furebodidace:fode123@cluster0.oxsrq.mongodb.net/myBlog?retryWrites=true&w=majority'
 // connecting app to mongoDB
-mongoose.connect(MONGODB_URI||'mongodb://localhost:27017/mylocaldb',{
+mongoose.connect(MONGODB_URI,{
     useNewUrlParser:true,
     useUnifiedTopology:true
 });
 //CHECKING if mongoose is connected
 mongoose.connection.on('connected',()=>{
+
     console.log('mongoose is connected!!!!!!!!!');
 }).catch(()=>{
     console.log('mongoose is not connected!!!!');
@@ -189,7 +190,7 @@ app.post('/loginuser',(req,res,next)=>{
                 })
             }
             if(result){
-                var token = jsonwebtoken.sign({name:user[0].name}, process.env.JWT_KEY, {expiresIn:"5h"})
+                var token = jsonwebtoken.sign({name:user[0].name}, "secret", {expiresIn:"5h"})
                 return res.status(200).json({
                     message:"user logen in successfully",
                     token:token
