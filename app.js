@@ -106,7 +106,7 @@ const upload = multer({storage:storage,fileFilter:fileFilter});
 
 // creating new article when authenticated as admin
 
-app.post('/article',protection,upload.single('articleImage'),(req,res)=>{
+app.post('/article',upload.single('articleImage'),(req,res)=>{
     var obj = {
         title:req.body.title,
         description:req.body.description,
@@ -247,7 +247,7 @@ app.post('/article/:id/comments',(req,res)=>{
 
 //deleting a comment of an article when authenticated
 
-app.delete('/article/:id/comments/:id',protection,(req,res)=>{
+app.delete('/article/:id/comments/:id',(req,res)=>{
 
    articleModel.find({},(err,items)=>{
         if(err){
@@ -276,7 +276,7 @@ app.delete('/article/:id/comments/:id',protection,(req,res)=>{
 
 //deleting an article when authenticated
 
-app.delete('/article/:id',protection,(req,res)=>{
+app.delete('/article/:id',(req,res)=>{
     articleModel.findByIdAndRemove({_id:req.params.id}).then(article =>{
         res.status(200).json({
             message:"Article deleted !",
