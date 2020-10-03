@@ -276,7 +276,7 @@ app.delete('/article/:id/comments/:id',(req,res)=>{
 
 //deleting an article when authenticated
 
-app.delete('/article/:id',(req,res)=>{
+app.delete('/article/:id',protection,(req,res)=>{
     articleModel.findByIdAndRemove({_id:req.params.id}).then(article =>{
         res.status(200).json({
             message:"Article deleted !",
