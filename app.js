@@ -15,7 +15,6 @@ const bcrypt = require('bcrypt');
 const jsonwebtoken = require('jsonwebtoken');
 
 
-//app.set('view engine','ejs')
 app.set('uploads', path.join(__dirname, 'uploads'));
 const urlencodedParser = bodyParser.urlencoded({extended:false});
 app.use('/uploads',express.static('uploads'))
