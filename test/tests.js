@@ -2,15 +2,15 @@ let chai = require("chai");
 let server = require("../app");
 let chaiHttp = require("chai-http");
 
+
+
 chai.should();
 chai.use(chaiHttp);
 
 describe('articles API',()=>{
 
-
-    //testing GET default route for getting all articles
-
-    describe("get/article",()=>{
+//testing GET default route for getting all articles
+ describe("get/article",()=>{
         it("should get all the articles from database",(done)=>{
             chai.request(server).get("/article").end((err,response)=>{
                 response.should.have.status(200);

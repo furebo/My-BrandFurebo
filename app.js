@@ -1,13 +1,12 @@
 const { urlencoded } = require('express');
 const express = require('express')
 const mongoose = require('mongoose');
-const articleRouter = require('./routes/articles')
+//const articleRouter = require('./routes/articles')
 const app = express();
 var fs = require('fs'); 
 var path = require('path');
 const bodyParser = require('body-parser');  
-
-var multer = require('multer');
+let multer = require('multer');
 //require('dotenv/config');
 var articleModel = require('./model'); 
 var usermodel = require('./usermodel');
@@ -24,7 +23,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json()) 
 
 
-app.use('/viewblogs',articleRouter);    
+//app.use('/viewblogs',articleRouter);    
 app.use(express.urlencoded({extended:false}));
 app.use('/static',express.static('public'));
 app.use('/static',express.static('images'));
@@ -58,31 +57,6 @@ mongoose.connection.on('connected',()=>{
 app.use('/posts',()=>{
     
 })
-
-//Routes
-
-/*
-app.get("/",(req,res)=>{
-    res.status(200).json({message:'welcome !'});
-})
-
-app.get('/login',(req,res)=>{
-    res.status(200).json({message:'welcome To login page !'});
-})
-app.post('/admin',urlencodedParser,(req,res)=>{
-      const credentials = req.body;
-      if(credentials.username == "furebo" && credentials.password == "fode123"){
-          res.sendFile(__dirname + "/public/adminportal.html")
-      }else{
-              /*if(confirm('There is an error! Do you want to quite?')){
-                  res.sendFile(__dirname + "index.html")
-              }else{
-                  res.sendFile(__dirname + "/public/login.html")
-              } 
-          console.log('Password or Username is incorrect !')
-      }
-
-})  */
 
 const storage = multer.diskStorage({
     destination:function (req,file,cb){
