@@ -1,16 +1,16 @@
 let chai = require("chai");
-let server = require("../app");
 let chaiHttp = require("chai-http");
-
-
+let server = require("../app");
 
 chai.should();
 chai.use(chaiHttp);
 
-describe('articles API',()=>{
+//describe('articles API',()=>{
 
 //testing GET default route for getting all articles
- describe("get/article",()=>{
+
+
+ describe("GET/article",()=>{
         it("should get all the articles from database",(done)=>{
             chai.request(server).get("/article").end((err,response)=>{
                 response.should.have.status(200);
@@ -18,7 +18,9 @@ describe('articles API',()=>{
                 done();
             })
         });
-    }) 
+    })  
+
+
 
 
     describe("get/article",()=>{
@@ -53,11 +55,13 @@ describe('articles API',()=>{
             done();
             })
         })
-    }) */
-
+    })     
+*/
     //testing POST route for creating a new article 
 
-/*describe("post/article",()=>{
+    /*
+
+describe("post/article",()=>{
 
     it("should create a new article ",(done)=>{
 
@@ -77,7 +81,9 @@ describe('articles API',()=>{
             done();
         })
     })
-}) */
+}) 
+
+*/
 
 /* describe("post/article",()=>{
 
@@ -104,6 +110,8 @@ describe('articles API',()=>{
 */
 
 //testing a route for posting comment
+
+
 
 describe("post/article/:id/comments",()=>{
     it("should add comments to an article ",(done)=>{
@@ -151,9 +159,11 @@ describe("put/article/:id",()=>{
             done();
         })
     })
-})
+})     
 
-/*describe("put/article/:id",()=>{
+
+/*
+  describe("put/article/:id",()=>{
 
     it("should not update an existing  article ",(done)=>{
         const updatedArticleId = "6e20183a0fa22e625528ba";
@@ -173,9 +183,12 @@ describe("put/article/:id",()=>{
             done();
         })
     })
-  }) */
-
+  }) 
+  
+*/
   //testing route to delete an article
+
+  
 
   describe("delete/article/:id",()=>{
 
@@ -194,9 +207,9 @@ describe("put/article/:id",()=>{
         })
     })
 
-})
+}) 
 
-})
+//})  
 
 
 
