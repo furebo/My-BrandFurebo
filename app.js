@@ -14,7 +14,6 @@ const protection = require('./protection');
 const bcrypt = require('bcrypt');
 const jsonwebtoken = require('jsonwebtoken');
 
-
 app.set('uploads', path.join(__dirname, 'uploads'));
 const urlencodedParser = bodyParser.urlencoded({extended:false});
 app.use('/uploads',express.static('uploads'))
@@ -163,9 +162,9 @@ app.post('/loginuser',(req,res,next)=>{
                 })
             }
             if(result){
-                var token = jsonwebtoken.sign({name:user[0].name}, "secret", {expiresIn:"5h"})
+                var token = jsonwebtoken.sign({name:user[0].name},"secret", {expiresIn:"5h"})
                 return res.status(200).json({
-                    message:"user logen in successfully",
+                    message:"user loged in successfully",
                     token:token
 
                 }) 
@@ -312,68 +311,6 @@ app.get('/article/:id',(req,res)=>{
         res.status(500).json({error:err})
     })
 })
-
-
-
-//user comments
-
-//app.post('/article/:id/comments',()=>{
-    
-//})
-
-
-// Retriving the image 
-/*
-app.get('/ourimage', (req, res) => { 
-	imgModel.find({}, (err, items) => { 
-		if (err) { 
-			console.log(err); 
-		} 
-		else { 
-			res.render('app', {}); 
-		} 
-	}); 
-}); */
-
-
-// Uploading the image 
-
-//var upload = multer({ destination:'/uploads' });
-
-/*
-var storage = multer.diskStorage({ 
-    destination: (req, file, cb) => { 
-        cb(null, 'uploads') 
-    }, 
-    filename: (req, file, cb) => { 
-        cb(null, file.fieldname + '-' + Date.now()) 
-    } 
-});
-
-var upload = multer({ storage: storage });
-
-app.get('/articles', upload.single('image'), (req, res, next) => { 
-    
-    var obj = { 
-		title: req.body.title, 
-		description: req.body.description, 
-	   img: { 
-			data:fs.readFileSync(path.join(__dirname + '/uploads/' + req.file.filename)), 
-			contentType:'image/png'
-        }, 
-        content:req.body.content 
-	} 
-	articleModel.create(obj, (err, item) => { 
-		if (err) { 
-			console.log(err); 
-		} 
-		else { 
-			item.save();  
-		} 
-    }); 
-    
-    res.json({message:"data sent to database."})
-});                                                                   */
 
 
 // lesting to the server
