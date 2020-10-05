@@ -6,8 +6,8 @@
   "scripts": {
     "start": "node app.js",
     "devStart": "nodemon app.js",
-    "test": "nyc --reporter=lcov --reporter=text-summary mocha --timeout 40000",
-    "coverage": "istanbul cover npm run test"
+    "test": "nyc mocha --timeout 40000",
+    "coverage": "open coverage/lcov-report/index.html"
   },
   "dependencies": {
     "babel-cli": "^6.26.0",
