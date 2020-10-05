@@ -63,7 +63,6 @@ const storage = multer.diskStorage({
     filename:function (req,file,cb){
         cb(null, file.originalname)
     }
-    
 });
 
 const fileFilter = (req,file,cb)=>{
@@ -113,8 +112,8 @@ app.get('/',(req,res)=>{
 // signing up of an user
 
 app.post('/signup',(req,res,next)=>{
-
-    usermodel.find({name:req.body.name}).then(username =>{
+    const userObj = {name:req.body.name};
+    usermodel.find(userObj).then(username =>{
         if(username.length >= 1){
             return res.status(409).json({
                 message:'user arlady exist !'
@@ -195,7 +194,7 @@ app.get('/article/:id/comments',(req,res)=>{
 
 //posting a comment to an article
 
-app.post('/article/:id/comments',(req,res)=>{
+app.post('/article/:id/comments',protection,(req,res)=>{
 
     articleModel.findById(req.params.id).then((result)=>{
         result.comments.push(req.body);
@@ -219,7 +218,7 @@ app.post('/article/:id/comments',(req,res)=>{
 
 //deleting a comment of an article when authenticated
 
-app.delete('/article/:id/comments/:id',(req,res)=>{
+app.delete('/article/:id/comments/:id',protection,(req,res)=>{
 
    articleModel.find({},(err,items)=>{
         if(err){
