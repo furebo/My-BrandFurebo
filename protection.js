@@ -4,9 +4,9 @@ const jsonwebtoken = require('jsonwebtoken');
     try {
         var token = req.headers.token;
         //const tokendecoded = jsonwebtoken.verify(req.body.token, process.env.JWT_KEY);
-        const tokendecoded = jsonwebtoken.verify(token,process.env.JWT_KEY);
-        req.userData = tokendecoded;
-        next();
+        jsonwebtoken.verify(token,process.env.JWT_KEY);
+        //req.userData = tokendecoded;
+       // next();
     }catch(err){
         return res.status(401).json({
             message:"failed to authenticate"
