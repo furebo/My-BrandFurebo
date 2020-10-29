@@ -133,7 +133,7 @@ describe("get default",()=>{
     describe("deleting a comment",()=>{
         it("should delete a user comment ",(done)=>{
            const comment = {
-               id:"5f9a6d94a02b4a1cc8613d42",
+               id:"5f9a84892961932281e7cdc4",
                name:"furebo",
                comment:"cool"
            }
