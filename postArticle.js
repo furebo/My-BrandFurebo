@@ -22,7 +22,7 @@ app.set('uploads', path.join(__dirname, 'uploads'));
 app.use('/uploads',express.static('uploads'))
 
 
-router.post('/article',protection,upload.single('articleImage'),(req,res,)=>{
+router.post('/article',upload.single('articleImage'),(req,res,)=>{
     const obj = new articleModel({
          title:req.body.title,
          description:req.body.description,

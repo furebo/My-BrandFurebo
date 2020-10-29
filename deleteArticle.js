@@ -8,7 +8,7 @@ const bodyParser = require('body-parser');
 
 app.use(bodyParser.json()) ;
 
-router.delete('/article/:id',protection,(req,res)=>{
+router.delete('/article/:id',(req,res)=>{
     console.log(req.params.id)
     articleModel.findByIdAndRemove({_id:req.params.id}).then(()=>{
         res.json({

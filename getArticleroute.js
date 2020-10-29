@@ -8,6 +8,7 @@ router.get('/',(req,res)=>{
         res.send(items);
     }).then(()=>{
         res.status(200);
+        //res.send(items)
     }).catch((err)=>{
         console.log(err)
     })

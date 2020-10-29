@@ -9,7 +9,7 @@ const bodyParser = require('body-parser');
 
 app.use(bodyParser.json()) ;
 
-router.delete('/article/:id/comments/:id',protection,(req,res)=>{
+router.delete('/article/:id/comments/:id',(req,res)=>{
     articleModel.find({},(err,items)=>{
         
              for(let i = 0; i < items.length; i++ ){
