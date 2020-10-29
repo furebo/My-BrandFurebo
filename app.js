@@ -280,7 +280,7 @@ let port = process.env.PORT ||3000;
 
 
 //mongoDB url from atlas = 
-const MONGODB_URI = process.env.CONNECTION_DB;
+const MONGODB_URI = "mongodb+srv://furebodidace:fode123@cluster0.oxsrq.mongodb.net/myBlog?retryWrites=true&w=majority";
 // connecting app to mongoDB
  mongoose.connect(MONGODB_URI,{
  useNewUrlParser:true,
