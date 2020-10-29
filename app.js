@@ -3,33 +3,284 @@ const { urlencoded } = require('express');
 const express = require('express');
 const mongoose = require('mongoose');
 const app = express();
-let multer = require('multer');
+//let multer = require('multer');
+//app.use(multer);
+
+// import routes modules
+const postsRoute = require('./routes/posts');
+const signupRoute = require('./signup');
+const loginuserRoute = require('./loginuser');
+//const getCommentRoute = require('./getcommentRoute');
+const postCommentRoute = require('./postcommentRoute');
+const deletearticle = require('./deleteArticle');
+const deleteComment = require('./deletecomment');
+const editArticle = require('./editArticle');
+const getArticles = require('./getArticleroute');
+const getArticleById = require('./getOneArticle');
+const postingArticle = require('./postArticle');
+
+const swaggerJsDoc = require('swagger-jsdoc');
+const swaggerUi = require('swagger-ui-express');
+
+
+const swaggerOptions = {
+    
+    swaggerDefinition:{
+        //openapi:"3.0.0",
+        schemes: 
+        - "http",
+
+        info:{
+            title:"Develloper Articles API",
+            description:"This Api is for articles released evey end of week"
+        },
+        contacts:{
+            name:"Furebo Didace",
+            email:"furebodidace582@gmail.com"
+        },
+        servers:["http://localhost:3000"]
+    },
+    apis:["app.js"]
+}
+
+const swaggerDocs = swaggerJsDoc(swaggerOptions)
+
+app.use('/api-docs',swaggerUi.serve,swaggerUi.setup(swaggerDocs))
+
 var fs = require('fs'); 
 var path = require('path');
+
+
 const bodyParser = require('body-parser');  
 
-var articleModel = require('./model'); 
-var usermodel = require('./usermodel');
-const protection = require('./protection');
+//var articleModel = require('./model'); 
+//var usermodel = require('./usermodel');
+//const protection = require('./protection');
 const bcrypt = require('bcrypt');
 const jsonwebtoken = require('jsonwebtoken');
 
 app.set('uploads', path.join(__dirname, 'uploads'));
 const urlencodedParser = bodyParser.urlencoded({extended:false});
+
 app.use('/uploads',express.static('uploads'))
-app.use(bodyParser.urlencoded({ extended: false })) 
+app.use(bodyParser.urlencoded({ extended: true })) 
 app.use(bodyParser.json()) 
 
 app.use(express.urlencoded({extended:false}));
 app.use('/static',express.static('public'));
 app.use('/static',express.static('images'));
 
+//use routes middlewares
+
+app.use('/', postsRoute);
+app.use('/signup',signupRoute);
+app.use(loginuserRoute);
+//app.use('/article/:id/comments',getCommentRoute);
+app.use(deletearticle);
+app.use(deleteComment);
+app.use(postCommentRoute);
+app.use(editArticle);
+app.use('/article',getArticles);
+app.use(getArticleById);
+app.use(postingArticle)
+
+/**
+ * @swagger
+ * /:
+ *  get:
+ *    tags:
+ *    - welcome
+ *    summary: welcoming a user
+ *    description: A welcome message desplayed
+ *    responses:
+ *      '200':
+ *        description: A welcome message desplayed succesffuly.
+ *       
+*/
+
+/**
+ * @swagger
+ * /article:
+ *  get:
+ *    description: Use to request all articles
+ *    responses:
+ *      '200':
+ *        description: All articles succesffuly retreived.
+ *       
+*/
+
+/**
+ * @swagger
+ * /article/5f96b9c3002c7b14f8951145:
+ *  get:
+ *    description: Use to request an article by id
+ *    responses:
+ *      '200':
+ *        description: An articles is succesffuly retreived.
+ *       
+*/
+
+/**
+ * @swagger
+ * /signup:
+ *  post:
+ *    description: To signup a user to the database
+ *    parameters:
+ *      - name: usermodel
+ *        description: user object
+ *        in: body
+ *        schema:
+ *          $ref: '#/definitions/usermodel'
+ *    responses:
+ *      '200':
+ *        description: A new user is signed up succesfully.
+ *       
+*/
+
+/**
+ * @swagger
+ * /loginuser:
+ *  post:
+ *    description: To login the user to the database
+ *    parameters:
+ *      - name: usermodel2
+ *        description: user object
+ *        in: body
+ *        schema:
+ *          $ref: '#/definitions/usermodel2'
+ *    responses:
+ *      '200':
+ *        description: A user is loged in succesfully.
+ *       
+*/
+
+/**
+ * @swagger
+ * /article/5f96bd1571078c1653fd29ff:
+ *  delete:
+ *    description: To delete an article by id
+ *    responses:
+ *      '200':
+ *        description: Article is deleted succesfully.
+ *       
+*/
+
+
+/**
+ * @swagger
+ * /article:
+ *  post:
+ *    description: To post a new article 
+ *    parameters:
+ *      - name: articleModel
+ *        description: article object
+ *        in: body
+ *        schema:
+ *          $ref: '#/definitions/articleModel'
+ *    responses:
+ *      '200':
+ *        description: A new article is created succesfully.
+ *       
+*/
+
+/**
+ * @swagger
+ * /article/5f7ed076fdd9c80004310ca3:
+ *  put:
+ *    description: To update an existing article 
+ *    parameters:
+ *      - name: updatingModel
+ *        description: updating object
+ *        in: body
+ *        schema:
+ *          $ref: '#/definitions/updatingModel'
+ *    responses:
+ *      '200':
+ *        description: An article is updated succesfully.
+ *       
+*/
+
+/**
+ * @swagger
+ * definitions:
+ *   commentsModel:
+ *     properties: 
+ *       name:
+ *         type: Strings
+ *       comment:
+ *         type: String
+ *   articleModel:
+ *     properties: 
+ *       title:
+ *         type: Strings
+ *       description:
+ *         type: String
+ *       articleImage: 
+ *         type: Object
+ *       content:
+ *         type: String
+ *   usermodel:
+ *     prooerties:
+ *       name:
+ *         type: String
+ *       password:
+ *         type: String 
+ *   usermodel2:
+ *     prooerties:
+ *       name:
+ *         type: String
+ *       password:
+ *         type: String
+ *   updatingModel:
+ *     properties: 
+ *       title:
+ *         type: Strings
+ *       description:
+ *         type: String
+ *       articleImage:
+ *         type: String
+ *       content:
+ *         type: String
+ *    
+ *       
+*/
+
+/**
+ * @swagger
+ * /article/5f96bd4771078c1653fd2a00/comments:
+ *  post:
+ *    description: To post a comment to an article 
+ *    parameters:
+ *      - name: commentsModel
+ *        description: comment object
+ *        in: body
+ *        schema:
+ *          $ref: '#/definitions/commentsModel'
+ *    responses:
+ *      '200':
+ *        description: A new comment of an article is created succesfully.
+ *       
+*/
+
+/**
+ * @swagger
+ * /article/5f7ed076fdd9c80004310ca3/comments/5f97af8c783ae92e3ea0cbbb:
+ *  delete:
+ *    description: To delete a comment by id
+ *    responses:
+ *      '200':
+ *        description: A comment must be deleted succesfully.
+ *       
+*/
+
 const { JsonWebTokenError } = require('jsonwebtoken');
 
 let port = process.env.PORT ||3000;
 
+
+
 //mongoDB url from atlas = 
-const MONGODB_URI = 'mongodb+srv://furebodidace:fode123@cluster0.oxsrq.mongodb.net/myBlog?retryWrites=true&w=majority'
+const MONGODB_URI = process.env.CONNECTION_DB;
 // connecting app to mongoDB
  mongoose.connect(MONGODB_URI,{
  useNewUrlParser:true,
@@ -42,176 +293,6 @@ mongoose.connection.on('connected',()=>{
         console.log('mongoose is connected!!!!!!!!!');
 })
 
-
-// creating new article when authenticated as admin
-
-
-const storage = multer.diskStorage({
-    destination:function (req,file,cb){
-        cb(null,'./uploads')
-    }
-});
-
-const upload = multer({storage:storage});
-
-
-
-app.post('/article',upload.single('articleImage'),(req,res,next)=>{
-    var obj = new articleModel({
-        title:req.body.title,
-        description:req.body.description,
-        articleImage:req.file.path,
-        content:req.body.content
-    })
-
-    articleModel.create(obj, (err, item) => { 
-        item.save().then(()=>{
-            res.json({message:"article created successfully"})
-        }) 
-    })
-
-})
-
-//default route
-
-app.get('/',(req,res)=>{
-    res.json({"message":"welcome"})
-})
-
-// signing up of an user
-
-
-app.post('/signup',(req,res,next)=>{
-
-    bcrypt.hash(req.body.password, 10, (err, hash)=>{
-        const newuser =new usermodel({
-                        name:req.body.name,
-                        password:hash
-                    });
-        
-    newuser.save().then(
-        res.json({message:"user signed up"})
-    )
-   })
-})
-
-app.post('/loginuser',(req,res,next)=>{
-    usermodel.find({name:req.body.name})
-    .then(user =>{ bcrypt.compare(req.body.password, user[0].password, ()=>{
-        var token = jsonwebtoken.sign({name:user[0].name},"secret", {expiresIn:"5h"})
-                    res.status(200).json({
-                    message:"user loged in successfully",
-                    token:token
-                }) 
-            })
-     }) 
-
-});
- 
-
-//getting an article with its comments
-
-app.get('/article/:id/comments',(req,res)=>{
-
-    articleModel.findById(req.params.id).then((result)=>{
-        res.status(200).json({comment:result})
-    })
-})
-
-//posting a comment to an article
-
-app.post('/article/:id/comments',(req,res)=>{
-     articleModel.findById(req.params.id).then((result)=>{
-        result.comments.push(req.body);
-        
-        articleModel.findByIdAndUpdate({_id:req.params.id},result).then(()=>{
-            articleModel.findOne({_id:req.params.id}).then((article)=>{
-                res.status(200)
-                res.send(article)
-         })
-        })
-            
-     })
- })
-
-//deleting a comment of an article when authenticated
-
-app.delete('/article/:id/comments/:id',(req,res)=>{
-
-   articleModel.find({},(err,items)=>{
-            for(var i = 0; i < items.length; i++ ){
-                for(var j = 0; j < items[i].comments.length; j++){
-                    if(items[i].comments[j]._id == req.params.id){
-
-                      items[i].comments.splice(j,1);
-                      articleModel.findByIdAndUpdate({_id:items[i]._id},items[i])
-                      
-                 }
-               }
-             
-        }
-    }).then(()=>{ res.status(200),res.json({message:"comment deleted successfully !"})})
-})
-
-//deleting an article when authenticated
-
-app.delete('/article/:id',(req,res)=>{
-    articleModel.findByIdAndRemove({_id:req.params.id}).then(()=>{
-        res.status(200).json({
-            message:"Article deleted !",
-            request:{
-                type:'DELETE',
-                URI:'http://127.0.0.1/articles',
-                info:{
-                    title:String,
-                    description:String,
-                    content:String,
-                    articleImage:String
-                }
-            }
-
-            
-        })
- 
-    })
-})  
-
-
-// updating an article when authenticated
-
-app.put('/article/:id',(req,res)=>{
-    articleModel.findByIdAndUpdate({_id:req.params.id}, req.body).then(()=>{
-        articleModel.findOne({_id:req.params.id}).then((article)=>{
-            res.status(200);
-            res.send(article);
-        })
-    })
-
-
-})
-
-// getting a list of all articles
-
-app.get('/article',(req,res)=>{
-    articleModel.find({},(err,items)=>{
-        res.send(items);
-    }).then(()=>{
-        res.status(200);
-    })
-})
-
-//getting a particular article
-
-
-app.get('/article/:id',(req,res)=>{
-
-    articleModel.findById(req.params.id).then((result)=>{
-        res.status(200).json({article:result})
-    })
-})
-
-
-// lesting to the server
 app.listen(port,()=>{
     console.log(`Server listing on port http://localhost: ${port}`)
 })

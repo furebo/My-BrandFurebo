@@ -5,8 +5,8 @@ var mongoose = require('mongoose');
 var imageSchema = new mongoose.Schema({ 
 	title: String, 
 	description: String, 
-    articleImage:String,
-	content:String,
+    articleImage: Object,
+	content: String,
 	comments:[{
 		name:String,
 		comment:String
