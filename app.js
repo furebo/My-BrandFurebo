@@ -80,7 +80,7 @@ app.use(deletearticle);
 app.use(deleteComment);
 app.use(postCommentRoute);
 app.use(editArticle);
-app.use('/article',getArticles);
+app.use(getArticles);
 app.use(getArticleById);
 app.use(postingArticle)
 
