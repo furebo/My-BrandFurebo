@@ -1,10 +1,11 @@
-
+process.env.NODE_ENV = 'test';
 require('dotenv').config();
-//let mongoose = require('mongoose');
+const express = require('express');
+let mongoose = require('mongoose');
 //var articleModel = require('./model');
 //const fs = require('fs');
 const sinon = require('sinon');
-//const articleModel = require("../model.js");
+const articleModel = require("../model.js");
 const usermodel = require("../usermodel.js");
 const protection = require("../protection.js");
 const chai = require("chai");
@@ -16,6 +17,8 @@ const assert = require('assert');
 const { should } = require('chai');
 chai.should();
 chai.use(chaiHttp);
+
+let token = ' ';
 
 
 describe("get default",()=>{
@@ -77,18 +80,28 @@ describe("get default",()=>{
     
     
     describe('post/article', () => {
-        it('it should  POST an article', (done) => {
+        it('it should  POST an article', () => {
+            const valid_input = {
+                "name": "furebo",
+                "password": "fode123"
+            }
               chai.request(server)
-              .post('/article')
-              .end((err,res) => {
-                 res.should.have.status(200)
-                 //res.body.should.have.property('message').eql('Article is created successfully!');
-                done();
+              .post('/loginuser')
+              .send(valid_input)
+              .then((login_response)=>{
+                  token = 'Bearer ' + login_response.body.token;
+                  chai.request(server)
+                  .post('/article')
+                  .set('token', token)
+                  .end((err,res) => {
+                    res.should.have.status(200)
+                    //res.body.should.have.property('message').eql('Article is created successfully!');
+                   //done();
+                 })
               })
- 
         });
-    
     });
+
 
     /*describe('Not post/article', () => {
         it('it should not POST an article', (done) => {
@@ -105,49 +118,93 @@ describe("get default",()=>{
     
     });  */
 
+       //testing route for deleting a comment
+
+   describe("deleting a comment",()=>{
+    it("should delete a user comment ",(done)=>{
+        const valid_input = {
+            "name": "furebo",
+            "password": "fode123"
+        }
+        chai.request(server)
+          .post('/loginuser')
+          .send(valid_input)
+          .then((login_response)=>{
+            token = 'Bearer ' + login_response.body.token;
+            
+            articleModel.findById('5f7ed0affdd9c80004310ca5').then((result)=>{
+                const comment = {
+                    "name":"furebo",
+                    "comment":"cool"
+                }
+                result.comments.push(comment);
+                articleModel.findByIdAndUpdate({_id:'5f7ed0affdd9c80004310ca5'},result).then(()=>{
+                    articleModel.findOne({_id:'5f7ed0affdd9c80004310ca5'}).then((article)=>{
+                      let commentsArray = article.comments
+                      let commentId = commentsArray[0]._id; 
+                      
+                      chai.request(server)
+                      .delete("/article/:id/comments/" + commentId)
+                      .set('token',token)
+                      .end((err,response)=>{
+                          response.should.have.status(200)
+                          response.body.should.have.property('message').eql('comment deleted successfully !');
+               
+                          done();
+                      })
+                    })
+                }) 
+             })
+         })
+    })
+})
+
     
     //testing a route for posting comment
     
     describe("post/article/:id/comments",()=>{;
 
         it("should add comments to an article ",()=>{
-            const comment = {id:'5f7eca3abf4e24630f30869a',
-                              name:'furebo',
-                              comment:'hey!'
-                           }
+            const valid_input = {
+                "name": "furebo",
+                "password": "fode123"
+            }
 
             chai.request(server)
-            .post("/article/" + comment.id +"/comments")
-            .send(comment)
-            .end((err,response)=>{
-                response.should.have.status(200);
-                response.body.should.be.a('object');
-            
+              .post('/loginuser')
+              .send(valid_input)
+              .then((login_response)=>{
+                token = 'Bearer ' + login_response.body.token;
+                const comment = {
+                    'name':'furebo',
+                     'comment':'hey!'
+                  }
+
+                articleModel.findById('5f7ed0affdd9c80004310ca5').then((result)=>{
+
+                    result.comments.push(comment);
+                    articleModel.findByIdAndUpdate({_id:'5f7ed0affdd9c80004310ca5'},result).then(()=>{
+                        articleModel.findOne({_id:'5f7ed0affdd9c80004310ca5'}).then((article)=>{
+                            let articleId = article._id
+                            chai.request(server)
+                            .post('/article/' + articleId + 'comments')
+                            .set('token', token)
+                            .send()
+                            .end((err,response)=>{
+                                response.should.have.status(200);
+                                response.body.should.be.a('object');
+                            
+                            })  
+                     })
+                    }) 
+                        
+                 })
+
+
             })
+            
         })
     })
-
-
-    //testing route for deleting a comment
-
-    describe("deleting a comment",()=>{
-        it("should delete a user comment ",(done)=>{
-           const comment = {
-               id:"5f9a848f2961932281e7cdc9",
-               name:"furebo",
-               comment:"cool"
-           }
-           chai.request(server)
-           .delete("/article/:id/comments/" + comment.id)
-           //.send(comment)
-           .end((err,response)=>{
-               response.should.have.status(200)
-               response.body.should.have.property('message').eql('comment deleted successfully !');
-    
-               done();
-           })
-       })
-    })  
 
     /*
     
@@ -207,6 +264,7 @@ describe("get default",()=>{
     
             chai.request(server)
             .put("/article/" + newArticle.id)
+            .set('token', token)
             .send(newArticle)
             .end((err,response)=>{
                 response.should.have.status(200);
@@ -223,41 +281,40 @@ describe("get default",()=>{
           describe("delete/article/:id",()=>{
 //console.log(process.env.protection);
         it("should delete an existing  article ",(done)=>{
+ 
                 const newArticle = {
-                    _id:"5f9045a0fc245638e974fee3",
+                    _id:"5f9abcc557cd8100044d4d5b",
                     title:"new title3",
                     description:"new description2",
                     articleImage:"uploads/database.png",
                     content:"content of new article2",
-                    
-    
                 }
-                    chai.request(server)
-                    .delete("/article/" + newArticle._id)
-                    .end((err,response)=>{
-                        response.should.have.status(200);
-                        response.body.should.have.property('message').eql('Article deleted !');
-    
-                    })
-                   done(); 
-               })
-        
-          })
+                chai.request(server)
+                .delete('/article/' + newArticle)
+                .set('token', token)
+                .send()
+                .end((err,response)=>{
+                    response.should.have.status(200);
+                    response.body.should.have.property('message').eql('Article deleted !');
+                })
+               done(); 
+              
+            })
+        })
 
           describe("delete/article/:id",()=>{
               it("should not delete an existing  article ",()=>{
+
                 const newArticle = {
                     _id:"5f8819ce231962929d015701",
                     title:"new title3",
                     description:"new description2",
                     articleImage:"uploads/database.png",
                     content:"content of new article2",
-                    
-    
                 }
                     chai.request(server)
                     .delete("/article/" + newArticle._id)
-                    .set('Authorization','Bearer '+process.env.protection)
+                    .set('token',token)
                     .end((err,response)=>{
                         response.should.have.status(404);
                     })
@@ -275,6 +332,7 @@ describe("get default",()=>{
             const artId = newArticle.id;
                 chai.request(server)
                 .put("/article/" + newArticle.id)
+                .set('token',token)
                 .send(newArticle)
                 .end((err,response)=>{
                 response.should.have.status(500)
@@ -376,7 +434,9 @@ describe("get default",()=>{
 
            })
        })
-   })   
+   }) 
+   
+  
     
 
 

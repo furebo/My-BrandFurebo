@@ -1,5 +1,5 @@
 require('dotenv').config();
-const { urlencoded } = require('express');
+//const { urlencoded } = require('express');
 const express = require('express');
 const mongoose = require('mongoose');
 const app = express();
@@ -24,23 +24,34 @@ const swaggerUi = require('swagger-ui-express');
 
 
 const swaggerOptions = {
-    
-    swaggerDefinition:{
-        //openapi:"3.0.0",
-        schemes: 
-        - "http",
-
+   swaggerDefinition:{
+        openapi: "3.0.0",
         info:{
+            version: "1.0.0",
             title:"Develloper Articles API",
-            description:"This Api is for articles released evey end of week"
+            description:"This Api is for articles released evey end of week",
         },
+        components: {
+            securitySchemes: {
+              bearerAuth: {
+                type: 'http',
+                scheme: 'bearer',
+                in: 'header',
+                bearerFormat: 'JWT',
+              }
+            }
+          },
+
+           security: [{
+             bearerAuth: []
+              }],
+
         contacts:{
             name:"Furebo Didace",
             email:"furebodidace582@gmail.com"
         },
-        servers:["http://localhost:3000"]
     },
-    apis:["app.js"]
+    apis:["app.js","getcommentRoute.js","deleteArticle.js","postArticle.js","postcommentRoute.js","deletecomment.js","editArticle.js","getArticleroute.js","getOneArticle.js","loginuser.js","signup.js","./routes/posts.js"]
 }
 
 const swaggerDocs = swaggerJsDoc(swaggerOptions)
@@ -82,196 +93,9 @@ app.use(postCommentRoute);
 app.use(editArticle);
 app.use(getArticles);
 app.use(getArticleById);
-app.use(postingArticle)
+app.use(postingArticle);
+//app.use(getCommentRoute);
 
-/**
- * @swagger
- * /:
- *  get:
- *    tags:
- *    - welcome
- *    summary: welcoming a user
- *    description: A welcome message desplayed
- *    responses:
- *      '200':
- *        description: A welcome message desplayed succesffuly.
- *       
-*/
-
-/**
- * @swagger
- * /article:
- *  get:
- *    description: Use to request all articles
- *    responses:
- *      '200':
- *        description: All articles succesffuly retreived.
- *       
-*/
-
-/**
- * @swagger
- * /article/5f96b9c3002c7b14f8951145:
- *  get:
- *    description: Use to request an article by id
- *    responses:
- *      '200':
- *        description: An articles is succesffuly retreived.
- *       
-*/
-
-/**
- * @swagger
- * /signup:
- *  post:
- *    description: To signup a user to the database
- *    parameters:
- *      - name: usermodel
- *        description: user object
- *        in: body
- *        schema:
- *          $ref: '#/definitions/usermodel'
- *    responses:
- *      '200':
- *        description: A new user is signed up succesfully.
- *       
-*/
-
-/**
- * @swagger
- * /loginuser:
- *  post:
- *    description: To login the user to the database
- *    parameters:
- *      - name: usermodel2
- *        description: user object
- *        in: body
- *        schema:
- *          $ref: '#/definitions/usermodel2'
- *    responses:
- *      '200':
- *        description: A user is loged in succesfully.
- *       
-*/
-
-/**
- * @swagger
- * /article/5f96bd1571078c1653fd29ff:
- *  delete:
- *    description: To delete an article by id
- *    responses:
- *      '200':
- *        description: Article is deleted succesfully.
- *       
-*/
-
-
-/**
- * @swagger
- * /article:
- *  post:
- *    description: To post a new article 
- *    parameters:
- *      - name: articleModel
- *        description: article object
- *        in: body
- *        schema:
- *          $ref: '#/definitions/articleModel'
- *    responses:
- *      '200':
- *        description: A new article is created succesfully.
- *       
-*/
-
-/**
- * @swagger
- * /article/5f7ed076fdd9c80004310ca3:
- *  put:
- *    description: To update an existing article 
- *    parameters:
- *      - name: updatingModel
- *        description: updating object
- *        in: body
- *        schema:
- *          $ref: '#/definitions/updatingModel'
- *    responses:
- *      '200':
- *        description: An article is updated succesfully.
- *       
-*/
-
-/**
- * @swagger
- * definitions:
- *   commentsModel:
- *     properties: 
- *       name:
- *         type: Strings
- *       comment:
- *         type: String
- *   articleModel:
- *     properties: 
- *       title:
- *         type: Strings
- *       description:
- *         type: String
- *       articleImage: 
- *         type: Object
- *       content:
- *         type: String
- *   usermodel:
- *     prooerties:
- *       name:
- *         type: String
- *       password:
- *         type: String 
- *   usermodel2:
- *     prooerties:
- *       name:
- *         type: String
- *       password:
- *         type: String
- *   updatingModel:
- *     properties: 
- *       title:
- *         type: Strings
- *       description:
- *         type: String
- *       articleImage:
- *         type: String
- *       content:
- *         type: String
- *    
- *       
-*/
-
-/**
- * @swagger
- * /article/5f96bd4771078c1653fd2a00/comments:
- *  post:
- *    description: To post a comment to an article 
- *    parameters:
- *      - name: commentsModel
- *        description: comment object
- *        in: body
- *        schema:
- *          $ref: '#/definitions/commentsModel'
- *    responses:
- *      '200':
- *        description: A new comment of an article is created succesfully.
- *       
-*/
-
-/**
- * @swagger
- * /article/5f7ed076fdd9c80004310ca3/comments/5f97af8c783ae92e3ea0cbbb:
- *  delete:
- *    description: To delete a comment by id
- *    responses:
- *      '200':
- *        description: A comment must be deleted succesfully.
- *       
-*/
 
 const { JsonWebTokenError } = require('jsonwebtoken');
 

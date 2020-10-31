@@ -3,6 +3,20 @@ const mongoose = require('mongoose');
 const router = express.Router();
 var articleModel = require('./model');
 
+/**
+ * @swagger
+ * /article:
+ *  get:
+ *    tags:
+ *    - All articles
+ *    summary: For getting all articles
+ *    description: Use to request all articles
+ *    responses:
+ *      '200':
+ *        description: All articles succesffuly retreived.
+ *       
+*/
+
 router.get('/article',(req,res)=>{
     articleModel.find({},(err,items)=>{
         res.send(items);

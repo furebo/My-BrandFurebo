@@ -4,12 +4,30 @@ const router = express.Router();
 const protection = require('./protection');
 const articleModel = require('./model'); 
 const bodyParser = require('body-parser');
-
-
 app.use(bodyParser.json()) ;
 
-router.delete('/article/:id',(req,res)=>{
-    console.log(req.params.id)
+/**
+ * @swagger
+ * /article/{id}:
+ *   delete:
+ *     summary: Deletes an article based on ID
+ *     tags:
+ *       - Articles
+ *     description: Deletes a single article
+ *     produces:
+ *       - application/json
+ *     parameters:
+ *       - name: id
+ *         description: Article's id
+ *         in: path
+ *         required: true
+ *         type: string
+ *     responses:
+ *       200:
+ *         description: Successfully deleted
+ */
+
+router.delete('/article/:id',protection,(req,res)=>{
     articleModel.findByIdAndRemove({_id:req.params.id}).then(()=>{
         res.json({
             message:"Article deleted !",

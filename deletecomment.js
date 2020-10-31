@@ -5,11 +5,30 @@ const router = express.Router();
 var articleModel = require('./model'); 
 
 const bodyParser = require('body-parser');
-
-
 app.use(bodyParser.json()) ;
 
-router.delete('/article/:id/comments/:id',(req,res)=>{
+/**
+ * @swagger
+ * /article/5f7ed12afdd9c80004310ca6/comments/{id}:
+ *   delete:
+ *     summary: Deletes a comment based on ID
+ *     tags:
+ *       - Comments
+ *     description: Deletes a single comment
+ *     produces:
+ *       - application/json
+ *     parameters:
+ *       - name: id
+ *         description: Comment's id
+ *         in: path
+ *         required: true
+ *         type: string
+ *     responses:
+ *       200:
+ *         description: Successfully deleted
+ */
+
+router.delete('/article/:id/comments/:id',protection,(req,res)=>{
     articleModel.find({},(err,items)=>{
         
              for(let i = 0; i < items.length; i++ ){

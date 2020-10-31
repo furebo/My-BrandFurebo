@@ -2,9 +2,9 @@ const jsonwebtoken = require('jsonwebtoken');
 
    module.exports = (req,res,next)=>{
     try {
-           var token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiZnVyZWJvIiwiaWF0IjoxNjAzOTU1MzMyLCJleHAiOjE2MDM5NzMzMzJ9.EmbBqBnk2xD0Wfu0fbsTvckM_1jqdmTcz9WSVsbQw9w"
+        const token = req.headers.token.split(" ")[1];
         //var token = req.headers.token;
-        //const tokendecoded = jsonwebtoken.verify(req.body.token, process.env.JWT_KEY);
+        //const tokendecoded = jsonwebtoken.verify(token, process.env.JWT_KEY);
         jsonwebtoken.verify(token,process.env.JWT_KEY);
         //req.userData = tokendecoded;
         next();
@@ -14,3 +14,5 @@ const jsonwebtoken = require('jsonwebtoken');
         })
     }
 } 
+
+//"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiZnVyZWJvIiwiaWF0IjoxNjA0MDUwODUwLCJleHAiOjE2MDQwODY4NTB9.ba-kms3B9BJB2R2_2ISDGb2TT0LWhemAyun4c5tFZxc" 
