@@ -94,6 +94,53 @@ describe('post/article', () => {
     });
 });
 
+describe("post/article/:id/comments",()=>{;
+
+    it("should add comments to an article ",()=>{
+
+        //let token = " ";
+
+        const valid_input = {
+            "name": "furebo",
+            "password": "fode123"
+        }
+
+        chai.request(server)
+          .post('/loginuser')
+          .send(valid_input)
+          .then((login_response)=>{
+            token = 'Bearer ' + login_response.body.token;
+            const comment = {
+                'name':'furebo',
+                 'comment':'hey!'
+              }
+
+            articleModel.findById('5f7ed0affdd9c80004310ca5').then((result)=>{
+
+                result.comments.push(comment);
+                articleModel.findByIdAndUpdate({_id:'5f7ed0affdd9c80004310ca5'},result).then(()=>{
+                    articleModel.findOne({_id:'5f7ed0affdd9c80004310ca5'}).then((article)=>{
+                        let articleId = article._id
+                        chai.request(server)
+                        .post('/article/' + articleId + 'comments')
+                        .set('token', token)
+                        .send()
+                        .end((err,response)=>{
+                            response.should.have.status(200);
+                            response.body.should.be.a('object');
+                        
+                        })  
+                 })
+                }) 
+                    
+             })
+
+
+     })
+        
+})
+})
+
 
 //testing route to delete an article
 
@@ -237,52 +284,7 @@ describe("put/article/:id",()=>{
     })
 
 
- describe("post/article/:id/comments",()=>{;
 
-        it("should add comments to an article ",()=>{
-
-            //let token = " ";
-
-            const valid_input = {
-                "name": "furebo",
-                "password": "fode123"
-            }
-
-            chai.request(server)
-              .post('/loginuser')
-              .send(valid_input)
-              .then((login_response)=>{
-                token = 'Bearer ' + login_response.body.token;
-                const comment = {
-                    'name':'furebo',
-                     'comment':'hey!'
-                  }
-
-                articleModel.findById('5f7ed0affdd9c80004310ca5').then((result)=>{
-
-                    result.comments.push(comment);
-                    articleModel.findByIdAndUpdate({_id:'5f7ed0affdd9c80004310ca5'},result).then(()=>{
-                        articleModel.findOne({_id:'5f7ed0affdd9c80004310ca5'}).then((article)=>{
-                            let articleId = article._id
-                            chai.request(server)
-                            .post('/article/' + articleId + 'comments')
-                            .set('token', token)
-                            .send()
-                            .end((err,response)=>{
-                                response.should.have.status(200);
-                                response.body.should.be.a('object');
-                            
-                            })  
-                     })
-                    }) 
-                        
-                 })
-
-
-         })
-            
-    })
-})
 
 
 
