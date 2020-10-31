@@ -36,9 +36,9 @@ var usermodel = require('./usermodel');
 */
 
 router.post('/loginuser',(req,res,next)=>{
-    usermodel.findOne({name:req.body.name})
+    usermodel.find({name:req.body.name})
     .then(user =>{ bcrypt.compare(req.body.password, user.password,()=>{
-        var token = jsonwebtoken.sign({name:user.name},"secret",{expiresIn:"1h"})
+        var token = jsonwebtoken.sign({name:user.name},process.env.JWT_KEY,{expiresIn:"1h"})
        
                     res.status(200).json({
                     message:"user loged in successfully",
