@@ -351,19 +351,22 @@ describe("get default",()=>{
 
     describe("post/signup",()=>{
         it("should signup a user to database ",(done)=>{
-           let user = {name:"frere",password:"frere123"}
+           //let user = {name:"frere",password:"frere123"}
            
                 chai.request(server)
                 .post("/signup")
                 .end((err,res)=>{
                     res.should.have.status(200);
                     res.body.should.have.property('message').eql('user signed up');
+                done();
                 })
-                done();       
+                       
              })
                
 
        }) 
+
+      
   
  
   /*

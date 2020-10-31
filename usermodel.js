@@ -3,11 +3,11 @@ var mongoose = require('mongoose');
 var userSchema = new mongoose.Schema({ 
 name:{
     type:String,
-    required:true},
+    required:false},
 
 password:{
         type:String,
-        required:true
+        required:false
     }
 });
 

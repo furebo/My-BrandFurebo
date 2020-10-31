@@ -40,7 +40,9 @@ router.post('/',(req,res,next)=>{
         
     newuser.save().then(
         res.json({message:"user signed up"})
-    )
+    ).catch(()=>{
+        res.json({message:'there is an error'})
+     })
    })
 })
 

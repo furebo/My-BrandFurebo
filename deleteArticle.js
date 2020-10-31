@@ -42,6 +42,8 @@ router.delete('/article/:id',protection,(req,res)=>{
                 }
             }
         })
+    }).catch((err)=>{
+        console.log('Error: ' + err)
     })
 }) 
 
