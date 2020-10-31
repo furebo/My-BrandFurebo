@@ -122,7 +122,7 @@ describe("get default",()=>{
 
    describe("deleting a comment",()=>{
     it("should delete a user comment ",(done)=>{
-        const valid_input = {
+    /*    const valid_input = {
             "name": "furebo",
             "password": "fode123"
         }
@@ -130,7 +130,7 @@ describe("get default",()=>{
           .post('/loginuser')
           .send(valid_input)
           .then((login_response)=>{
-            token = 'Bearer ' + login_response.body.token;
+            token = 'Bearer ' + login_response.body.token;  */
             
             articleModel.findById('5f7ed0affdd9c80004310ca5').then((result)=>{
                 const comment = {
@@ -155,7 +155,7 @@ describe("get default",()=>{
                     })
                 }) 
              })
-         })
+        // })
     })
 })
 
