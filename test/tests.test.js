@@ -66,10 +66,12 @@ describe("get/article/:id",()=>{
     })
 })
 
+let token = "";
+
 describe('post/article', () => {
     it('it should  POST an article', () => {
 
-        let token = " ";
+        //let token = " ";
 
         const valid_input = {
             "name": "furebo",
@@ -98,7 +100,7 @@ describe('post/article', () => {
 describe("delete/article/:id",()=>{
     it("should delete an existing  article ",(done)=>{
              
-        let token = " ";
+       // let token = " ";
 
             const newArticle = {
                 _id:"5f9abcc557cd8100044d4d5b",
@@ -145,7 +147,7 @@ describe("put/article/:id",()=>{
 
     it("should update an existing  article ",()=>{
          
-        let token = " ";
+       // let token = " ";
 
         const valid_input = {
             "name": "furebo",
@@ -172,7 +174,7 @@ describe("put/article/:id",()=>{
  describe("put/article/:id",()=>{
         it("should not update an existing  article ",()=>{
            
-         let token = " ";
+        // let token = " ";
 
          const newArticle = {
             id:"5f6e20183a0fa22e625528ba"
@@ -203,7 +205,7 @@ describe("put/article/:id",()=>{
  describe("delete/article/:id",()=>{
         it("should not delete an existing  article ",()=>{
     
-         let token = " ";
+       //  let token = " ";
 
           const newArticle = {
               _id:"5f8819ce231962929d015701",
@@ -216,7 +218,7 @@ describe("put/article/:id",()=>{
           const valid_input = {
             "name": "furebo",
             "password": "fode123"
-        }
+        }  
         chai.request(server)
           .post('/loginuser')
           .send(valid_input)
@@ -239,7 +241,7 @@ describe("put/article/:id",()=>{
 
         it("should add comments to an article ",()=>{
 
-            let token = " ";
+            //let token = " ";
 
             const valid_input = {
                 "name": "furebo",
@@ -282,49 +284,8 @@ describe("put/article/:id",()=>{
     })
 })
 
-//testing route for deleting a comment
 
- describe("deleting a comment",()=>{
-    it("should delete a user comment ",(done)=>{
 
-       let token = " ";
-
-       const valid_input = {
-            "name": "furebo",
-            "password": "fode123"
-        }
-        chai.request(server)
-          .post('/loginuser')
-          .send(valid_input)
-          .then((login_response)=>{
-            token = 'Bearer ' + login_response.body.token;  
-            
-            articleModel.findById('5f7ed0affdd9c80004310ca5').then((result)=>{
-                const comment = {
-                    "name":"furebo",
-                    "comment":"cool"
-                }
-                result.comments.push(comment);
-                articleModel.findByIdAndUpdate({_id:'5f7ed0affdd9c80004310ca5'},result).then(()=>{
-                    articleModel.findOne({_id:'5f7ed0affdd9c80004310ca5'}).then((article)=>{
-                      let commentsArray = article.comments
-                      let commentId = commentsArray[0]._id; 
-                      
-                      chai.request(server)
-                      .delete("/article/:id/comments/" + commentId)
-                      .set('token',token)
-                      .end((err,response)=>{
-                          response.should.have.status(200)
-                          response.body.should.have.property('message').eql('comment deleted successfully !');
-               
-                          done();
-                      })
-                    })
-                }) 
-             })
-         })
-    })
-})
 
 //testing post route for signing up the user to database
 
@@ -370,7 +331,7 @@ describe("post/loginuser",()=>{
            }
            chai.request(server)
            .post("/loginuser")
-           //.send(user)
+           .send(user)
            .end((err,response)=>{
                response.should.have.status(200);
                response.should.have.property('message').eql('user loged in successfully')
@@ -378,6 +339,31 @@ describe("post/loginuser",()=>{
            })
        })
    }) 
+
+   //testing route for deleting a comment
+/*
+ describe("deleting a comment",()=>{
+    it("should delete a user comment ",(done)=>{
+
+      //let token = " " 
+            //token = 'Bearer ' + login_response.body.token;  
+            
+                     let commentId = "5f9d5e5ebeb6981ae8560c3d"
+                      
+                      chai.request(server)
+                      .delete("/article/:id/comments/" + commentId)
+                      .set('token',token)
+                      .end((err,response)=>{
+                          response.should.have.status(200)
+                          response.body.should.have.property('message').eql('comment deleted successfully !');
+               
+                          done();
+                      })
+                    })
+                }) 
+       */     
+         
+    
    
   
     
