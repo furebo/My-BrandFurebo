@@ -35,7 +35,7 @@ describe('post/article', () => {
               token = 'Bearer ' + login_response.body.token;
               chai.request(server)
               .post('/article')
-              .set('token', token)
+              .set('Authorization', token)
               .end((err,res) => {
                 res.should.have.status(200)
                 //res.body.should.have.property('message').eql('Article is created successfully!');

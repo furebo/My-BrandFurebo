@@ -41,7 +41,7 @@ describe("deleting a comment",()=>{
         chai.request(server)
         .delete("/article/:id/comments/" + commentid)
         .send()
-        .set('token',token)
+        .set('Authorization',token)
         .end((err,response)=>{
             response.should.have.status(200)
             response.body.should.have.property('message').eql('comment deleted successfully !');

@@ -43,7 +43,7 @@ describe("put/article/:id",()=>{
             token = 'Bearer ' + login_response.body.token; 
             chai.request(server)
             .put("/article/" + newArticle.id)
-            .set('token', token)
+            .set('Authorization', token)
             .send(newArticle)
             .end((err,response)=>{
                 response.should.have.status(200);

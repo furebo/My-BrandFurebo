@@ -7,7 +7,7 @@ let mongoose = require('mongoose');
 const sinon = require('sinon');
 const articleModel = require("../model.js");
 const usermodel = require("../usermodel.js");
-const protection = require("../protection.js");
+//const protection = require("../protection.js");
 const chai = require("chai");
 const expect = require('chai').expect;
 const request = require('supertest');
@@ -48,7 +48,7 @@ chai.use(chaiHttp);
     
                     chai.request(server)
                     .delete('/article/' + newArticle)
-                    .set('Authorization', token)
+                    .set('token',token)
                     .end((err,response)=>{
                         response.should.have.status(200);
                         response.body.should.have.property('message').eql('Article deleted !');
