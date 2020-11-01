@@ -14,6 +14,26 @@ const assert = require('assert');
 const { should } = require('chai');
 chai.should();
 chai.use(chaiHttp);
+
+
+//testing post route for signing up the user to database
+    
+describe("post/signup",()=>{
+    it("should signup a user to database ",(done)=>{
+           let user = {name:"frere",password:"frere123"}
+       
+            chai.request(server)
+            .post("/signup")
+            .send(user)
+            .end((err,res)=>{
+                res.should.have.status(200);
+                res.body.should.have.property('message').eql('user signed up');
+            done();
+            })
+    
+        })
+
+    }) 
         
     describe("get default",()=>{
         it("should desplay a welcome message ",(done)=>{
