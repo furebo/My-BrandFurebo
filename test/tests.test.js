@@ -19,7 +19,7 @@ chai.use(chaiHttp);
 //testing post route for signing up the user to database
     
 describe("post/signup",()=>{
-    it("should signup a user to database ",(done)=>{
+    it("should signup a user to database ",()=>{
            let user = {name:"frere",password:"frere123"}
        
             chai.request(server)
@@ -28,7 +28,7 @@ describe("post/signup",()=>{
             .end((err,res)=>{
                 res.should.have.status(200);
                 res.body.should.have.property('message').eql('user signed up');
-            done();
+            //done();
             })
     
         })
@@ -57,12 +57,103 @@ describe("post/signup",()=>{
             })
         });
     }) 
-   
 
-
-   
+    describe("delete/article/:id",()=>{
+        it("should delete an existing  article ",(done)=>{
+                 
+            
     
-     
+                const newArticle = {
+                    _id:"5f9abcc557cd8100044d4d5b",
+                    title:"new title3",
+                    description:"new description2",
+                    articleImage:"uploads/database.png",
+                    content:"content of new article2",
+                }
+    
+                const valid_input = {
+                    "name": "furebo",
+                    "password": "fode123"
+                }
+                chai.request(server)
+                  .post('/loginuser')
+                  .send(valid_input)
+                  .then((login_response)=>{
+                   let token = 'Bearer ' + login_response.body.token;
+    
+                    chai.request(server)
+                    .delete('/article/' + newArticle)
+                    .set('token',token)
+                    .end((err,response)=>{
+                        response.should.have.status(200);
+                        response.body.should.have.property('message').eql('Article deleted !');
+                    })
+                   done(); 
+                })  
+            })
+        })
+   
+    describe('post/article', () => {
+        it('it should  POST an article', () => {
+    
+            let token = " ";
+    
+            const valid_input = {
+                "name": "furebo",
+                "password": "fode123"
+            }
+              chai.request(server)
+              .post('/loginuser')
+              .send(valid_input)
+              .then((login_response)=>{
+                  token = 'Bearer ' + login_response.body.token;
+                  chai.request(server)
+                  .post('/article')
+                  .set('Authorization', token)
+                  .end((err,res) => {
+                    res.should.have.status(200)
+                    //res.body.should.have.property('message').eql('Article is created successfully!');
+                   //done();
+                 })
+              })
+        });
+    });
+
+    describe("put/article/:id",()=>{
+        const newArticle = {
+            id:"5f6e20183a0fa22e625528ba",
+            title: "this is the title",
+            description: "this decsription is for testing",
+            articleImage: "uploads/education icon.png",
+            content:"this is an article posted for testing",
+        }
+    
+        it("should update an existing  article ",()=>{
+             
+           let token = " ";
+    
+            const valid_input = {
+                "name": "furebo",
+                "password": "fode123"
+            }
+            chai.request(server)
+              .post('/loginuser')
+              .send(valid_input)
+              .then((login_response)=>{
+                token = 'Bearer ' + login_response.body.token; 
+                chai.request(server)
+                .put("/article/" + newArticle.id)
+                .set('Authorization', token)
+                .send(newArticle)
+                .end((err,response)=>{
+                    response.should.have.status(200);
+                    response.body.should.have.property('message').eql('Article updated!');
+        
+                })
+              })
+            })
+        }) 
+    
     
    
     describe("post/article/:id/comments",()=>{;
@@ -180,45 +271,6 @@ describe("post/signup",()=>{
         })
 
 //testing route to delete an article
-    //let token = "";
-
-    describe("delete/article/:id",()=>{
-        it("should delete an existing  article ",(done)=>{
-                 
-            
-    
-                const newArticle = {
-                    _id:"5f9abcc557cd8100044d4d5b",
-                    title:"new title3",
-                    description:"new description2",
-                    articleImage:"uploads/database.png",
-                    content:"content of new article2",
-                }
-    
-                const valid_input = {
-                    "name": "furebo",
-                    "password": "fode123"
-                }
-                chai.request(server)
-                  .post('/loginuser')
-                  .send(valid_input)
-                  .then((login_response)=>{
-                   let token = 'Bearer ' + login_response.body.token;
-    
-                    chai.request(server)
-                    .delete('/article/' + newArticle)
-                    .set('token',token)
-                    .end((err,response)=>{
-                        response.should.have.status(200);
-                        response.body.should.have.property('message').eql('Article deleted !');
-                    })
-                   done(); 
-                })  
-            })
-        })
-            
-
-        
 
 /*
 describe("deleting a comment",()=>{
