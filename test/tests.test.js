@@ -61,7 +61,7 @@ describe("post/signup",()=>{
     describe("delete/article/:id",()=>{
         it("should delete an existing  article ",(done)=>{
                  
-            
+            let token = " ";
     
                 const newArticle = {
                     _id:"5f9abcc557cd8100044d4d5b",
@@ -79,7 +79,7 @@ describe("post/signup",()=>{
                   .post('/loginuser')
                   .send(valid_input)
                   .then((login_response)=>{
-                   let token = 'Bearer ' + login_response.body.token;
+                   token = 'Bearer ' + login_response.body.token;
     
                     chai.request(server)
                     .delete('/article/' + newArticle)
