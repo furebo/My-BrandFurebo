@@ -28,9 +28,8 @@ app.use(bodyParser.json()) ;
  *         description: Successfully deleted
  */
 
-router.delete('/article/:id/comments/:id',protection,(req,res)=>{
+router.delete('/article/:id/comments/:id',(req,res)=>{
     articleModel.find({},(err,items)=>{
-        
              for(let i = 0; i < items.length; i++ ){
                 
                  for(let j = 0; j < items[i].comments.length; j++){
