@@ -27,7 +27,7 @@ app.use(bodyParser.json()) ;
  *         description: Successfully deleted
  */
 
-router.delete('/article/:id',(req,res)=>{
+router.delete('/article/:id',protection,(req,res)=>{
     articleModel.findByIdAndRemove({_id:req.params.id}).then(()=>{
         res.json({
             message:"Article deleted !",
