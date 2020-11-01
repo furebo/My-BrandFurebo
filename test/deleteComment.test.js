@@ -24,7 +24,7 @@ chai.use(chaiHttp);
 describe("deleting a comment",()=>{
     it("should delete a user comment ",(done)=>{
 
-      //let token = " " 
+      let token = " " 
 
       const valid_input = {
         "name": "furebo",
