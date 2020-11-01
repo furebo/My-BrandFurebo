@@ -2,11 +2,11 @@ const jsonwebtoken = require('jsonwebtoken');
 
    module.exports = (req,res,next)=>{
     try {
-        const token = req.headers.token.split(" ")[1];
+        var token = req.headers.token.split(" ")[1];
         //var token = req.headers.token;
-        //const tokendecoded = jsonwebtoken.verify(token, process.env.JWT_KEY);
+        const tokendecoded = jsonwebtoken.verify(token, process.env.JWT_KEY);
         jsonwebtoken.verify(token,process.env.JWT_KEY);
-        //req.userData = tokendecoded;
+        req.userData = tokendecoded;
         next();
     }catch(err){
         return res.status(401).json({

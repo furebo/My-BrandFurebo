@@ -23,7 +23,7 @@ var usermodel = require('./usermodel');
  *        description: A new user is signed up succesfully.
  * definitions:
  *   usermodel:
- *     prooerties:
+ *     properties:
  *       name:
  *         type: String
  *       password:

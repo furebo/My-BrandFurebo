@@ -23,7 +23,7 @@ const articleModel = require('./model');
  *         description: A single article
  *       500:
  *         description: Server Error
- */
+ */     
 
 router.get('/article/:id',(req,res)=>{
 

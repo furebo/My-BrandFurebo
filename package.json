@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node app.js",
     "devStart": "nodemon app.js",
-    "test": "nyc mocha test/tests.test.js --timeout 40000 --exit",
+    "test": "nyc mocha test/**/*.js --timeout 40000 --exit",
     "coverage": "nyc --reporter=lcov --reporter=text-lcov npm test",
     "showCoverage": "open coverage/lcov-report/index.html"
   },
