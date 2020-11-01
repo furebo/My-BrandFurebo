@@ -24,7 +24,7 @@ chai.use(chaiHttp);
 describe("deleting a comment",()=>{
     it("should delete a user comment ",(done)=>{
 
-      let token = " " 
+      
 
       const valid_input = {
         "name": "furebo",
@@ -34,6 +34,7 @@ describe("deleting a comment",()=>{
       .post('/loginuser')
       .send(valid_input)
       .then((login_response)=>{
+        let token = " " ;
         token = 'Bearer ' + login_response.body.token;
 
         articleModel.findById("5f7ed0affdd9c80004310ca5").then((result)=>{
