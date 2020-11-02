@@ -57,41 +57,6 @@ describe("post/signup",()=>{
             })
         });
     }) 
-
-    describe("delete/article/:id",()=>{
-        it("should delete an existing  article ",(done)=>{
-                 
-            let token = " ";
-    
-                const newArticle = {
-                    _id:"5f9abcc557cd8100044d4d5b",
-                    title:"new title3",
-                    description:"new description2",
-                    articleImage:"uploads/database.png",
-                    content:"content of new article2",
-                }
-    
-                const valid_input = {
-                    "name": "furebo",
-                    "password": "fode123"
-                }
-                chai.request(server)
-                  .post('/loginuser')
-                  .send(valid_input)
-                  .then((login_response)=>{
-                   token = 'Bearer ' + login_response.body.token;
-    
-                    chai.request(server)
-                    .delete('/article/' + newArticle)
-                    .set('authorization',token)
-                    .end((err,response)=>{
-                        response.should.have.status(200);
-                        response.body.should.have.property('message').eql('Article deleted !');
-                    })
-                   done(); 
-                })  
-            })
-        })
    
     describe('post/article', () => {
         it('it should  POST an article', () => {
@@ -235,6 +200,43 @@ describe("post/signup",()=>{
              })
           })
         }) 
+
+        describe("delete/article/:id",()=>{
+            it("should delete an existing  article ",(done)=>{
+                     
+                let token = " ";
+        
+                    const newArticle = {
+                        _id:"5f9abcc557cd8100044d4d5b",
+                        title:"new title3",
+                        description:"new description2",
+                        articleImage:"uploads/database.png",
+                        content:"content of new article2",
+                    }
+        
+                    const valid_input = {
+                        "name": "furebo",
+                        "password": "fode123"
+                    }
+                    chai.request(server)
+                      .post('/loginuser')
+                      .send(valid_input)
+                      .then((login_response)=>{
+                       token = 'Bearer ' + login_response.body.token;
+        
+                        chai.request(server)
+                        .delete('/article/' + newArticle._id)
+                        .set('authorization',token)
+                        .end((err,response)=>{
+                            response.should.have.status(200);
+                            response.body.should.have.property('message').eql('Article deleted !');
+                            done();
+                        })
+                        
+                    })  
+                })
+            })
+    
         
      describe("delete/article/:id",()=>{
             it("should not delete an existing  article ",()=>{
@@ -270,6 +272,8 @@ describe("post/signup",()=>{
         
         })
 
+
+       
 //testing route to delete an article
 
 /*
