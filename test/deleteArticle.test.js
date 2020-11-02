@@ -1,16 +1,7 @@
-require('dotenv').config();
 const express = require('express');
-let mongoose = require('mongoose');
-const sinon = require('sinon');
-const articleModel = require("../model.js");
-const usermodel = require("../usermodel.js");
 const chai = require("chai");
-const expect = require('chai').expect;
-const request = require('supertest');
 const chaiHttp = require("chai-http");
 const server = require("../app");
-const assert = require('assert');
-const { should } = require('chai');
 chai.should();
 chai.use(chaiHttp);
 describe("delete/article/:id",()=>{
