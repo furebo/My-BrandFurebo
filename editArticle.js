@@ -16,22 +16,6 @@ var articleModel = require('./model');
  *          in: path
  *          description: Article ID
  *          required: true
- *        - name: title
- *          in: path
- *          description: Article title
- *          required: true
- *        - name: description
- *          in: path
- *          description: Article description
- *          required: false
- *        - name: content
- *          in: path
- *          description: Article content
- *          required: false
- *        - name: article Image
- *          in: path
- *          description: Article image
- *          required: false
  *      requestBody:
  *        required: false
  *        content:
@@ -40,7 +24,7 @@ var articleModel = require('./model');
  *              $ref: '#/components/schemas/article'
  *      responses:
  *        "201":
- *          description: An article update
+ *          description: An article schema
  *
  * components:
  *    schemas:
@@ -48,17 +32,15 @@ var articleModel = require('./model');
  *        type: object
  *        required: 
  *          - title
- *          - description
  *          - content
+ *          - articleImage
  *        properties:
  *          title:
  *            type: string
- *          description:
- *            type: string
  *          content:
  *            type: string
- *          articleImage:
- *             type: string
+ *          description:
+ *            type: string
  *            
  *
  */

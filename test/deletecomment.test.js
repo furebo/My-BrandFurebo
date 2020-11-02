@@ -23,7 +23,7 @@ chai.use(chaiHttp);
            articleModel.findById("5f7ed0affdd9c80004310ca5").then((result)=>{
             let commentid = result.comments[0]._id               
             chai.request(server)
-            .delete("/article/:id/comments/" + commentid)
+            .delete("/article/:ArtId/comments/" + commentid)
             .end((err,response)=>{
                 response.should.have.status(200)
                 response.body.should.have.property('message').eql('comment deleted successfully !');

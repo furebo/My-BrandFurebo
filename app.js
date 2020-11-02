@@ -18,6 +18,7 @@ const editArticle = require('./editArticle');
 const getArticles = require('./getArticleroute');
 const getArticleById = require('./getOneArticle');
 const postingArticle = require('./postArticle');
+const protection = require('./protection')
 
 const swaggerJsDoc = require('swagger-jsdoc');
 const swaggerUi = require('swagger-ui-express');
@@ -31,6 +32,7 @@ const swaggerOptions = {
             title:"Develloper Articles API",
             description:"This Api is for articles released evey end of week",
         },
+        basePath: '/',
         components: {
             securitySchemes: {
               bearerAuth: {

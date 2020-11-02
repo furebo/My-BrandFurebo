@@ -9,33 +9,17 @@ const protection = require('./protection');
  *
  * /article:
  *    post:
- *      summary: add an article
- *      tags: [Articles]
+ *      summary: add article
+ *      tags: [articles]
  *      requestBody:
+ *        required: true
  *        content:
- *          multipart/form-data:
+ *          application/json:
  *            schema:
  *              $ref: '#/components/schemas/article'
- *      parameters:
- *        - in: formData
- *          name: title
- *          type: string
- *          description: An article title.
- *        - in: formData
- *          name: descrition
- *          type: string
- *          description: An article description.
- *        - in: formData
- *          name: content
- *          type: string
- *          description: Article content
- *        - in: formData
- *          name: upfile
- *          type: file
- *          description: The file to upload
  *      responses:
- *        "200":
- *          description: An article schema
+ *        "201":
+ *          description: Article schema
  *
  * components:
  *    schemas:
@@ -50,17 +34,12 @@ const protection = require('./protection');
  *          title:
  *            type: string
  *          description:
- *            type:string
+ *              type: string
  *          content:
- *            type: string
+ *              type: string
  *          articleImage:
- *            type: Object
- *         
- * 
- *              
+ *              type: object
  *       
- * 
- * 
  */
 
 const multer = require('multer');

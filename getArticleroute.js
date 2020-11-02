@@ -9,9 +9,12 @@ var articleModel = require('./model');
  *  get:
  *    tags:
  *    - All articles
- *    summary: For getting all articles
- *    description: Use to request all articles
- *       
+ *    summary: All articles from database
+ *    description: Articles are desplayed from DB
+ *    responses:
+ *      '200':
+ *        description: Articles are desplayed succesffuly.
+ *      
 */
 
 router.get('/article',(req,res)=>{

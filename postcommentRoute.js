@@ -6,10 +6,15 @@ const protection = require('./protection')
 /**
  * @swagger
  *
- * /article/{_id}/comments:
+ * /article/{id}/comments:
  *    post:
  *      summary: add a comment
  *      tags: [Comments]
+ *      parameters:
+ *        - name: id
+ *          in: path
+ *          description: Article ID
+ *          required: true
  *      requestBody:
  *        required: true
  *        content:
@@ -25,12 +30,9 @@ const protection = require('./protection')
  *      comment:
  *        type: object
  *        required:
- *          - article_id
  *          - name
  *          - comment
  *        properties:
- *          article_id:
- *            type: string
  *          name:
  *            type: string
  *          comment:

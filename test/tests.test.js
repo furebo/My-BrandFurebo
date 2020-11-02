@@ -83,7 +83,7 @@ describe("post/signup",()=>{
     
                     chai.request(server)
                     .delete('/article/' + newArticle)
-                    .set('token',token)
+                    .set('authorization',token)
                     .end((err,response)=>{
                         response.should.have.status(200);
                         response.body.should.have.property('message').eql('Article deleted !');

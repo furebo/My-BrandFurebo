@@ -7,27 +7,30 @@ var usermodel = require('./usermodel');
 /**
  * @swagger
  * /signup:
- *  post:
- *    tags:
+ *  tags:
  *    - User signup
- *    summary: For user to Signup
- *    description: To signup a user to the database
- *    parameters:
- *      - name: usermodel
- *        description: user object
- *        in: body
+ *  summary: For user to signup 
+ *  description: To signup the user to the database
+ *  equestBody:
+ *    required: true
+ *    content:
+ *      application/json:
  *        schema:
- *          $ref: '#/definitions/usermodel'
- *    responses:
- *      '200':
- *        description: A new user is signed up succesfully.
+ *          $ref: '#/definitions/usermodel2'
+ *  responses:
+ *    '200':
+ *      description: A user is loged in succesfully.
  * definitions:
- *   usermodel:
+ *   usermodel2:
+ *     type: object
+ *     required:
+ *       - name
+ *       - password
  *     properties:
  *       name:
- *         type: String
+ *         type: string
  *       password:
- *         type: String       
+ *         type: string      
 */
 
 router.post('/',(req,res,next)=>{

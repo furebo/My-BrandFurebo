@@ -9,7 +9,7 @@ app.use(bodyParser.json()) ;
 
 /**
  * @swagger
- * /article/5f7ed12afdd9c80004310ca6/comments/{id}:
+ * /article/{ArtId}/comments/{id}:
  *   delete:
  *     summary: Deletes a comment based on ID
  *     tags:
@@ -18,6 +18,11 @@ app.use(bodyParser.json()) ;
  *     produces:
  *       - application/json
  *     parameters:
+ *       - name: ArtId
+ *         description: Article's id
+ *         in: path
+ *         required: true
+ *         type: string
  *       - name: id
  *         description: Comment's id
  *         in: path
@@ -28,7 +33,7 @@ app.use(bodyParser.json()) ;
  *         description: Successfully deleted
  */
 
-router.delete('/article/:id/comments/:id',(req,res)=>{
+router.delete('/article/:ArtId/comments/:id',(req,res)=>{
     articleModel.find({},(err,items)=>{
              for(let i = 0; i < items.length; i++ ){
                 

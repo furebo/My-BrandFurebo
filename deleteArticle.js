@@ -1,10 +1,10 @@
 const express = require('express');
-const app = express();
+//const app = express();
 const router = express.Router();
 const protection = require('./protection');
 const articleModel = require('./model'); 
-const bodyParser = require('body-parser');
-app.use(bodyParser.json()) ;
+//const bodyParser = require('body-parser');
+//app.use(bodyParser.json()) ;
 
 /**
  * @swagger
@@ -27,7 +27,7 @@ app.use(bodyParser.json()) ;
  *         description: Successfully deleted
  */
 
-router.delete('/article/:id',(req,res)=>{
+router.delete('/article/:id',protection,(req,res)=>{
     articleModel.findByIdAndRemove({_id:req.params.id}).then(()=>{
         res.json({
             message:"Article deleted !",

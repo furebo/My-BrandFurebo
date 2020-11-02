@@ -1,7 +1,6 @@
 require('dotenv').config();
 const express = require('express');
 const bcrypt = require('bcrypt');
-const protection = require('./protection');
 const jsonwebtoken = require('jsonwebtoken');
 const router = express.Router();
 var usermodel = require('./usermodel');
