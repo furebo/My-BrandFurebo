@@ -15,24 +15,18 @@ const { should } = require('chai');
 chai.should();
 chai.use(chaiHttp);
 
-//testing post route for signing up the user to database
-    
-describe("post/signup",()=>{
-    it("should signup a user to database ",()=>{
-           let user = {name:"frere",password:"frere123"}
-       
-            chai.request(server)
-            .post("/signup")
-            .send(user)
-            .end((err,res)=>{
-                res.should.have.status(200);
-                res.body.should.have.property('message').eql('user signed up');
+     //testing GET/article route for getting a particular article
+            
+     describe("get/article/:id",()=>{
+        it("should get an article by id",()=>{
+            const articleId = '5f96b9c3002c7b14f8951145';
+            chai.request(server).get("/article/" + articleId).end((err,response)=>{
+                response.should.have.status(200);
+                response.body.should.be.a('object');
             //done();
             })
-    
         })
-
-    }) 
+    })
         
     describe("get default",()=>{
         it("should desplay a welcome message ",(done)=>{
@@ -111,7 +105,7 @@ describe("post/signup",()=>{
                 .send(newArticle)
                 .end((err,response)=>{
                     response.should.have.status(200);
-                    response.body.should.have.property('message').eql('Article updated!');
+                    response.json.should.have.property('message').eql('Article updated!');
         
                 })
               })
@@ -232,46 +226,27 @@ describe("post/signup",()=>{
             
             })
         
+        }) 
+
+
+   //testing post route for signing up the user to database
+    
+describe("post/signup",()=>{
+    it("should signup a user to database ",()=>{
+           let user = {name:"frere",password:"frere123"}
+       
+            chai.request(server)
+            .post("/signup")
+            .send(user)
+            .end((err,res)=>{
+                res.should.have.status(200);
+                res.body.should.have.property('message').eql('user signed up');
+            //done();
+            })
+    
         })
 
-//testing route to delete an article
-
-/*
-describe("deleting a comment",()=>{
-    var token = "" ;
-    it("should delete a user comment ",(done)=>{
-        const newComment = {
-            _id:"5f8819ce231962929d015701",
-            name:"gaetan",
-            comment:"oh!"
-        }
-      const valid_input = {
-        "name": "furebo",
-        "password": "fode123"
-    }  
-    chai.request(server)
-      .post('/loginuser')
-      .send(valid_input)
-      .then((login_response)=>{
-        
-        token = 'Bearer ' + login_response.body.token;
-
-       articleModel.findById("5f7ed0affdd9c80004310ca5").then((result)=>{
-        let commentid = result.comments[0]._id               
-        chai.request(server)
-        .delete("/article/:id/comments/" + _id)
-        .set('Authorization',token)
-        .end((err,response)=>{
-            response.should.have.status(200)
-            response.body.should.have.property('message').eql('comment deleted successfully !');
- 
-            done();
-        })
-      })
     }) 
- })
-})
-   */ 
     
 
  

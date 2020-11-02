@@ -19,10 +19,8 @@ chai.use(chaiHttp);
               .send(valid_input)
               .then((login_response)=>{
                 auth = 'Bearer '+ login_response.body.token;
-                //console.log(auth);
                 let article = new articlemodel({title: "node", description:"article descr",content: "about me", articleImage: "myimage"})
                 article.save((err, article) => {
-                    console.log(auth);
                     chai.request(server)
                     .delete('/article/' + article._id)
                     .set('authorization', auth)
