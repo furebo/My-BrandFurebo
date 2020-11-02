@@ -14,11 +14,11 @@ const { should } = require('chai');
 chai.should();
 chai.use(chaiHttp);
 
-let token = " ";
+
 
 describe("delete/article/:id",()=>{
     it("should delete an existing  article ",(done)=>{
-
+        let token = " ";
             const newArticle = {
                 _id:"5f9abcc557cd8100044d4d5b",
                 title:"new title3",
@@ -41,7 +41,7 @@ describe("delete/article/:id",()=>{
                 .delete('/article/' + newArticle._id)
                 .set('authorization',token)
                 .end((err,response)=>{
-                    response.should.have.status(401);
+                    response.should.have.status(200);
                     //response.body.should.have.property('message').eql("Article deleted !");
                     done();
                 })
