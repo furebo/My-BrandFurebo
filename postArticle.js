@@ -66,7 +66,7 @@ router.post('/article',protection,upload.single('articleImage'),(req,res,)=>{
     const obj = new articleModel({
          title:req.body.title,
          description:req.body.description,
-         articleImage:req.file,
+         articleImage:req.file.originalname,
          content:req.body.content,
      })
 

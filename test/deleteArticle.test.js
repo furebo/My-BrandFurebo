@@ -27,8 +27,8 @@ chai.use(chaiHttp);
                     .delete('/article/' + article._id)
                     .set('authorization', auth)
                     .end((err, res) => {
-                      res.should.have.status(401);
-                      //response.body.should.have.property('message').eql("Article deleted !");
+                      res.should.have.status(200);
+                      res.body.should.have.property('message').eql("Article deleted !");
       
                       done();
                     });
