@@ -27,7 +27,7 @@ const articleModel = require('./model');
  *         description: Successfully deleted
  */
 
-router.delete('/article/:id',protection,(req,res)=>{
+router.delete('/article/:id',(req,res)=>{
     articleModel.findByIdAndRemove({_id:req.params.id}).then(()=>{
         res.json({
             message:"Article deleted !",
