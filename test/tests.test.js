@@ -202,11 +202,10 @@ describe("post/signup",()=>{
         }) 
     
         
+
      describe("delete/article/:id",()=>{
             it("should not delete an existing  article ",()=>{
-        
-             let token = " ";
-    
+                let token = " "; 
               const newArticle = {
                   _id:"5f8819ce231962929d015701",
                   title:"new title3",
@@ -236,8 +235,6 @@ describe("post/signup",()=>{
         
         })
 
-
-       
 //testing route to delete an article
 
 /*

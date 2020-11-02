@@ -13,9 +13,6 @@ const assert = require('assert');
 const { should } = require('chai');
 chai.should();
 chai.use(chaiHttp);
-
-
-
 describe("delete/article/:id",()=>{
     it("should delete an existing  article ",(done)=>{
         let token = " ";
