@@ -14,10 +14,10 @@ const { should } = require('chai');
 chai.should();
 chai.use(chaiHttp);
 
+let token = " ";
+
 describe("delete/article/:id",()=>{
     it("should delete an existing  article ",(done)=>{
-             
-        let token = " ";
 
             const newArticle = {
                 _id:"5f9abcc557cd8100044d4d5b",
