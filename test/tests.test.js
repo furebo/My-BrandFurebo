@@ -15,7 +15,6 @@ const { should } = require('chai');
 chai.should();
 chai.use(chaiHttp);
 
-
 //testing post route for signing up the user to database
     
 describe("post/signup",()=>{

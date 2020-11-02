@@ -1,39 +1,38 @@
 const express = require('express');
+const mongoose = require('mongoose');
+const articlemodel = require('../model.js')
 const chai = require("chai");
 const chaiHttp = require("chai-http");
 const server = require("../app");
 chai.should();
 chai.use(chaiHttp);
-describe("delete/article/:id",()=>{
-    it("should delete an existing  article ",(done)=>{
-        let token = " ";
-            const newArticle = {
-                _id:"5f9fb875022d2c0004450ecf",
-                title:"new title3",
-                description:"new description2",
-                articleImage:"uploads/database.png",
-                content:"content of new article2",
-            }
 
-            const valid_input = {
-                "name": "furebo",
-                "password": "fode123"
-            }
-            chai.request(server)
+   describe('/delete/articleId', () => {
+	it('it should delete an article by id', (done) => {
+
+        const valid_input = {
+            "name": "furebo",
+            "password": "fode123"
+        }
+        chai.request(server)
               .post('/loginuser')
               .send(valid_input)
               .then((login_response)=>{
-               token = 'Bearer ' + login_response.body.token;
+                token = 'Bearer '+ login_response.body.token;
+                let article = new articlemodel({title: "node", description:"article descr",content: "about me", articleImage: "myimage"})
+                article.save((err, article) => {
+                      chai.request(server)
+                      .delete('/article/' + article._id)
+                      .set('token', token)
+                      .end((err, res) => {
+                        res.should.have.status(200);
+                        //response.body.should.have.property('message').eql("Article deleted !");
+        
+                        done();
+                      });
+              })
 
-                chai.request(server)
-                .delete('/article/' + newArticle._id)
-                .set('Authorization',token)
-                .end((err,response)=>{
-                    response.should.have.status(200);
-                    //response.body.should.have.property('message').eql("Article deleted !");
-                    done();
-                })
-                
-            })  
-        })
-    })
+		});
+	});
+});
+
