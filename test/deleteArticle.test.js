@@ -9,7 +9,7 @@ chai.use(chaiHttp);
 
    describe('/delete/articleId', () => {
 	it('it should delete an article by id', (done) => {
-
+       let auth = " ";
         const valid_input = {
             "name": "furebo",
             "password": "fode123"
@@ -18,19 +18,21 @@ chai.use(chaiHttp);
               .post('/loginuser')
               .send(valid_input)
               .then((login_response)=>{
-                token = 'Bearer '+ login_response.body.token;
+                auth = 'Bearer '+ login_response.body.token;
+                //console.log(auth);
                 let article = new articlemodel({title: "node", description:"article descr",content: "about me", articleImage: "myimage"})
                 article.save((err, article) => {
-                      chai.request(server)
-                      .delete('/article/' + article._id)
-                      .set('token', token)
-                      .end((err, res) => {
-                        res.should.have.status(200);
-                        //response.body.should.have.property('message').eql("Article deleted !");
-        
-                        done();
-                      });
-              })
+                    console.log(auth);
+                    chai.request(server)
+                    .delete('/article/' + article._id)
+                    .set('authorization', auth)
+                    .end((err, res) => {
+                      res.should.have.status(200);
+                      //response.body.should.have.property('message').eql("Article deleted !");
+      
+                      done();
+                    });
+            })
 
 		});
 	});
