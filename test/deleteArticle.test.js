@@ -41,7 +41,7 @@ describe("delete/article/:id",()=>{
                 .delete('/article/' + newArticle._id)
                 .set('authorization',token)
                 .end((err,response)=>{
-                    response.should.have.status(200);
+                    response.should.have.status(401);
                     response.body.should.have.property('message').eql('Article deleted !');
                     done();
                 })
