@@ -109,7 +109,7 @@ describe("post/signup",()=>{
                   token = 'Bearer ' + login_response.body.token;
                   chai.request(server)
                   .post('/article')
-                  .set('Authorization', token)
+                  .set('authorization', token)
                   .end((err,res) => {
                     res.should.have.status(200)
                     //res.body.should.have.property('message').eql('Article is created successfully!');
