@@ -39,7 +39,7 @@ describe("delete/article/:id",()=>{
 
                 chai.request(server)
                 .delete('/article/' + newArticle._id)
-                .set('authorization',token)
+                .set('Authorization',token)
                 .end((err,response)=>{
                     response.should.have.status(200);
                     //response.body.should.have.property('message').eql("Article deleted !");
