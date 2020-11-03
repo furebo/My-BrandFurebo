@@ -231,6 +231,72 @@ chai.use(chaiHttp);
         
         }) 
 
+        describe("delete/article/:id",()=>{
+            it("should delete an existing  article ",()=>{
+                let token = " "; 
+              const newArticle = {
+                _id: "5fa0ea99516173945d8ad35d",
+                title: "node",
+                description: "other article",
+                content: "node.js",
+                articleImage: "node image"
+              }
+        
+              const valid_input = {
+                "name": "furebo",
+                "password": "fode123"
+            }  
+            chai.request(server)
+              .post('/loginuser')
+              .send(valid_input)
+              .then((login_response)=>{
+                token = 'Bearer ' + login_response.body.token;
+                newArticle.save((err, article)=>{
+                    chai.request(server)
+                    .delete("/article/" + article.id)
+                    .set('token',token)
+                    .end((err,response)=>{
+                        response.should.have.status(200);
+                    })
+                })
+ 
+              })
+            
+            })
+        
+        }) 
+
+
+/*
+        describe('/delete/articleId', () => {
+            it('it should delete an article by id', (done) => {
+               let auth = " ";
+                const valid_input = {
+                    "name": "furebo",
+                    "password": "fode123"
+                }
+                chai.request(server)
+                      .post('/loginuser')
+                      .send(valid_input)
+                      .then((login_response)=>{
+                        auth = 'Bearer '+ login_response.body.token;
+                        let article = new articleModel({title: "node", description:"article descr",content: "about me", articleImage: "myimage"})
+                        article.save((err, article) => {
+                            chai.request(server)
+                            .delete('/article/' + article._id)
+                            .set('token', auth)
+                            .end((err, res) => {
+                              res.should.have.status(200);
+                              res.body.should.have.property('message').eql("Article deleted !");
+              
+                              done();
+                            });
+                    })
+        
+                });
+            });
+        });
+*/
 
    //testing post route for signing up the user to database
     
