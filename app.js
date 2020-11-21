@@ -4,7 +4,6 @@ const express = require('express');
 const mongoose = require('mongoose');
 const app = express();
 //let multer = require('multer');
-
 // import routes modules
 const postsRoute = require('./routes/posts');
 const signupRoute = require('./signup');
