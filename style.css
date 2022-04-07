@@ -39,12 +39,16 @@ flex-wrap: wrap;
 width: 200px;
 height: 900px;
 position: fixed;
-margin-top: 140px;
 background:#F5F1DA;
 box-shadow: 2px;
+margin-top: 140px;
 
 }
-
+ .side{
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+ }
 
 .menu div img{
     width: 30px;
@@ -84,7 +88,8 @@ margin-left: 20px;
 display: flex;
 flex-direction: row;
 font-family: calibri;
-font-size: 14px
+font-size: 14px;
+
 
 }
 .menu div:hover{
